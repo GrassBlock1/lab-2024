@@ -1,0 +1,30 @@
+# Hugo files
+/public/
+/resources/_gen/
+.hugo_build.lock
+
+# Dependency directories
+/node_modules/
+/vendor/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*.log
+
+# Binary files
+*.bin
+*.exe
+*.dll
+*.so
+*.dylib

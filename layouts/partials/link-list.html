@@ -1,0 +1,21 @@
+<section class="w-80 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+{{ range .Site.Data.link }}
+  <a href="{{ .link }}" target="_blank" rel="external" class="min-w-full">
+    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
+    <div class="w-full thumbnail_card nozoom" style="background-image:url({{ .avatar }});"></div>
+    <div class="px-6 pt-4 pb-2">
+    <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral">
+            {{ .name | emojify }}
+            <span class="text-xs align-top cursor-default text-neutral-400 dark:text-neutral-500">
+              <span class="rtl:hidden">&#8599;</span>
+              <span class="ltr:hidden">&#8598;</span>
+            </span>
+          </div>
+    <div class="py-1 prose dark:prose-invert">
+          {{ .descr | emojify }}
+    </div>
+    </div>
+  </div>
+  </a>
+  {{ end }}
+</section>
