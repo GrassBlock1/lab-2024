@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@waline/client@3.0.0-alpha.11/dist/waline.min.css" />
+  <div id="waline" class="article"></div>
+  <script type="module">
+    import { init } from 'https://cdn.jsdelivr.net/npm/@waline/client@3.0.0-alpha.11/dist/waline.min.js';
+
+    init({
+      el: '#waline',
+      serverURL: 'https://waline-gb.zeabur.app/',
+    });
+  </script>
+<style>
+#wl-edit {
+  width: -moz-available !important;
+  width: -webkit-fill-available !important;
+}
+</style>

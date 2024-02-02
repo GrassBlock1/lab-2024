@@ -1,0 +1,6 @@
+#!/usr/bin/sh
+hugo -e envs && rsync -avz --delete public/ grassblock@envs.net:~/public_html/
+echo 清空 public 目录...
+rm -r public/*
+echo done
+printf "部署完成\n结果请查看 https://envs.net/~grassblock"

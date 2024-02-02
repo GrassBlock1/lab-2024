@@ -12,6 +12,7 @@ description: 草方块对于这个人的一些看法…
 top_img: http://pic.veryhuo.com/upload/20201221/022b3ace85edcb6d9df3aae25d0a635e.jpg
 cover: http://pic.veryhuo.com/upload/20201221/022b3ace85edcb6d9df3aae25d0a635e.jpg
 slug: yang-xx-yyds
+draft: true
 ---
 今天~~心血来潮~~想说说最近在某个群里遇到的一个人。
 看标题也应该知道是谁了，对，在1202年还在实名上网，用“畅玩5x”的人。
@@ -90,7 +91,7 @@ UP也说了
 
 诶？我突然想到了什么高兴的事（
 
-<details markdown='1'><summary>点我解锁</summary>
+<details><summary>点我解锁</summary>
 Telegram 似乎也是“违法”啊…所以我是不是可以说…
 </details>
 
