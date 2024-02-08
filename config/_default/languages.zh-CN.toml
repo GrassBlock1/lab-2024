@@ -26,6 +26,6 @@ title = "Mare_Infinitus"
      { steam = "https://steamcommunity.com/profiles/76561199422870469" },
      { telegram = "https://t.me/Grass_block" },
      { x-twitter = "https://twitter.com/Grass_block_cn" },
-     { pgpkey = "/gpg-key" },
+     { pgpkey = "./gpg-key" },
      { rocket = "https://www.travellings.cn/go.html"}
    ]
