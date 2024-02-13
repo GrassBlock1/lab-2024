@@ -3,7 +3,7 @@
 # https://blowfish.page/docs/getting-started/
 
 theme = "blowfish"
-baseURL = "http://localhost:1313/"
+baseURL = "https://lab.imgb.space/"
 defaultContentLanguage = "zh-CN"
 timezone = "Asia/Shanghai"
 
