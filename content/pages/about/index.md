@@ -36,60 +36,57 @@ AIGC 注意：此页面部分使用了AI模型生成的内容，包括但不限�
 如果你刚来这个博客，被上面AI写的描述所吸引，结果恐怕会让你大失所望：
 「揭开我们技术官僚世界光鲜表面下的秘密、阴谋和崇高的奇迹」暂时没有涉及，但是未来计划着写一点点议论性的东西来讨论。
 
-这个博客的建立其实是临时的一个在Vercel上部署博客的尝试，然后没忍心丢，就缝缝补补的维护到了现在，现在还在 Vercel 上。（在这里谢谢他们的服务！）
+这个博客的建立其实是临时的一个在Vercel上部署博客的尝试，然后没忍心丢，就缝缝补补的维护到了现在，现在托管于 [Cloudflare Pages](https://pages.cloudflare.com/) 。（在这里谢谢他们的服务！）
 
 # 博客历史
 （整理自 Telegram 上已废弃的公告板，等我哪天重建一下吧）
-{% timeline 2021,green %}
-<!-- timeline 06-09 -->
+{{< timeline >}}
+{{< timelineItem icon="location-dot" header="2021" subheader="06-09" >}}
 GrassBlog 建立！作为一个测试性分部而存在，使用 Hexo 驱动
-<!-- endtimeline -->
-<!-- timeline 07-23 -->
+{{< /timelineItem >}}
+{{< timelineItem icon="location-dot" header="2021" subheader="07-23" >}}
 更名为 Mare_Infinitus ，名字随便取的，意为“无限极海”，[来源](https://hyperioncantos.fandom.com/wiki/Mare_Infinitus)
-<!-- endtimeline -->
-<!-- timeline 08-07 -->
+{{< /timelineItem >}}
+{{< timelineItem icon="location-dot" header="2021" subheader="08-07" >}}
 在新仓库安全着陆！博客开始独立于“主站”存在，更新不稳定
-<!-- endtimeline -->
-<!-- timeline 10-16 -->
+{{< /timelineItem >}}
+{{< timelineItem icon="location-dot" header="2021" subheader="10-16" >}}
 使用 `lab.imgb.space` 作为域名，原有的 `grassblog.vercel.app` 仍存留
-<!-- endtimeline -->
-<!-- timeline 11-12 -->
+{{< /timelineItem >}}
+{{< timelineItem icon="location-dot" header="2021" subheader="11-12" >}}
 使用了新的网站图标
-<!-- endtimeline -->
-<!-- timeline 11-14 -->
+{{< /timelineItem >}}
+{{< timelineItem icon="location-dot" header="2021" subheader="11-14" >}}
 正式迁移到 `lab.imgb.space`，原域名进行了308跳转处理
-<!-- endtimeline -->
-<!-- timeline 11-28 -->
+{{< /timelineItem >}}
+{{< timelineItem icon="location-dot" header="2021" subheader="11-28" >}}
 数据迁移到新的评论系统，正式舍弃原有的 Waline
-<!-- endtimeline -->
-{% endtimeline %}
-
-{% timeline 2022,orange %}
-<!-- timeline 01-01 -->
+{{< /timelineItem >}}
+{{< timelineItem icon="location-dot" header="2022" subheader="01-01" >}}
 申请了独立的萌备 [20220007号](https://icp.gov.moe/?keyword=20220007)，标志着正式独立
-<!-- endtimeline -->
-{% endtimeline %}
-{% timeline 2023,pink %}
-<!-- timeline 01-25 -->
+{{< /timelineItem >}}
+{{< timelineItem icon="location-dot" header="2023" subheader="01-25" >}}
 新建镜像仓库，有效防止了意外发生
-<!-- endtimeline -->
-<!-- timeline 2now -->
+{{< /timelineItem >}}
+{{< timelineItem icon="location-dot" header="2023" subheader="12-31" >}}
 缝缝补补又一年啊
-<!-- endtimeline -->
-{% endtimeline %}
+{{< /timelineItem >}}
+{{< timelineItem icon="heart" header="2024" subheader="02-13" >}}
+迁移到 Hugo，托管服务切换到 Cloudflare Pages，也算是一个新的开始。
+
+我们的故事仍将继续。
+{{< /timelineItem >}}
+{{< /timeline >}}
 
 # 关于我
 虽然看起来有点奇怪，但是我想在最后介绍一下我自己。
 
-半拉子学生（高考完了，不知道将来还能否是一个学生），喜欢写作和折腾，乐于向别人分享自己的新发现。
+脆皮大学生，喜欢写作和折腾，乐于向别人分享自己的新发现。
 
-作为一个博主，我并不是一个很有经验的人（两年半左右），只是把自己的所学所知分享出来。
-(上一行 Powered by `openai-codex`)
-
-写博客算是一个长期的兴趣爱好，业余有时间便写一写。
+写博客算是一个长期的兴趣爱好，业余有时间便写一写，目前写了快三年了，也只是乱写。
 
 希望能够打破自己的限制和边界，尝试新的东西。
 
-如果你想深入的了解我的话，欢迎阅读[这个页面]()。
+如果你想深入的了解我的话，欢迎阅读这个页面。
 
-目前最常用 Telegram，你可以通过 [@Grass_block](https://telegram.dog/Grass_block) 来联系我，当然也有邮箱和联邦宇宙等等的联系方式，你可以在[“联系”页面]()获取。
+目前最常用 Telegram，你可以通过 [@Grass_block](https://telegram.dog/Grass_block) 来联系我，当然也有邮箱和联邦宇宙等等的联系方式，你可以在“联系”页面获取。
