@@ -1,0 +1,12 @@
+{
+	"scripts": {
+		"build": "hugo",
+		"elog:init": "elog init",
+		"sync:local": "elog sync -e .elog.env",
+		"sync": "elog sync",
+		"clean": "elog clean"
+	},
+	"dependencies": {
+		"@elog/cli": "^0.13.2"
+	}
+}
