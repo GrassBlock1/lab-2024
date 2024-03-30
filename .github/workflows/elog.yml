@@ -1,4 +1,4 @@
-name: Deplo To Github Pages
+name: Sync from Notion
 
 on:
   # 允许手动push触发
@@ -11,6 +11,7 @@ on:
     types:
       # api中的event_type就是这个
       - deploy
+  # 每早8点、晚21点同步一次，防止
   schedule:
     - cron: 0 0 * * *
     - cron: 0 13 * * *
@@ -34,8 +35,7 @@ jobs:
           version: 8
           run_install: |
             - recursive: true
-              args: [--frozen-lockfile, --strict-peer-dependencies]
-            - args: [--prod]
+              args: [--frozen-lockfile, --strict-peer-dependencies, --prod]
 
       - name: 设置时区
         run: |
@@ -50,18 +50,12 @@ jobs:
           # 对应package.json中的script.sync
           pnpm run sync
 
-      - name: 配置Git用户名邮箱
-        run: |
-          git config --global user.name "GB-0"
-          git config --global user.email "bot@imgb.space"
-
-      - name: 提交拉取的文章到GitHub仓库
-        run: |
-          git add .
-          git commit -m "update from notion" -a
-
-      - name: 推送文章到仓库
-        uses: ad-m/github-push-action@master
+      - name: Add, commit and push
+        uses: EndBug/add-and-commit@v9
         with:
-          # GITHUB_TOKEN为流水线内置变量，无需配置，可直接使用
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          cwd: .
+          default_author: github_actions
+          add: .
+          message: 'chore: sync Notion posts (pushed by GitHub Actions)'
+          fetch: true
+          push: true
