@@ -50,7 +50,7 @@ jobs:
           # 对应package.json中的script.sync
           pnpm run sync
 
-      - name: Add, commit and push
+      - name: 推送到仓库
         uses: EndBug/add-and-commit@v9
         with:
           cwd: .

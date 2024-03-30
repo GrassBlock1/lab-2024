@@ -129,6 +129,10 @@ smartTOCHideUnfocusedChildren = true
   # site = "ABC12345"
   # domain = "llama.yoursite.com"
 
+[umamiAnalytics]
+   websiteid = "cd3f2502-70ea-411a-9e87-c96f0d46a788"
+   domain = "umami.grassblock.eu.org"
+
 [buymeacoffee]
   # identifier = ""
   # globalWidget = true

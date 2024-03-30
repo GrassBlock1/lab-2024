@@ -41,7 +41,7 @@ module.exports = {
       format: 'markdown',
       frontMatter: {
         enable: true,
-        exclude: ['cover'],
+        exclude: [],
       },
       formatExt: './elog/cover.js'
     },
@@ -71,7 +71,8 @@ module.exports = {
     local: {
       outputDir: './assets/img',
       prefixKey: '/img',
-      pathFollowDoc: true,
+      pathFollowDoc: false,
+      imagePathExt: './elog/image.js'
     },
     oss: {
       secretId: process.env.OSS_SECRET_ID,
