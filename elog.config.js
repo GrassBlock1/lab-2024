@@ -39,6 +39,11 @@ module.exports = {
       outputDir: './content/posts/',
       filename: 'title',
       format: 'markdown',
+      frontMatter: {
+        enable: true,
+        exclude: ['cover'],
+      },
+      formatExt: './elog/cover.js'
     },
     halo: {
       endpoint: process.env.HALO_ENDPOINT,
@@ -61,7 +66,7 @@ module.exports = {
     }
   },
   image: {
-    enable: false,
+    enable: true,
     platform: 'local',
     local: {
       outputDir: './assets/img',
