@@ -28,26 +28,34 @@ jobs:
         with:
           node-version: "16.x"
 
-      - name: 安装依赖
+      - name: 安装pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
+          run_install: |
+            - recursive: true
+              args: [--frozen-lockfile, --strict-peer-dependencies]
+            - args: [--prod]
+
+      - name: 设置时区
         run: |
           export TZ='Asia/Shanghai'
-          npm install --prod
 
-      - name: 拉取语雀/Notion的文章
+      - name: 拉取Notion的文章
         env:
           # Notion相关环境变量
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
         run: |
           # 对应package.json中的script.sync
-          npm run sync
+          pnpm run sync
 
       - name: 配置Git用户名邮箱
         run: |
           git config --global user.name "GB-0"
           git config --global user.email "bot@imgb.space"
 
-      - name: 提交yuque拉取的文章到GitHub仓库
+      - name: 提交拉取的文章到GitHub仓库
         run: |
           git add .
           git commit -m "update from notion" -a
@@ -56,4 +64,4 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           # GITHUB_TOKEN为流水线内置变量，无需配置，可直接使用
-          github_token: ${{ secrets.ELOG_GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
