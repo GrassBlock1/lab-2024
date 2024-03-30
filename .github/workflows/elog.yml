@@ -23,6 +23,8 @@ jobs:
     steps:
       - name: 检查分支
         uses: actions/checkout@master
+        with:
+          token: ${{ secrets.ELOG_GITHUB_TOKEN }}
 
       - name: 安装node环境
         uses: actions/setup-node@master
