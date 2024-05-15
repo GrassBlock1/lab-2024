@@ -74,8 +74,8 @@ function loadComments() {
                         ;
 
                         let instance = "";
-                        if (status.account.acct.includes("@")) {
-                            instance = status.account.acct.split("@")[1];
+                        if (!status.account.id.includes("o3o.ca")) {
+                            instance = status.account.id.split("/")[2];
                         } else {
                             instance = "o3o.ca";
                         }
@@ -83,7 +83,7 @@ function loadComments() {
                         const isReply = status.in_reply_to_id !== id;
 
                         let op = false;
-                        if (status.account.acct == "grassblock") {
+                        if (status.account.username == "grassblock") {
                             op = true;
                         }
 
