@@ -1,0 +1,1 @@
+{"links":[{"rel":"lrdd","type":"application/json","template":"https://hatsu-nightly-debug.hyp3r.link/.well-known/webfinger?resource={uri}"}]}

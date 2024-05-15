@@ -1,6 +1,7 @@
 ---
 title: "调试页面"
-layout: simple
+
+showComments: true
 ---
 
 {{< heatmap >}}
