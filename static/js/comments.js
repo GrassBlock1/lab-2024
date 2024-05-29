@@ -186,9 +186,9 @@ function loadComments() {
                         commentsWrapper.innerHTML += DOMPurify.sanitize(comment.outerHTML);
                     });
                 } else {
-                    commentsWrapper.innerHTML = '还没有评论'
+                    commentsWrapper.innerHTML = '<p>无评论</p>'
                 }
-            document.getElementById('comments-wrapper').innerHTML += `<p><button class="!rounded-md bg-primary-600 px-4 py-2 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700 addComment">进行评论</button></p>`
+            document.getElementById('comments-wrapper').innerHTML += `<br><p><button class="!rounded-md bg-primary-600 px-4 py-2 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700 addComment">进行评论</button></p>`
             document.getElementById('comments-wrapper').innerHTML += `
                 <dialog id="comment-dialog" class="lg:w-1/4 md:w-auto bg-neutral-300 rounded-s-[0.25rem] px-2 py-2 text-neutral">
                     <h3>进行评论</h3>

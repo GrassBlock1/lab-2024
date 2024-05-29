@@ -1,49 +1,114 @@
-.mastodon-comment {
-    background-color: transparent;
+section#comments #comments-wrapper {
+    margin:1.5em 0;
+    padding:0 5px
+}
+section#comments .mastodon-comment {
+    display:grid;
+    column-gap:1rem;
+    grid-template-areas:"avatar name" "avatar time" "avatar post" "...... interactions";
+    grid-template-columns:min-content;
+    justify-items:start;
+    margin:0 auto 0 -1em;
+    padding:.5em
+}
+section#comments .mastodon-comment.comment-reply {
+    margin:0 auto 0 1em
+}
+section#comments .mastodon-comment .avatar-link {
+    grid-area:avatar;
+    height:4rem;
+    position:relative;
+    width:4rem;
+}
+section#comments .mastodon-comment .avatar-link .avatar {
+    max-height: 100%;
+    max-width: 100%;
     border-radius: 5px;
-    padding: 8rem;
-    margin-bottom: 1rem;
-    display: flex;
-    gap: 1rem;
-    flex-direction: column;
-    flex-grow: 2;
+    box-sizing: border-box;
 }
-.mastodon-comment .comment {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    flex-wrap: inherit;
+section#comments .mastodon-comment .avatar-link.op::after {
+    background-color:rgb(var(--color-secondary-400));
+    border-radius:50%;
+    bottom:-.25rem;
+    color:rgb(var(--color-neutral));
+    content:"✓";
+    display:block;
+    font-size:1.25rem;
+    font-weight:700;
+    height:1.5rem;
+    line-height:1.5rem;
+    position:absolute;
+    right:-.25rem;
+    text-align:center;
+    width:1.5rem
 }
-.mastodon-comment .comment-avatar img {
-    width: 6rem;
+section#comments .mastodon-comment .author {
+    align-items:center;
+    display:flex;
+    font-weight:700;
+    gap:.5em;
+    grid-area:name
 }
-.mastodon-comment .content {
-    flex-grow: 2;
+section#comments .mastodon-comment .author .instance {
+    background-color:rgb(var(--tw-prose-pre-bg));
+    border-radius:9999px;
+    color:rgb(var(--color-neutral-900));
+    font-size:smaller;
+    font-weight:400;
+    padding:.25em .75em
 }
-.mastodon-comment .comment-author {
-    display: flex;
-    flex-direction: column;
+section#comments .mastodon-comment .author .instance:hover {
+    opacity:.8;
+    text-decoration:none
 }
-.mastodon-comment .comment-author-name {
-    font-weight: bold;
+section#comments .mastodon-comment .author .instance.op {
+    background-color:rgb(var(--color-secondary-400));
+    color:rgb(var(--color-neutral))
 }
-.mastodon-comment .comment-author-name a {
-    display: flex;
-    align-items: center;
+section#comments .mastodon-comment .author .instance.op::before {
+    content:"✓";
+    font-weight:700;
+    margin-inline-end:.25em;
+    margin-inline-start:-.25em
 }
-.mastodon-comment .comment-author-date {
-    margin-left: auto;
+section#comments .mastodon-comment time {
+    grid-area:time;
+    line-height:1.5rem
 }
-.mastodon-comment .disabled {
-    color: var(--color-neutral);
+section#comments .mastodon-comment main {
+    grid-area:post
 }
-.mastodon-comment-content p:first-child {
-    margin-top: 0;
+section#comments .mastodon-comment main p:first-child {
+    margin-top:.25em
 }
-.mastodon {
-    --dlg-bg: #282c37;
-    --dlg-w: 600px;
-    --dlg-color: #9baec8;
-    --dlg-button-p: 0.75em 2em;
-    --dlg-outline-c: #00d9f5;
+section#comments .mastodon-comment main p:last-child {
+    margin-bottom:0
+}
+section#comments .mastodon-comment footer {
+    grid-area:interactions
+}
+section#comments .mastodon-comment footer .faves {
+    color:inherit
+}
+section#comments .mastodon-comment footer .faves:hover {
+    opacity:.8;
+    text-decoration:none
+}
+section#comments .mastodon-comment footer .faves::before {
+    color:red;
+    content:"♥";
+    font-size:2rem;
+    margin-inline-end:.25em
+}
+section#comments .mastodon-comment .emoji {
+    display:inline;
+    height:1.25em;
+    vertical-align:middle;
+    width:1.25em
+}
+section#comments .mastodon-comment .invisible {
+    display:none
+}
+section#comments .mastodon-comment .ellipsis::after {
+    content:"…"
 }
