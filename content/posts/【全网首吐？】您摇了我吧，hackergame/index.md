@@ -77,7 +77,7 @@ To be honest，在做这道题之前，我已经为了寻找上一道题的结�
 
 后来又去用searx试了一次还是没能得到结果，都是一堆我也不知道在说什么的结果。
 
-![Untitled](/img/hackergame-2023/Untitled%201.png)
+![Untitled](/img/hackergame-2023/Untitled_1.png)
 
 该死的searxng…
 
@@ -109,7 +109,7 @@ To be honest，在做这道题之前，我已经为了寻找上一道题的结�
 
 拿到题目，我熟练地打开了IDEA（什么肌肉记忆），然后被每一个内容没有出现红色的commit吓晕：
 
-![Untitled](/img/hackergame-2023/Untitled%202.png)
+![Untitled](</img/hackergame-2023/Untitled_2.png>)
 
 翻遍了我能看到的所有commit，嗯，只能说不在这里入手，剩下的我不知道（
 
@@ -117,7 +117,7 @@ To be honest，在做这道题之前，我已经为了寻找上一道题的结�
 
 **我：** ~~以为撤销就是commit删除东西~~
 
-![Untitled](/img/hackergame-2023/Untitled%203.png)
+![Untitled](</img/hackergame-2023/Untitled_3.png>)
 
 马老师重出江湖（？
 
@@ -127,7 +127,7 @@ To be honest，在做这道题之前，我已经为了寻找上一道题的结�
 
 聊了一会儿，我发现每当我以为我能触发出来关键词时，模型老是能跑偏到另外的方向…
 
-![Untitled](/img/hackergame-2023/Untitled%204.png)
+![Untitled](</img/hackergame-2023/Untitled_4.png>)
 
 我们住，我们爱，我们躺（无端
 
@@ -141,13 +141,13 @@ To be honest，在做这道题之前，我已经为了寻找上一道题的结�
 
 我一看，哦！图片压缩，于是我立马去找工具。结果就在这个过程中闹笑话了：我遇到假的tinypng了（
 
-![Untitled](/img/hackergame-2023/Untitled%205.png)
+![Untitled](</img/hackergame-2023/Untitled_5.png>)
 
 我依稀记得我搜索了这个关键词然后一看第一个结果标题是tinypng，啪的一下点进去了，很快啊，然后发现压缩效果并不好，根本达不到小于2048 bytes，于是转用熟悉的squoosh.app，最终发现只有转成webp是可行的，于是硬着头皮上传上去，不行（
 
 （写这个东西的时候又复现了一下上面的步骤…居然能得到奇奇怪怪的东西，但是根据[官方的说法](https://github.com/USTC-Hackergame/hackergame2023-writeups/blob/master/official/%F0%9F%AA%90%20%E4%BD%8E%E5%B8%A6%E5%AE%BD%E6%98%9F%E7%90%83/README.md#%E9%A2%98%E8%A7%A3)来说是正确的）
 
-![Untitled](/img/hackergame-2023/Untitled%206.png)
+![Untitled](</img/hackergame-2023/Untitled_6.png>)
 
 什么夹带私货…
 
@@ -155,7 +155,7 @@ To be honest，在做这道题之前，我已经为了寻找上一道题的结�
 
 后来复盘的时候才发现域名不对…
 
-![Untitled](/img/hackergame-2023/Untitled%207.png)
+![Untitled](</img/hackergame-2023/Untitled_7.png>)
 
 **友：** 不是，我把图片丢 tinypng 压缩一下就拿 flag1 啦？
 
@@ -182,7 +182,7 @@ To be honest，在做这道题之前，我已经为了寻找上一道题的结�
 
 然后后来看了经过艺术加工过的世界头号通缉黑客凯文·米特尼克的故事（当然是比赛之后看的），里面提到了这样几句：
 
-![Untitled](/img/hackergame-2023/Untitled%208.png)
+![Untitled](/img/hackergame-2023/Untitled_8.png)
 
 ~~果然，高端的解决方法都需要朴素的工具和原理~~
 
@@ -196,7 +196,7 @@ To be honest，在做这道题之前，我已经为了寻找上一道题的结�
 
 比赛结束的那天翻了wuhang的那篇writeup，发现了一个问题（图源网络）：
 
-![Untitled](/img/hackergame-2023/Untitled%209.png)
+![Untitled](</img/hackergame-2023/Untitled_9.png>)
 
 当然看了别的几篇wp也发现有不同的解法，果然是条条大路通罗马啊（
 
@@ -204,7 +204,7 @@ To be honest，在做这道题之前，我已经为了寻找上一道题的结�
 
 说实话拿到题目，我的想法是是看频谱图，因为有一种说法是人难以理解的音频大多都具有规律的频谱图，for example，minecraft中的11和13号音乐唱片：
 
-![Untitled](/img/hackergame-2023/Untitled%2010.png)
+![Untitled](</img/hackergame-2023/Untitled_10.png>)
 
 src: [*Minecraft - Disc 11 and 13 - Spectrogram*](https://www.youtube.com/watch?v=9EA2E6r_sLc)
 
