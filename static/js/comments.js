@@ -60,7 +60,7 @@ function loadComments() {
                     Array.isArray(descendants) &&
                     descendants.length > 0
                 ) {
-                    commentsWrapper.innerHTML = "加载中...";
+                    commentsWrapper.innerHTML = "";
 
 
                     descendants.forEach(function (status) {
