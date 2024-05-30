@@ -210,6 +210,11 @@ function loadComments() {
                   <input type="text" readonly id="copyInput" value="${url}">
                   <button class="button" id="copy">复制</button>
               </p>
+              <p>账号所在的实例使用 Misskey、Pleroma 等平台的用户，上面的方式可能不工作，请手动复制下面的链接到站点搜索框手动抓取进行互动：</p>
+              <p class="input-row">
+                  <input type="text" readonly id="copyInput" value="${host}/posts/${url}">
+                  <button class="button" id="copy">复制</button>
+              </p>
                 </dialog>`
                 const dialog = document.getElementById('comment-dialog');
 
