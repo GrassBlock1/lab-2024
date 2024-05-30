@@ -186,9 +186,9 @@ function loadComments() {
                         commentsWrapper.innerHTML += DOMPurify.sanitize(comment.outerHTML);
                     });
                 } else {
-                    commentsWrapper.innerHTML = '<p>无评论</p>'
+                    commentsWrapper.innerHTML = '<p>暂无评论</p>'
                 }
-                document.getElementById('load-comment').outerHTML = ``
+                document.getElementById('load-comment').outerHTML = ''
                 document.getElementById('comments-wrapper').innerHTML += `<br><p><button class="!rounded-md bg-primary-600 px-4 py-2 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700 addComment">进行评论</button></p>`
                 document.getElementById('comments-wrapper').innerHTML += `
                 <dialog id="comment-dialog" class="lg:w-auto bg-neutral-300 m-5 px-2 py-2 text-neutral">
@@ -197,7 +197,7 @@ function loadComments() {
                     <button title="Cancel" id="close" class="">&times;</button>
                    </div>
               <p>
-                  评论由 Hatsu 提供，可通过一个联邦宇宙帐号回复这个帖子进行评论。在下面填入自己的网站地址来跳转到自己网站中进行互动：
+                  评论由 Hatsu 提供，可通过一个联邦宇宙帐号回复这个帖子进行评论。在下面填入账号实例地址来跳转到相应帖子中进行互动：
               <p>
               <p class="input-row">
                   <input type="text" inputmode="url" autocapitalize="none" autocomplete="off"
