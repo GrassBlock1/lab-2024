@@ -112,3 +112,30 @@ section#comments .comment .invisible {
 section#comments .comment .ellipsis::after {
     content:"…"
 }
+/*comment dialog*/
+section#comments #comment-dialog {
+    width: 30em;
+    padding: 1em;
+    border-radius: 5px;
+}
+section#comments #comment-dialog #close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0.5em;
+        font: inherit;
+        outline: inherit;
+}
+section#comments #comment-dialog .input-row {
+    display: flex;
+}
+section#comments #comment-dialog .input-row > input {
+    flex-grow: 1;
+    margin-right: 0.5em;
+}
+section#comments #comment-dialog .input-row > button {
+    flex-basis: 3em;
+}

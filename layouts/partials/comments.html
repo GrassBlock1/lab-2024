@@ -1,23 +1,14 @@
 <script type="module">
     import { hatsu } from 'https://esm.sh/@kkna/preset-hatsu'
     import { openheart } from 'https://esm.sh/@kkna/preset-openheart'
-    import { defineConfig, provider } from 'https://esm.sh/@kkna/context'
+    import { defineConfig } from 'https://esm.sh/@kkna/context'
 
     defineConfig({
         presets: [
+            openheart({ endpoint: 'https://lab.imgb.space/api/openheart/' }),
             hatsu({ instance: 'https://hatsu-nightly-debug.hyp3r.link' }),
         ],
     })
-
-    const provide = provider(document.body, {
-        initialValue: {
-            presets: [
-                openheart({ endpoint: 'https://lab.imgb.space/api/openheart/' }),
-            ],
-        },
-    })
-
-    provide.hostConnected()
 </script>
 <script type="module" src="https://esm.sh/@kkna/component-material"></script>
 <kkna-material></kkna-material>
@@ -25,7 +16,7 @@
 <link href="/css/mastodon-comments.css" rel="stylesheet" />
 <section id="comments" class="container">
     <br>
-    <p>评论由 <a href="http://hatsu.cli.rs">Hatsu</a> 驱动，可通过一个联邦宇宙帐号回复这个博文对应的帖子进行评论。</p>
+    <p>评论由 <a href="https://hatsu.cli.rs">Hatsu</a> 驱动，可通过一个联邦宇宙帐号回复这个博文对应的帖子进行评论。</p>
     <p>你可以在 <a class="link" href="https://carlschwan.eu/2020/12/29/adding-comments-to-your-static-blog-with-mastodon/" target="_blank" >此处</a> 以及 <a href="https://blog.southfox.me/2023/06/使用 Mastodon 作为博客的评论系统/" target="_blank">此处</a> 查看功能实现</p>
     <p id="mastodon-comments-list"><button id="load-comment" class="!rounded-md bg-primary-600 px-4 py-2 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700">展开评论区</button></p>
     <div id="comments-wrapper" class="mastodon-comment">

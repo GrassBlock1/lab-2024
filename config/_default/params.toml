@@ -75,6 +75,7 @@ smartTOCHideUnfocusedChildren = true
   showWordCount = true
   sharingLinks = [ "twitter", "reddit", "pinterest", "facebook", "email", "whatsapp", "telegram"]
   showZenMode = true
+  #showComments = true
 
 [list]
   showHero = false

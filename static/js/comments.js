@@ -188,11 +188,14 @@ function loadComments() {
                 } else {
                     commentsWrapper.innerHTML = '<p>无评论</p>'
                 }
-            document.getElementById('comments-wrapper').innerHTML += `<br><p><button class="!rounded-md bg-primary-600 px-4 py-2 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700 addComment">进行评论</button></p>`
-            document.getElementById('comments-wrapper').innerHTML += `
-                <dialog id="comment-dialog" class="lg:w-1/4 md:w-auto bg-neutral-300 rounded-s-[0.25rem] px-2 py-2 text-neutral">
-                    <h3>进行评论</h3>
-                    <button title="Cancel" id="close">&times;</button>
+                document.getElementById('load-comment').outerHTML = ``
+                document.getElementById('comments-wrapper').innerHTML += `<br><p><button class="!rounded-md bg-primary-600 px-4 py-2 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700 addComment">进行评论</button></p>`
+                document.getElementById('comments-wrapper').innerHTML += `
+                <dialog id="comment-dialog" class="lg:w-auto bg-neutral-300 m-5 px-2 py-2 text-neutral">
+                   <div class="dialog-title">
+                    <b class="">进行评论</b>
+                    <button title="Cancel" id="close" class="">&times;</button>
+                   </div>
               <p>
                   评论由 Hatsu 提供，可通过一个联邦宇宙帐号回复这个帖子进行评论。在下面填入自己的网站地址来跳转到自己网站中进行互动：
               <p>
@@ -208,78 +211,79 @@ function loadComments() {
                   <button class="button" id="copy">复制</button>
               </p>
                 </dialog>`
-            const dialog = document.getElementById('comment-dialog');
+                const dialog = document.getElementById('comment-dialog');
 
-            // open dialog on button click
-            Array.from(document.getElementsByClassName("addComment")).forEach(button => button.addEventListener('click', () => {
-                dialog.showModal();
-                // this is a very very crude way of not focusing the field on a mobile device.
-                // the reason we don't want to do this, is because that will push the modal out of view
-                if (dialog.getBoundingClientRect().y > 100) {
-                    document.getElementById("instanceName").focus();
-                }
-            }));
+                // open dialog on button click
+                Array.from(document.getElementsByClassName("addComment")).forEach(button => button.addEventListener('click', () => {
+                    dialog.showModal();
+                    // this is a very very crude way of not focusing the field on a mobile device.
+                    // the reason we don't want to do this, is because that will push the modal out of view
+                    if (dialog.getBoundingClientRect().y > 100) {
+                        document.getElementById("instanceName").focus();
+                    }
+                }));
 
-            // when click on 'Go' button: go to the instance specified by the user
-            document.getElementById('go').addEventListener('click', () => {
-                let instanceURL = document.getElementById('instanceName').value.trim();
-                if (instanceURL === '') {
-                    // bail out - window.alert is not very elegant, but it works
-                    window.alert("请填入你的实例地址！");
-                    return;
-                }
+                // when click on 'Go' button: go to the instance specified by the user
+                document.getElementById('go').addEventListener('click', () => {
+                    let instanceURL = document.getElementById('instanceName').value.trim();
+                    if (instanceURL === '') {
+                        // bail out - window.alert is not very elegant, but it works
+                        window.alert("请填入你的实例地址！");
+                        return;
+                    }
 
-                // store the url in the local storage for next time
-                localStorage.setItem('mastodonUrl', instanceURL);
+                    // store the url in the local storage for next time
+                    localStorage.setItem('mastodonUrl', instanceURL);
 
-                if (!instanceURL.startsWith('https://')) {
-                    instanceURL = `https://${instanceURL}`;
-                }
+                    if (!instanceURL.startsWith('https://')) {
+                        instanceURL = `https://${instanceURL}`;
+                    }
 
-                window.open(`${instanceURL}/authorize_interaction?uri=${url}`, '_blank');
-            });
+                    window.open(`${instanceURL}/authorize_interaction?uri=${url}`, '_blank');
+                });
 
-            // also when pressing enter in the input field
-            document.getElementById('instanceName').addEventListener('keydown', e => {
-                if (e.key === 'Enter') {
-                    document.getElementById('go').dispatchEvent(new Event('click'));
-                }
-            });
+                // also when pressing enter in the input field
+                document.getElementById('instanceName').addEventListener('keydown', e => {
+                    if (e.key === 'Enter') {
+                        document.getElementById('go').dispatchEvent(new Event('click'));
+                    }
+                });
 
-            // copy tye post's url when pressing copy
-            document.getElementById('copy').addEventListener('click', () => {
-                // select the input field, both for visual feedback, and so that the user can use CTRL/CMD+C for manual copying, if they don't trust you
-                document.getElementById('copyInput').select();
-                navigator.clipboard.writeText(url);
-                // Confirm this by changing the button text
-                document.getElementById('copy').innerHTML = '已复制！';
-                // restore button text after a second.
-                window.setTimeout(() => {
-                    document.getElementById('copy').innerHTML = '复制';
-                }, 1000);
-            });
+                // copy tye post's url when pressing copy
+                document.getElementById('copy').addEventListener('click', () => {
+                    // select the input field, both for visual feedback, and so that the user can use CTRL/CMD+C for manual copying, if they don't trust you
+                    document.getElementById('copyInput').select();
+                    navigator.clipboard.writeText(url);
+                    // Confirm this by changing the button text
+                    document.getElementById('copy').innerHTML = '已复制！';
+                    // restore button text after a second.
+                    window.setTimeout(() => {
+                        document.getElementById('copy').innerHTML = '复制';
+                    }, 1000);
+                });
 
-            // close dialog on button click, or escape button
-            document.getElementById('close').addEventListener('click', () => {
-                dialog.close();
-            });
-            dialog.addEventListener('keydown', e => {
-                if (e.key === 'Escape') dialog.close();
-            });
-
-            // Close dialog, if clicked on backdrop
-            dialog.addEventListener('click', event => {
-                var rect = dialog.getBoundingClientRect();
-                var isInDialog =
-                    rect.top <= event.clientY
-                    && event.clientY <= rect.top + rect.height
-                    && rect.left <= event.clientX
-                    && event.clientX <= rect.left + rect.width;
-                if (!isInDialog) {
+                // close dialog on button click, or escape button
+                document.getElementById('close').addEventListener('click', () => {
                     dialog.close();
-                }
-            })
+                });
+                dialog.addEventListener('keydown', e => {
+                    if (e.key === 'Escape') dialog.close();
+                });
+
+                // Close dialog, if clicked on backdrop
+                dialog.addEventListener('click', event => {
+                    var rect = dialog.getBoundingClientRect();
+                    var isInDialog =
+                        rect.top <= event.clientY
+                        && event.clientY <= rect.top + rect.height
+                        && rect.left <= event.clientX
+                        && event.clientX <= rect.left + rect.width;
+                    if (!isInDialog) {
+                        dialog.close();
+                    }
+                })
             }
         )
-        }
-    document.getElementById("load-comment").addEventListener("click", loadComments);
+}
+
+document.getElementById("load-comment").addEventListener("click", loadComments);
