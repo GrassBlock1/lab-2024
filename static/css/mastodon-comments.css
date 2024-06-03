@@ -52,7 +52,7 @@ section#comments .comment .author {
 section#comments .comment .author .instance {
     background-color:rgb(var(--tw-prose-pre-bg));
     border-radius:9999px;
-    color:rgb(var(--color-neutral-900));
+    color:rgb(var(--color-neutral));
     font-size:smaller;
     font-weight:400;
     padding:.25em .75em

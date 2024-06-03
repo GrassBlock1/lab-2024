@@ -1,0 +1,76 @@
+{{- $pctx := . -}}
+{{- if .IsHome -}}{{ $pctx = site }}{{- end -}}
+{{- $pages := slice -}}
+{{- if or $.IsHome $.IsSection -}}
+{{- $pages = $pctx.RegularPages -}}
+{{- else -}}
+{{- $pages = $pctx.Pages -}}
+{{- end -}}
+{{- $limit := site.Config.Services.RSS.Limit -}}
+{{- if ge $limit 1 -}}
+{{- $pages = $pages | first $limit -}}
+{{- end -}}
+{{- $title := "" }}
+{{- if eq .Title .Site.Title }}
+{{- $title = .Site.Title }}
+{{- else }}
+{{- with .Title }}
+{{- $title = print . " on "}}
+{{- end }}
+{{- $title = print $title .Site.Title }}
+{{- end }}
+{
+"version": "https://jsonfeed.org/version/1.1",
+"title": {{ $title | jsonify }},
+"home_page_url": {{ .Permalink | jsonify }},
+{{- with  .OutputFormats.Get "jsonfeed" }}
+"feed_url": {{ .Permalink | jsonify  }},
+{{- end }}
+{{- if (or .Site.Params.author .Site.Params.author_url) }}
+"authors": [{
+{{- if .Site.Params.author }}
+"name": {{ .Site.Params.author | jsonify }},
+{{- end }}
+{{- if .Site.Params.author_url }}
+"url": {{ .Site.Params.author_url | jsonify }}
+{{- end }}
+}],
+{{- end }}
+{{- if $pages }}
+"items": [
+{{- range $index, $element := where .Site.RegularPages "Type" "in"
+.Site.Params.mainSections }}
+{{- with $element }}
+{{- if $index }},{{end}} {
+"title": {{ .Title | jsonify }},
+"id": {{ .Permalink | jsonify }},
+"url": {{ .Permalink | jsonify }},
+"summary": {{ with .Description }}{{ . | jsonify }}{{ else }}{{ .Summary | jsonify }}{{ end -}},
+"content_html": {{ .Content | jsonify }},
+{{- $images := .Resources.ByType "image" -}}
+{{- $featured := $images.GetMatch "*feature*" -}}
+{{ $disableImageOptimization := .Page.Site.Params.disableImageOptimization | default false }}
+{{- if not $featured }}{{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}{{ end -}}
+      {{ if and .Params.featureimage (not $featured) }}
+      {{- $url:= .Params.featureimage -}}
+{{ $featured = resources.GetRemote $url }}
+{{ end }}
+{{- if not $featured }}{{ with .Site.Params.defaultFeaturedImage }}{{ $featured = resources.Get . }}{{ end }}{{ end -}}
+{{- with $featured -}}
+{{ if or $disableImageOptimization (strings.HasSuffix $featured ".svg")}}
+{{ with . }}
+"image":  {{ .RelPermalink | absURL | jsonify }},
+    {{ end }}
+    {{ else }}
+    {{ with .Resize "600x" }}
+"image":  {{ .RelPermalink | absURL | jsonify }},
+    {{ end }}
+    {{ end }}
+{{- end -}}
+"date_published": {{ .Date.Format "2006-01-02T15:04:05Z07:00" | jsonify }}
+}
+{{- end }}
+{{- end }}
+]
+{{ end }}
+}
