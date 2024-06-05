@@ -71,6 +71,11 @@
 }
 {{- end }}
 {{- end }}
-]
+],
 {{ end }}
+"_hatsu": {
+    "about": "https://github.com/importantimport/hatsu/issues/1",
+    "aliases": "bot",
+    "banner_image": "{{ with resources.Get "img/blog-cover.png" }}{{ .Permalink }}{{ end }}"
+}
 }
