@@ -10,7 +10,7 @@ slug: mxspace-on-zeabur
 title: 使用 Mix Space × Zeabur 搭建自己的个人空间（博客）
 cover: 'https://www.notion.so/images/page-cover/nasa_buzz_aldrin_on_the_moon.jpg'
 date: '2024-05-15 22:45:00'
-updated: '2024-06-07 18:58:00'
+updated: '2024-06-08 00:44:00'
 ---
 
 > 🚧 此教程仍在活跃维护中。由于写作时间跨度较大，某些部分可能不适用/不工作，但教程总体没有问题。  
@@ -46,6 +46,45 @@ updated: '2024-06-07 18:58:00'
 - 一个拥有开发者订阅或者团队订阅的 [Zeabur](https://zeabur.com/?referralCode=GrassBlock1) 账号，你可以直接使用 GitHub 登录并绑定支付方式使用
 - [Mix Space 文档](https://mx-space.js.org/)，用于查阅以及获取环境变量信息
 - 一个能够管理/添加 dns 记录的域名（如果没有的话，你可以使用 Zeabur 提供的域名）
+
+## 一键部署
+
+
+经过我长达两个半小时的折腾之后，你终于可以通过模板一键部署了：
+
+
+[![Deploy on Zeabur](/img/mxspace-on-zeabur/5a645d024f639bfbbc82eb942b9d0603.svg)](https://zeabur.com/templates/JMY1I1?referralCode=GrassBlock1)
+
+
+使用这个模板部署后，你只需要绑定域名然后配置好前端和后端即可。
+
+
+### 绑定域名
+
+
+如果你更喜欢前端和后端使用不同的域名，只需要为 `mx-backend` 和 `shiro` 分别配置不同的域名即可。
+
+
+找到对应的服务，点击“网络”，找到“公开”一栏，如果你没有域名，可以点击“生成域名”产生一个 [zeabur.app](http://zeabur.app/) 域名，如果你愿意使用自己已有的域名，点击“自定域名”添加域名并配置对应记录即可，具体可参考[ Zeabur 有关域名绑定的文档](https://zeabur.com/docs/zh-CN/deploy/domain-binding) 。
+
+
+![Untitled.png](/img/mxspace-on-zeabur/fab907e4dfefbce3cef2fd44fc36cc88.png)
+
+
+如果你更喜欢前端和后端使用同一个域名，只需要为 `Nginx` 服务配置域名即可，方法同上。
+
+
+### 配置前后端
+
+
+打开对应的后台管理页面（一般来说是 `后端域名/proxy/qaqdmin` 或者  `域名/qaqdmin` ），不出意外的话，你应该会看到配置引导页面，按照提示设置即可，但请确保后端地址等参数是正确的。
+
+
+完成后，按照 [Shiro 主题的文档](https://mx-space.js.org/themes/shiro#设置主题配置) 完成主题配置，就可以开始你的写作之旅了。
+
+
+如果你对手动部署调配更感兴趣，可以接着看：
+
 
 ## 部署后端
 
