@@ -10,7 +10,7 @@ slug: mxspace-on-zeabur
 title: 使用 Mix Space × Zeabur 搭建自己的个人空间（博客）
 cover: 'https://www.notion.so/images/page-cover/nasa_buzz_aldrin_on_the_moon.jpg'
 date: '2024-05-15 22:45:00'
-updated: '2024-06-08 00:44:00'
+updated: '2024-06-08 00:45:00'
 ---
 
 > 🚧 此教程仍在活跃维护中。由于写作时间跨度较大，某些部分可能不适用/不工作，但教程总体没有问题。  
@@ -50,7 +50,7 @@ updated: '2024-06-08 00:44:00'
 ## 一键部署
 
 
-经过我长达两个半小时的折腾之后，你终于可以通过模板一键部署了：
+经过我长达两个半小时的折腾之后，终于可以通过模板一键部署了：
 
 
 [![Deploy on Zeabur](/img/mxspace-on-zeabur/5a645d024f639bfbbc82eb942b9d0603.svg)](https://zeabur.com/templates/JMY1I1?referralCode=GrassBlock1)
