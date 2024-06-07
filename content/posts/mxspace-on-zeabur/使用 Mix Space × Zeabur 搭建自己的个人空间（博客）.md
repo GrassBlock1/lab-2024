@@ -10,7 +10,7 @@ slug: mxspace-on-zeabur
 title: 使用 Mix Space × Zeabur 搭建自己的个人空间（博客）
 cover: 'https://www.notion.so/images/page-cover/nasa_buzz_aldrin_on_the_moon.jpg'
 date: '2024-05-15 22:45:00'
-updated: '2024-06-08 00:45:00'
+updated: '2024-06-08 00:46:00'
 ---
 
 > 🚧 此教程仍在活跃维护中。由于写作时间跨度较大，某些部分可能不适用/不工作，但教程总体没有问题。  
@@ -50,7 +50,7 @@ updated: '2024-06-08 00:45:00'
 ## 一键部署
 
 
-经过我长达两个半小时的折腾之后，终于可以通过模板一键部署了：
+经过我长达两个半小时的折腾之后，你终于可以通过模板一键部署了：
 
 
 [![Deploy on Zeabur](/img/mxspace-on-zeabur/5a645d024f639bfbbc82eb942b9d0603.svg)](https://zeabur.com/templates/JMY1I1?referralCode=GrassBlock1)
@@ -80,7 +80,7 @@ updated: '2024-06-08 00:45:00'
 打开对应的后台管理页面（一般来说是 `后端域名/proxy/qaqdmin` 或者  `域名/qaqdmin` ），不出意外的话，你应该会看到配置引导页面，按照提示设置即可，但请确保后端地址等参数是正确的。
 
 
-完成后，按照 [Shiro 主题的文档](https://mx-space.js.org/themes/shiro#设置主题配置) 完成主题配置，就可以开始你的写作之旅了。
+完成后，按照 [Shiro 主题的文档](https://mx-space.js.org/themes/shiro#设置主题配置) 完成前端的主题配置，就可以开始你的写作之旅了。
 
 
 如果你对手动部署调配更感兴趣，可以接着看：
