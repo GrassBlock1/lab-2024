@@ -4,16 +4,13 @@ tags:
   - 垃圾技术
   - blog
   - 今天开服务不用钱
-status: 已发布
 summary: 托管个人空间的新选择。如果你已经有在使用 zeabur 并跑了一些服务在上面，无需另外购买，这种办法可能会更为超值。
 description: 喜大普奔，现在终于能在 Zeabur 上运行 Mix Space 了，无服务器选择喜+1。
 slug: mxspace-on-zeabur
 title: 使用 Mix Space × Zeabur 搭建自己的个人空间（博客）
 cover: 'https://www.notion.so/images/page-cover/nasa_buzz_aldrin_on_the_moon.jpg'
-urlname: 616c6d9e-15fe-4359-921f-fe3514d3ad38
 date: '2024-05-15 22:45:00'
 updated: '2024-06-07 18:58:00'
-featureimage: 'https://lab.imgb.space/img/mxspace-on-zeabur/8923d65455974a7b2f7ca96c328204a1.jpg'
 ---
 
 > 🚧 此教程仍在活跃维护中。由于写作时间跨度较大，某些部分可能不适用/不工作，但教程总体没有问题。  
@@ -74,7 +71,7 @@ featureimage: 'https://lab.imgb.space/img/mxspace-on-zeabur/8923d65455974a7b2f7c
 ![Untitled.png](/img/mxspace-on-zeabur/c7d417fa48c86faf60438e2d69b9094d.png)
 
 
-![Untitled.png](/img/mxspace-on-zeabur/dace48174f0f56942a5575d2d476ca3e.png)
+![Untitled.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/154c8cde-d9ed-4739-b2db-0407122f1c06/db006155-9e5a-4593-9cbc-cba09942e150/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240607%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240607T154906Z&X-Amz-Expires=3600&X-Amz-Signature=7cf5007fe8defa646e990207b70a54f01745636fd12f1b48a43d800748c06b5b&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 > 💡 或者，你也可以选择暂时跳过，并在”添加服务“时再部署 MongoDB 和 Redis，且二者的先后顺序可以调换。
@@ -309,7 +306,7 @@ NEXT_SHARP_PATH = { default = "/usr/local/lib/node_modules/sharp" , expose = tru
 然后在弹出的对话框中点击“配置 GitHub”，授权访问 Fork 所在的账户中的仓库。
 
 
-![Untitled.png](/img/mxspace-on-zeabur/6022c86689e2d0217c716234dab665dc.png)
+![Untitled.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/154c8cde-d9ed-4739-b2db-0407122f1c06/dc4ead1f-1571-47d8-bdf7-79999a7d8ebb/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240607%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240607T154859Z&X-Amz-Expires=3600&X-Amz-Signature=13e1a76fbd9c148d3151b5bae73685ee5e1c27e9058b1fe623f9ee807635d47c&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 ![Untitled.png](/img/mxspace-on-zeabur/7dfb2ec4c63a539c2cbc27f657c6b188.png)

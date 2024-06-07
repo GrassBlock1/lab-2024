@@ -19,7 +19,11 @@ module.exports = {
     notion: {
       token: process.env.NOTION_TOKEN,
       databaseId: process.env.NOTION_DATABASE_ID,
-      filter: {property: 'status', select: {equals: '已发布'}, }
+      filter: {property: 'status', select: {equals: '已发布'}, },
+      catalog: {
+        enable: true,
+        property: "slug"
+      }
     },
     feishu: {
       type: 'space',
@@ -38,10 +42,11 @@ module.exports = {
     local: {
       outputDir: './content/posts/',
       filename: 'title',
+      catalog: true,
       format: 'markdown',
       frontMatter: {
         enable: true,
-        exclude: [],
+        exclude: ['status','urlname'],
       },
       formatExt: './elog/cover.js'
     },

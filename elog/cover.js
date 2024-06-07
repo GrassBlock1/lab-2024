@@ -1,4 +1,7 @@
 const { matterMarkdownAdapter } = require('@elog/cli')
+const path = require("node:path");
+const {rename} = require("node:fs");
+
 
 /**
  * 自定义文档插件
@@ -12,13 +15,25 @@ const format = async (doc, imageClient) => {
     if (imageClient)  {
         // 只有启用图床平台image.enable=true时或image.enablForExt=true，imageClient才能用，否则请自行实现图片上传
         const url = await imageClient.uploadImageFromUrl(cover, doc)
-        // cover链接替换为本地图片
-        doc.properties.featureimage = "https://lab.imgb.space" + url
+        // cover 移动到对应文件夹中的 featured.jpg
+        const oldFile = process.cwd() + "/assets" + url
+        const format = url.split('.')[1]
+        const newFile = process.cwd() + "/content/posts/" + doc.properties.slug + "/featured." + format
+        rename(oldFile,newFile,function (err) {
+            if (err) throw err
+            console.log('成功替换封面')
+        })
     }
     doc.body = matterMarkdownAdapter(doc);
     return doc;
+    const oldname = process.cwd() + "/content/posts/" + doc.properties.slug + "/" + doc.properties.title + ".md"
+    const newname = process.cwd() + "/content/posts/" + doc.properties.slug + "/index.md"
+    rename(oldname,newname,function (err) {
+        if (err) throw err
+        console.log('尝试替换文章名称以正常显示封面...成功')
+    })
 };
 
 module.exports = {
-    format,
+    format
 };
