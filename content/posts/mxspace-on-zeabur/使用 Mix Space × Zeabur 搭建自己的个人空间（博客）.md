@@ -10,7 +10,7 @@ slug: mxspace-on-zeabur
 title: 使用 Mix Space × Zeabur 搭建自己的个人空间（博客）
 cover: 'https://www.notion.so/images/page-cover/nasa_buzz_aldrin_on_the_moon.jpg'
 date: '2024-05-15 22:45:00'
-updated: '2024-06-08 00:46:00'
+updated: '2024-06-08 00:51:00'
 ---
 
 > 🚧 此教程仍在活跃维护中。由于写作时间跨度较大，某些部分可能不适用/不工作，但教程总体没有问题。  
@@ -143,9 +143,6 @@ updated: '2024-06-08 00:46:00'
 在弹出的对话框中点击左下角的`编辑 TOML 文件`，对以下内容进行适当修改并填入：
 
 
-> 🚧 截至 2024/06/06 使用这份 TOML 文件会导致不能创建服务，原因未知。
-
-
 ```toml
 name = "mx-backend"
 
@@ -159,7 +156,7 @@ type = "HTTP"
 
 [[volumes]]
 id = "mx-space"
-path = "/root/.mx-space"
+dir = "/root/.mx-space"
 
 [env]
 TZ = { default = "Asia/Shanghai" , expose = true }
@@ -189,7 +186,7 @@ DB_PORT ={ default = "${MONGO_PORT}" , expose = true }
 环境变量 ：点击展开按钮，之后点击”添加环境变量“，填写[环境变量](#环境变量) 一节中的内容（一行只填写一个，左为key，右为value，并**只**勾选上暴露，填写下一个时再点击一次”添加环境变量“）
 
 
-> 💡 由于手动添加环境变量十分麻烦，所以如果使用这个办法，强烈建议先不填写环境变量，可以再参考后面的步骤填写。
+> 💡 由于手动添加环境变量十分麻烦，所以如果使用这个办法，强烈建议先不填写环境变量，之后再参考后面的步骤填写。
 
 
 端口：点击`添加端口`，端口名称：web （可自定义方便识别），端口号：2333，类型保持 HTTP 不变 （服务要使用的端口）
@@ -304,8 +301,6 @@ type = "HTTP"
 
 [env]
 NEXT_SHARP_PATH = { default = "/usr/local/lib/node_modules/sharp" , expose = true  }
-
-
 ```
 
 
