@@ -10,11 +10,12 @@ for SUBDIR in "$TARGET_DIR"/*; do
         for FILE in "$SUBDIR"/*; do
             # 获取文件名
             FILENAME=$(basename "$FILE")
+            EXTENSION="${FILENAME##*.}"
 
-            # 检查文件名是否不是 index.md 或者不包含 featured
-            if [[ "$FILENAME" != "index.md" && "$FILENAME" != *"featured"* ]]; then
-                echo "Deleting $FILE"
-                rm "$FILE"
+            if [[ "$EXTENSION" == "md" && "$FILENAME" != "index.md" ]]; then
+                NEWFILE="$SUBDIR/index.md"
+                echo "Renaming $FILE to $NEWFILE"
+                mv "$FILE" "$NEWFILE"
             fi
         done
     fi
