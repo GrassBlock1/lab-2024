@@ -1,4 +1,5 @@
 ---
+
 title: Another Widget v2 - 可自定义的“一目了然”小部件
 date: 2021-11-09 19:06:32
 updated:
@@ -6,8 +7,8 @@ tags: ['评测']
 categories: tech
 keywords: Another Widget,At a glance,一目了然
 description: 又一个假装是Pixel的新方式？
-top_img: https://gitraw.grassblock.workers.dev/tommasoberlose/another-widget/master/hero.png
-cover: https://gitraw.grassblock.workers.dev/tommasoberlose/another-widget/master/hero.png
+top_img: <https://gitraw.grassblock.workers.dev/tommasoberlose/another-widget/master/hero.png>
+cover: <https://gitraw.grassblock.workers.dev/tommasoberlose/another-widget/master/hero.png>
 slug: another-widget-v2
 ---
 
@@ -16,10 +17,10 @@ slug: another-widget-v2
 
 {{< alert icon="circle-info" cardColor="#303952" iconColor="#fafafa" textColor="#f1faee" >}}
 本文部分翻译/节选自
-https://www.computerworld.com/article/3269497/at-a-glance-widget-android.html ，如有侵权请告知
+<https://www.computerworld.com/article/3269497/at-a-glance-widget-android.html> ，如有侵权请告知
 {{< /alert >}}
 
-一个好的 Android 小部件可以使主屏幕有吸引力、有效和特别有用，作为你所有移动生产力需求的起点。（当然，这同样适用于您的移动拖延需求 - 并不是说您会出于如此愚蠢的目的使用手机......） 
+一个好的 Android 小部件可以使主屏幕有吸引力、有效和特别有用，作为你所有移动生产力需求的起点。（当然，这同样适用于您的移动拖延需求 - 并不是说您会出于如此愚蠢的目的使用手机......）
 
 随 Pixel 2 一起推出的 Google 的“概览”小部件是一个很好的 Android 小部件。它以简单、紧凑且具有视觉吸引力的形式向你显示当前日期和天气。在适当的时候，它甚至可以扩展以显示上下文信息，例如即将到来的日历事件的倒计时。它可以作为你的日历和完整预测应用程序的单击快捷方式，因此您可以快速到达任何一个地方，而无需为标准快捷方式图标分配额外的屏幕空间。
 

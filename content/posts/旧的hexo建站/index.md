@@ -1,8 +1,9 @@
 ---
+
 title: 利用 Termux × GitHub × Hexo 创建免费博客
 tags: []
 date: 2021-02-25 05:55:00
-cover: https://hazyman.com/img/content/Hexo-Cover.png
+cover: <https://hazyman.com/img/content/Hexo-Cover.png>
 slug: hexo-blogging-old
 ---
 
@@ -32,17 +33,17 @@ slug: hexo-blogging-old
 话不多说 我们直接开始吧（  
 在进行以下步骤前，请确保给予了存储权限！
 
-1.  安装 git
+1. 安装 git
 
 `pkg install git`
 
-1.  安装 npm & node-js （注意是长期支持版本，其它版本是安装不上的现在可以）
+1. 安装 npm & node-js （注意是长期支持版本，其它版本是安装不上的现在可以）
 
 `pkg install nodejs-lts`
 
 （这也会将npm安装到termux）
 
-1.  安装 hexo
+1. 安装 hexo
 
 `npm install hexo-cli -g`
 
@@ -50,13 +51,13 @@ slug: hexo-blogging-old
 
 `npm config set registry http://registry.npm.taobao.org`
 
-1.  创建一个博客目录
+1. 创建一个博客目录
 
 `hexo init blog（此处名字随意）`
 
 > 据说必须是termux自己的目录才可以，否则会报错（故不能输入外部文件夹路径）
 
-1.  更方便的访问博客目录&编辑配置
+1. 更方便的访问博客目录&编辑配置
 
 可以开启sftp服务器进行管理。  
 首先输入 `sshd && whoami` 以获取身份信息（  
@@ -74,7 +75,7 @@ slug: hexo-blogging-old
 
 （当然如果你习惯于vim 编辑器，可以直接进行以下步骤（
 
-1.  设置 git 部署
+1. 设置 git 部署
 
 首先安装 hexo-deployer-git 。  
 在博客目录运行：  
@@ -94,16 +95,16 @@ deploy:
 然后保存即可
 
 > 如果你没有 GitHub 账号，也可以使用码云账号（兼容性未知），或者注册一个（
-> 
+>
 > 如果使用码云账号 需要把 repo 链接处改为码云 （ gitee.com ）repo链接
-> 
+>
 > 建议新建一个repo以确保无问题
 
 同时，你还需要更改网站（#url）处为 你 GitHub Pages 的地址（
 
 > 如果使用自己的域名，也请同步更改，否则会出现问题
 
-1.  开始部署
+1. 开始部署
 
 1> 进入博客目录  
 `cd blog（也即上面你创建的目录）`
@@ -113,7 +114,7 @@ deploy:
 （不过要保证你的配置文件正确）  
 之后输入你的 GitHub 账号和密码 即可
 
-1.  在 GitHub 方面的设置
+1. 在 GitHub 方面的设置
 
 打开你部署好的repo,进入它的settings（别问我在哪里，顶上那么多东西自己看看  
 找到 Github pages 并启用它（记得使用 gh-pages 的分支）
@@ -162,4 +163,3 @@ feed:
 
 [https://hexo.io/zh-cn/docs/](https://hexo.io/zh-cn/docs/)  
 我们下个教程见！
-

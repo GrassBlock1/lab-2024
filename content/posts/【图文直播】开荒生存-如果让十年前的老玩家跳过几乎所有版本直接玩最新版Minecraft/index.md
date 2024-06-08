@@ -3,11 +3,13 @@ title: 【图文直播】开荒生存-如果让十年前的老玩家跳过大多
 date: 2023-10-22 22:11:23
 tags: ["Minecraft","图文直播"]
 categories:
-  - Daily
+
+- Daily
 description: '文艺复兴一下！顺便借着 Minecraft 怀念一下从前的日子。'
 slug: 1-20-be-survival
-cover: https://obj.imgb.space/api/raw/?path=/prjs/mc_daily/cover.webp
-top_img: https://obj.imgb.space/api/raw/?path=/prjs/mc_daily/cover.webp
+cover: <https://obj.imgb.space/api/raw/?path=/prjs/mc_daily/cover.webp>
+top_img: <https://obj.imgb.space/api/raw/?path=/prjs/mc_daily/cover.webp>
+
 ---
 为了实现自己的 [帖子](https://o3o.ca/deck/@grassblock/111278941131706042) 的一个小的目标，在这里开篇帖子，记录一下我的Minecraft生存。
 
@@ -23,14 +25,17 @@ top_img: https://obj.imgb.space/api/raw/?path=/prjs/mc_daily/cover.webp
 
 ---
 版本信息：
+
 - Minecraft：Bedrock Edition 1.20.32 （特意用了携带版的界面来重温）
 - 材质包： Bare Bones | [Bare Bones Texture Pack](https://mcpedl.com/bare-bones-be/)
 - (假的)光影：ENBS Shader | [ENBS Shader v2.0! (Discontinued)](https://mcpedl.com/enbs-shader/) （刚知道已经停更了，暂时找不到别的太好的，就先这样了。）
 - 种子：我乱糊的（但是最后被认为是`880786423`）
 - 行为包：无
+
 ---
 
 # 开荒
+
 (2023/10/22 21:31:55)
 ~~*明天更新，顺便做个小封面*~~
 开局通过奖励箱拿到了一些石镐等等的道具，并在在附近找到了似乎含有煤矿的地形，我不知道意味着什么，但决定先挖空了再说。

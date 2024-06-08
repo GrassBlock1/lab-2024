@@ -2,13 +2,15 @@
 title: '在 GNOME 上实现可自定义主题的自动切换深色模式'
 date: 2023-07-22 21:16:18
 tags:
+
 - 'GNOME'
 - 'Dark Mode'
 categories: 'tech'
-cover: https://obj.imgb.space/api/raw/?path=/img/2023/07/autodarrrk/cover.webp
-top_img: https://obj.imgb.space/api/raw/?path=/img/2023/07/autodarrrk/cover.webp
+cover: <https://obj.imgb.space/api/raw/?path=/img/2023/07/autodarrrk/cover.webp>
+top_img: <https://obj.imgb.space/api/raw/?path=/img/2023/07/autodarrrk/cover.webp>
 description: '经过几天的摸索，我最终找到了让 GNOME 桌面环境下随时间自动切换全局可自定义的深色模式的方法，同时也让一部分应用服从系统设定。'
 slug: auto-darkmode-on-gnome
+
 ---
 
 {{< alert icon="circle-info" cardColor="#303952" iconColor="#fafafa" textColor="#f1faee" >}}
@@ -24,13 +26,16 @@ slug: auto-darkmode-on-gnome
 {{< /alert >}}
 
 # 更新日志
+
 - 2023.07.22 初稿
 - 2023.09.03 新增有关 Auto Dark Mode 插件的更新
 
 前一阵子，我把我的laptop重装成了 [Arch Linux](https://archlinux.org/)，并且使用了 [GNOME](https://gnome.org) 作为桌面环境，但是我发现它并没有像 macOS 那样自动切换深色模式，于是我就开始寻找方法来实现这个功能。
 
 经过多日的摸索，我终于找到了一种比较完全的切换深色模式的方法，而且还可以随时间自动切换，支持自定义主题，并[把大致思路分享在联邦宇宙上](https://nya.one/notes/9hah8g2lry)，下面展开说说。
+
 # 难点
+
 要先说自动切换深色模式，我们先来说 GNOME 上的预配的深色模式的一些问题。
 
 GNOME 上的确是有 “深色模式” 的，但是它只支持 GNOME 预配的 Adwaita-dark 主题，如果你是默认主题的忠实用户，这应该是一件好事——它基本上支持所有的平台构建的应用（对应的Qt主题可能需要另行安装，详见[Uniform look for Qt and GTK applications - ArchWiki#Adwaita](https://wiki.archlinux.org/title/Uniform_look_for_Qt_and_GTK_applications#Styles_for_both_Qt_and_GTK)）。但是这对于想要自定义主题的用户来讲，就不是那么友好了。
@@ -48,7 +53,9 @@ Qt 则更不必想，由于主题系统独立于GTK，所以自定义主题，�
 然后就是自动切换的问题了，很明显，就像大多数桌面环境一样，GNOME 并没有提供自动切换深色模式的功能，所以我们需要自己动手。
 
 # 解决办法
+
 通过以上我们不难看出，要解决这个看似简单的问题，我们需要先行解决以下几个问题：
+
 1. 如何为GTK4应用使用自定义主题？
 2. 如何让使用系统界面组件的flatpak应用读取到系统当前主题？
 3. 如何让Qt应用跟随系统主题？
@@ -56,7 +63,9 @@ Qt 则更不必想，由于主题系统独立于GTK，所以自定义主题，�
 幸运的是，这些问题都有解决办法。
 
 不过，先不要着急去解决这些特殊环境下的问题，我们先来解决最基本的问题：如何让系统自动切换深浅色模式，而且使用自定义主题？
+
 ## 先行准备
+
 在开始配置之前，我们需要提前准备一些东西：
 
 首先，我们需要安装一个叫做 [Night Theme Switcher](https://extensions.gnome.org/extension/2236/night-theme-switcher/) 的扩展，它可以让我们在指定的时间（或者是随日出日落）自动切换深浅色模式，而且可以自定义主题。
@@ -69,6 +78,7 @@ Qt 则更不必想，由于主题系统独立于GTK，所以自定义主题，�
 然后，我们需要找两套主题，一套是浅色为主的，一套是深色为主的（或者是同一套主题的深浅色版本），我这里使用的是 [vimix-gtk-theme](https://www.gnome-look.org/p/1013698)（用于浅色模式下）和 [Nordic](https://www.gnome-look.org/p/1267246)（用于深色模式下）作为示例。
 
 但是无论如何，主题需要满足以下条件：
+
 - 支持 GTK4
 - 最好有对应的 kvantum 主题
 - 符合自己的心意
@@ -78,11 +88,15 @@ Qt 则更不必想，由于主题系统独立于GTK，所以自定义主题，�
 如果可以，还可以找一些对应的图标主题和光标主题，这样就可以让你的桌面环境更加统一。有余力的话，还可以为你所使用的应用找一些对应的样式主题。
 
 当然，还需要安装 kvantum，可以参考 [Kvantum 项目的 README.md来进行安装](https://github.com/tsujan/Kvantum/tree/master/Kvantum)
+
 ## 配置
+
 {{< alert icon="circle-info" cardColor="#303952" iconColor="#fafafa" textColor="#f1faee" >}}
 比较喜欢默认的 Adwaita 样式？你可以直接跳转到 [对于Adwaita的设置](#对于adwaita的设置)。
 {{< /alert >}}
+
 ### Night Theme Switcher 配置
+
 一般来说，这个扩展在默认安装时就已经被启用，但是我们还是需要对其进行一些配置。
 
 打开扩展的设置，你会看到这样的界面：
@@ -103,6 +117,7 @@ Qt 则更不必想，由于主题系统独立于GTK，所以自定义主题，�
 `主题` 一栏可以设置切换要切换哪些元素的主题，以及要切换的主题，你可以根据需要进行调整。一般来说，只需要开启并调整 `GTK主题` 和 `图标主题` 两项即可。
 
 ### GTK4 的额外配置
+
 前面说到，`Night Theme Switcher` 可以在切换时执行命令，我们就可以利用这个功能来解决 GTK4 应用不跟随主题的问题。
 
 GTK 4 的主题实际上也是一些 CSS 文件，不过与 GTK 2/3 不同的是，GNOME 并没有提供设置自定义主题的方式，所以我们需要自己动手替换原有的样式。
@@ -119,6 +134,7 @@ GTK 4 的主题实际上也是一些 CSS 文件，不过与 GTK 2/3 不同的是
 cp $HOME/.themes/vimix-light-doder/gtk-4.0/assets/* $HOME/.config/gtk-4.0/assets/
 ln -s $HOME/.themes/vimix-light-doder/gtk-4.0/gtk.css $HOME/.config/gtk-4.0/gtk.css
 ```
+
 你可以亲自执行一次这个脚本，再打开一个 GTK4 应用（比如设置）看看是否能够正常切换主题。（已经打开的应用需要重启才能看到效果）
 
 {{< alert icon="circle-info" cardColor="#303952" iconColor="#fafafa" textColor="#f1faee" >}}
@@ -129,10 +145,12 @@ ln -s $HOME/.themes/vimix-light-doder/gtk-4.0/gtk.css $HOME/.config/gtk-4.0/gtk.
 这么做的原因是，GTK4 的主题文件中，所有的资源文件都是相对于 gtk.css 所在的路径的，而我们的脚本是将 gtk.css 放在了 `~/.config/gtk-4.0` 目录下，所以需要将所有的资源文件的路径改为相对于 `~/.config/gtk-4.0` 的路径。
 
 举个例子，我所用的 Nordic 主题将 assets 目录放在了 gtk.css 所在的上一级目录（也就是主题的根目录），那么脚本就需要改为这样：
+
 ```shell
 cp $HOME/.themes/Nordic-[variant]/assets/* $HOME/.config/gtk-4.0/assets/
 ln -s $HOME/.themes/Nordic-[variant]/gtk-4.0/gtk.css $HOME/.config/gtk-4.0/gtk.css
 ```
+
 并且 `gtk.css` 中所有的 `../assets` 都需要改为 `./assets`。
 {{< /alert >}}
 
@@ -141,14 +159,17 @@ ln -s $HOME/.themes/Nordic-[variant]/gtk-4.0/gtk.css $HOME/.config/gtk-4.0/gtk.c
 比如，我们将上面的脚本作为切换浅色主题的脚本写入到了 `~/.local/bin/light-theme-switcher.sh` 中，那么就在扩展中的命令菜单的`日出`一栏填写 `sh ~/.local/bin/light-theme-switcher.sh`即可。
 
 ## Qt 的额外配置
+
 Qt 的主题系统与 GTK 的主题系统是相互独立的，所以我们需要单独为 Qt 应用设置主题。
 
 在前面的步骤中，你应该安装了 kvantum，它可以让我们为 Qt 应用设置主题，而你可能不知道的是，它也拥有一系列的命令行参数，可以让我们在不打开设置界面的情况下，直接设置主题。
 
 不过先别急着尝试，因为我们还没有让 Qt 应用使用 kvantum 主题。先行添加以下的环境变量：
+
 ```env
 QT_STYLE_OVERRIDE=kvantum
 ```
+
 {{< alert icon="circle-info" cardColor="#303952" iconColor="#fafafa" textColor="#f1faee" >}}
 有关如何设置环境变量，请参考 [ArchWiki - Environment variables](https://wiki.archlinux.org/title/Environment_variables#Defining_variables)。
 {{< /alert >}}
@@ -162,32 +183,40 @@ QT_STYLE_OVERRIDE=kvantum
 这样虽然可以让 Qt 应用使用 kvantum 主题，但是这种办法还需要打开 Kvantum Manager 才能切换主题，并不便于自动切换，这时我们就需要使用它的命令行参数了。
 
 要使用它的命令行工具切换主题：
+
 ```shell
 kvantummanager --set [THEME]
 ```
+
 其中 [THEME] 为你想要使用的主题的名称，在 Kvantum Manager 中“变更主题”处可以找到（一般带有 `Kv` 标识）。
 
 比如，要使用内置的类似于Adwaita样式的主题 `KvGNOME`，我们可以这样写：
+
 ```shell
 kvantummanager --set KvGNOME
 ```
+
 更改应当会立即生效。
 
 剩下要做的，就是将这个命令写入到上面所创建的脚本中，然后在扩展中配置即可。（如果你在上个步骤中直接将命令复制过去的话，再以'&&'的方式附到扩展的相应命令中也可）
 
 ## 使用系统界面组件的 flatpak 应用的额外配置
+
 前面说到，flatpak 应用是在一个与主系统相对隔离的沙盒环境中运行的，所以我们需要让它们读取到系统当前的主题。
 
 这里的配置相对简单，只需要运行一次以下命令，将用户主题目录和gtk-4.0配置目录开放给flatpak应用访问即可。
+
 ```shell
 flatpak --user override --filesystem=~/.config/gtk-4.0
 flatpak --user override --filesystem=~/.themes
 ```
+
 {{< alert icon="fire" cardColor="#e63946" iconColor="#1d3557" textColor="#f1faee" >}}
 将系统中的目录开放给flatpak应用访问，可能会造成数据泄露，从而降低系统的安全性，所以请谨慎使用。
 {{< /alert >}}
 
 ## 对于Adwaita的设置
+
 考虑到很多人出于兼容性等等的原因可能会使用默认的 Adwaita 主题，所以这里也给出一些对于 Adwaita 主题的设置。
 
 {{< alert icon="circle-info" cardColor="#303952" iconColor="#fafafa" textColor="#f1faee" >}}
@@ -202,7 +231,7 @@ Adwaita 作为默认主题，毫无疑问的是它的兼容性是最好的，它
 
 或者，如果你有安装 kvantum 的话，可以使用 Kvantum Manager 来设置 `KvGNOME` 主题，它提供了类似于旧的 Adwaita 的样式。
 
-### 自动切换：
+### 自动切换
 
 在最开始的步骤中，我们已经安装了 `Night Theme Switcher` 这个扩展，我们这次仍然使用它完成自动切换。
 
@@ -221,11 +250,13 @@ Adwaita 作为默认主题，毫无疑问的是它的兼容性是最好的，它
 {{< /alert >}}
 
 ## 善后工作
+
 如果你按照上面的步骤进行了配置，那么你应该已经可以在深浅色模式之间自动切换了，但是，如果你想要在深浅色模式之间切换时，让所有的应用都使用自定义主题，那么你还需要做一些额外的工作。
 
 对于大部分应用来说，进行以上的配置就可以了，但是总有一些特立独行的应用，它们使用着自己的主题系统，甚至在设置主题后变得混乱不堪（说的就是你OBS），对此需要做些额外的配置。
 
 ### KDE 系应用
+
 这个范围比较广，因为 KDE 开发的大部分应用都使用Qt进行构建，但是它们并不会跟随系统主题，所以我们需要对它们进行额外的配置。
 
 考虑到兼容性问题，我想大多数人并不会在 GNOME 上去安装 KDE 的应用，但是实际情况中，我们可能不得不需要使用到一些 KDE 应用（比如 Krita 和 Kate 等等），这就使事情变得比较复杂。
@@ -239,6 +270,7 @@ Adwaita 作为默认主题，毫无疑问的是它的兼容性是最好的，它
 不过，经过我的测试，即使安装了上面所述的 `qgnomeplatform` 的一系列包，Krita 等应用并不会跟随系统主题，所以还是需要手动设置主题，如果有需要还是建议以暗色主题为主。
 
 ### Firefox
+
 作为一个浏览器，Firefox 遵循系统的深浅色设置————如果系统是深色模式，Firefox 就会使用深色模式，反之亦然。 在使用默认主题时浏览器自身的界面元素（标题栏等等）也会随之变化，界面较为协调。
 
 但是假如你是自定义主题爱好者，或者只是比较喜欢某一套主题（比如Mozilla之前推出的一套[“凡人之声”的主题](https://blog.mozilla.org/en/products/firefox/firefox-news/independent-voices/)，很显然这并不是一套默认主题），你可能会因为在系统全局深色模式下看到一个刺眼的浅色的标题栏而感到不适。
@@ -250,12 +282,15 @@ Adwaita 作为默认主题，毫无疑问的是它的兼容性是最好的，它
 当然，如果想要获得更为完美的体验，还可以搭配 [Darkreader] 这个扩展，它可以让网页的内容也跟随系统深色主题设置，让你在夜间阅读也能保护你的眼睛。（或者，也可以使用[midnight lizard](https://addons.mozilla.org/zh-CN/firefox/addon/midnight-lizard-quantum)，深入自定义网页的配色）
 
 ### OBS Studio
+
 OBS 默认使用的 Yami 主题在自定义Qt主题下的显示效果并不好，甚至在浅色主题下会出现一些设置项看不清的情况，但可以通过更改为系统主题来解决，这样同时也会解决跟随系统主题的问题。
 
 ![谢谢，已经瞎了](https://obj.imgb.space/api/raw/?path=/img/2023/07/autodarrrk/2023-07-29-14-36-45.webp)
 
 点击菜单栏上的`文件`，打开 `设置`，在 `通用` 一栏中，将 `主题` 的选项改为 `System` 即可。
+
 ### Telegram
+
 {{< alert icon="circle-info" cardColor="#303952" iconColor="#fafafa" textColor="#f1faee" >}}
 Telegram 各个设置在使用不同语言包下的显示差异较大，这里以英文为准。
 {{< /alert >}}
@@ -267,6 +302,7 @@ Telegram 桌面端默认不跟随系统深色模式设置，但是在设置中�
 如果要自定义对应颜色模式下的主题，可以在对应模式下在 `Chat Settings` 中的 `Themes` 一栏中进行设置。
 
 ### IntelliJ IDEs
+
 虽然说写代码配合深色模式是最好的，但是吧考虑到总会有像我这样的~~异端~~人，喜欢在白天使用浅色模式，晚上使用深色模式，所以这里也给出一些设置办法。
 
 众所周知，JetBrains 家的 IDE 在 Windows 和 macOS 下都是可以跟随系统颜色模式的，而且可以自订对应模式下所使用的主题。
@@ -290,6 +326,7 @@ Telegram 桌面端默认不跟随系统深色模式设置，但是在设置中�
 {{< /alert >}}
 
 ### Fcitx5
+
 GNOME 原生支持 `ibus`，但我还没有测试它的情况，只好拿出目前用的比较多的小企鹅输入法来说。
 
 Fcitx5 的输入法主题很好配置，只需要打开 `Fcitx5 配置` 这个应用，点击 `附加组件`，点击 `经典用户界面` 旁的设置图标就可以配置主题。
@@ -307,17 +344,20 @@ Fcitx5 将所有的用户配置写进了一个配置文件里，想找到它们�
 翻找一下还能发现，`经典用户界面` 的设置存放在 `classicui.conf` 这个文件，那么思路就很明晰了：更改文件中主题相关的键值，然后在 `Night Theme Switcher` 中配置执行脚本即可。
 
 直接使用文本编辑器打开 `classicui.conf`，我们发现我们设置的主题存放在 `Theme` 这个键值：
+
 ```conf
 ...
 # 主题
 Theme=catppuccin-mocha
 ...
 ```
+
 那么我们只需要在切换深浅色模式时，使用脚本将这个键值改为相应的主题即可。
 
 大致思路是 `grep` 查找 `Theme` 这一行，然后使用 `sed` 将其替换为我们想要的主题键值，最后将结果写入到原文件中。
 
 我请 [Bard](https://bard.google.com) 帮我写了一个示例脚本，你可以根据需要进行修改：
+
 ```shell
 #!/bin/bash
 
@@ -336,6 +376,7 @@ repl=`sed -i -e "s/$old_value/$new_value/" $config_file`
 # Save the changes to the config file
 echo "The value of setting_name has been changed to $new_value."
 ```
+
 顺便说一句，如果要使用这个脚本，我们还需要一个主题名作为参数，而主题名就是在 `~/.local/share/fcitx5/themes` 存放的文件夹名字。
 
 比如，我想要使用 `catppuccino-mocha` 这个深色调的主题，那么我就需要在扩展中的命令菜单的`日落`一栏填写 `sh ~/.local/bin/fcitx5-theme-switcher.sh catppuccino-mocha`。
@@ -346,16 +387,21 @@ echo "The value of setting_name has been changed to $new_value."
 {{< /alert >}}
 
 如果怕麻烦，我们可以直接使用 [Input Method Panel](https://extensions.gnome.org/extension/261/kimpanel/) 这个插件，它会让 KDE 的相关api兼容 GNOME，从而使其跟随 GNOME shell 的主题，不过缺点也在这儿，无法自定义主题（Fcitx5内相应选项也会失效，只能通过更换GNOME的主题来进行更换）。
+
 ### 其它较为通用的解决方案
+
 {{< alert >}}
 以下内容部分由AI所生成，并不保证可用性。
 {{< /alert >}}
 如果应用并不在以上列表中，可以尝试以下的解决方案：
+
 - 在应用的设置中查找是否有设置界面主题跟随系统的选项，如果有，就直接设置即可。（大概会在 `外观` 或者 `界面` 一类的设置中）
 - 使用第三方的工具修改样式
 - 如果有开发者的联系方式，直接和开发者联系，请求添加对应的功能
 - 如果实在不行，就寻找功能相近的替代品，或者忍一忍吧
+
 # 总结
+
 以上便是我总结出来的一套比较全面的随日出日落切换深浅色主题的解决方案。
 
 但是上面说到的办法并不是唯一的，也不一定是最友好的，就比如我在写这篇总结性经验的时候找到了一个 [Yin-Yang](https://github.com/oskarsh/Yin-Yang) 的项目，而且做的比较完备，希望大家也可以试试。

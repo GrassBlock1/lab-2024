@@ -5,14 +5,16 @@ updated:
 tags: ['新年']
 categories: ['Daily']
 keywords: 
+
 - 2022
 - 农历新年
 - 祝福
 - 日常
 description: 在此新年之际，想写的东西。
-top_img: https://unsplash.com/photos/Rq7Zqt92efE/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjQzNTQzMjA5&force=true&w=1920
-cover: https://unsplash.com/photos/Rq7Zqt92efE/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjQzNTQzMjA5&force=true&w=1920
+top_img: <https://unsplash.com/photos/Rq7Zqt92efE/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjQzNTQzMjA5&force=true&w=1920>
+cover: <https://unsplash.com/photos/Rq7Zqt92efE/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjQzNTQzMjA5&force=true&w=1920>
 slug: happy-lunar-new-year
+
 ---
 
 > 给您送上新春祝福，祝您虎年大吉，财源广进，阖家团圆！
@@ -71,7 +73,7 @@ slug: happy-lunar-new-year
 
 大部分时间都会在水群，~~毕竟实际上我也帮不了太大忙~~
 
->  真就“在家和 Meta-verse 过”呗
+> 真就“在家和 Meta-verse 过”呗
 
 （还好提前下了一部电影，~~可以在作业写腻的时候看~~
 
@@ -89,15 +91,11 @@ slug: happy-lunar-new-year
 <iframe src="//player.bilibili.com/player.html?aid=338457916&bvid=BV1XR4y1K7aH&cid=492761546&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 <iframe src="//player.bilibili.com/player.html?aid=893096852&bvid=BV1VP4y1J79t&cid=481784541&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
-
-
 （仅供娱乐）
 
 当然和一群朋友（无论是现实的还是网络的）一起过姿势更佳（
 
 提前对自身做一些准备。
-
-
 
 晚上推荐观看晚会：
 
@@ -105,8 +103,6 @@ slug: happy-lunar-new-year
 - bilibili拜年纪（同上，我没收广告费（
 
 实在没意思的话看些“春晚密卷”（？）
-
-
 
 明日博主的活动
 
@@ -120,9 +116,6 @@ slug: happy-lunar-new-year
 
 好像没力（
 
-
-
 ~~幻报啥的我大年初二再说，抽奖的话再看（？）~~
 
 总之，过年好！
-

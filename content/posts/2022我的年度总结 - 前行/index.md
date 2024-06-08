@@ -1,4 +1,5 @@
 ---
+
 title: '2022我的年度总结 - 前行'
 date: 2022-12-27 10:16:22
 updated: 2022-12-31 21:00:09
@@ -7,14 +8,15 @@ categories: ['Daily']
 keywords: ['2022','年终总结','年度报告','日常']
 description: “长路浩浩荡荡，万事尽可期待。”
 slug: 2022-move-forward
-top_img: https://obj.imgb.space/api/raw/?path=/img/2022/conclusion/cover.webp
-cover: https://obj.imgb.space/api/raw/?path=/img/2022/conclusion/cover.webp
+top_img: <https://obj.imgb.space/api/raw/?path=/img/2022/conclusion/cover.webp>
+cover: <https://obj.imgb.space/api/raw/?path=/img/2022/conclusion/cover.webp>
 aplayer: true
 ---
 
 <meting-js server="netease" type="playlist" id="7979300946"> </meting-js>
 
 ## 闲话
+
 一年又要过去了...
 今年的年底和往年都不一样，看到的不是“战疫有我”，而是“集体感染”，各路网友交流着感染经验，好不热闹。
 
@@ -25,6 +27,7 @@ aplayer: true
 其实这一年过得比较浑水摸鱼的感觉，大多时间都是在混日子，感觉没什么意义（除了学习新东西之外），所以总结也不会很多（逃
 
 ## Blog & Lab
+
 这一年活动比较少，有一部分原因是被即时通讯捆住了（我是说Telegram），还有一部分原因是闲的没事就看b站（冷知识：直到我现在写这篇总结时我还在手机放一边看b站，~~效率低下~~（内心os：键盘进了什么东西似的，有些键特别难按），还有一部分原因是几乎没什么时间（大多数时间都在封校，呜呜）
 
 今年只有实验室（就是你现在浏览的这个网站）更新（水）了两篇文章。
@@ -40,6 +43,7 @@ aplayer: true
 _你们这是什么rclone啊传输速度那么慢（？）_
 
 ## Devices
+
 今年“很意外”地让家长买了台laptop（其实本想着23年高考结束再买，因为原先被送的Thinkpad还可以用一阵子，但是和家长这么一说，暑假快结束的时候便多了台设备）
 目前那台ThinkPad正在吃灰，过两天想办法让它发光发热（
 
@@ -54,6 +58,7 @@ _你们这是什么rclone啊传输速度那么慢（？）_
 _原文可见于[咱的频道](https://t.me/realGrassblock/5371)_
 
 ## Gaming
+
 这一年里仍旧没有认真的游玩过一款游戏，偶尔会到 Minecraft 看看之前自己的空岛建筑，然后乱玩
 
 退坑了 Cytoid，因为没什么时间去搓谱子，年初的时候尝试了下经常出没在推荐的Phigros（就连这个词我都是照抄官方Bilibili账号的名字才能正确拼写），但大概8月份的时候也因为同样的原因退坑。
@@ -66,8 +71,8 @@ laptop上只整了个minecraft，存档虽说能和基岩版互通，但我终�
 
 一直在想着重制一下咱的 Minecraft 皮肤，但始终没着手实施，或许这两天会弄吧。
 
-
 ## Music
+
 恭喜我成功住进了网易云（bushi
 
 现今的我的网易云已经被我调整成一个只能听英文歌的应用（？，当然偶尔会听些日文歌和几年前以及00年代的中文歌（现在的歌曲我表示还是算了，我还是喜欢旧曲子（（
@@ -79,13 +84,14 @@ _提示:_
 _如果您无法正常存取上面的嘟文，可以点击[此处](https://social.ongov.ca/@grassblock/109595505983718631) [镜像（需要自备网络环境）](https://o3o.ca/@grassblock/109595505983718631)_
 
 ## Fediverse
+
 {% timeline 2022,blue %}
 <!-- timeline 10-14 -->
 作为逃避杜叔叔封号铁拳的避难所，又出于一些个人原因，我重新启用了2021年~~尾随一友~~注册的嘟站(o3o.ca)账户（之前不怎么用），作为 Telegram 频道的平替（原本打算存档，后来取消这个计划了），尝试发一些日常向内容。
-_(@grassblock@o3o.ca 欢迎关注)_
+_(@<grassblock@o3o.ca> 欢迎关注)_
 <!-- endtimeline -->
 <!-- timeline 11-7 -->
-尝试用rsshub和[feediverse](https://github.com/edsu/feediverse)在本地跑了个Telegram频道转发到Mastodon的bot，借此获得了自己在Fediverse的第一个机器人账号 @blockcao@masto.ai 。
+尝试用rsshub和[feediverse](https://github.com/edsu/feediverse)在本地跑了个Telegram频道转发到Mastodon的bot，借此获得了自己在Fediverse的第一个机器人账号 @<blockcao@masto.ai> 。
 <!-- endtimeline -->
 <!-- timeline 11-17 -->
 看到嘟站的管理员salt的[一篇帖子](https://o3o.ca/@salt/109352350086909522)，了解到WriteFreely这个平台，就~~脑子一热~~注册了一个账户，但是一直在考虑个人简介的事情就没有写什么东西，过两天把文章搬过去一些。
@@ -94,8 +100,8 @@ _(@grassblock@o3o.ca 欢迎关注)_
 因为学校里出现疑似而回家。Fediverse 账户进入高产期，基本上每天看看嘟站。bot在停运近一个月之后重新运作了起来。
 <!-- endtimeline -->
 <!-- timeline 12-17 -->
--  Yuuta 开了个 Mastodon实例，~~凑了下热闹~~，有了第二个账户（现在不怎么用了）
--  从一篇博文里听说了Misskey 实例 “喵窝”，本着探索的精神打算注册，便发嘟文询问已经注册的人邀请码，没有回应
+- Yuuta 开了个 Mastodon实例，~~凑了下热闹~~，有了第二个账户（现在不怎么用了）
+- 从一篇博文里听说了Misskey 实例 “喵窝”，本着探索的精神打算注册，便发嘟文询问已经注册的人邀请码，没有回应
 - 关注了一些从Twitter逃亡到Fediverse的眼熟的人
 <!-- endtimeline -->
 <!-- timeline 12-19 -->
@@ -103,7 +109,7 @@ _(@grassblock@o3o.ca 欢迎关注)_
 <!-- endtimeline -->
 <!-- timeline 12-20 -->
 在一个朋友的帮助下（指用他的邀请码）注册了“喵窝”账号，在进行一些简单的摸索和设置后，决定这个账号作为发布技术性（？）内容的分身，也通过此交到一些新朋友。
-_(@grassblock@nya.one)_
+_(@<grassblock@nya.one>)_
 <!-- endtimeline -->
 <!-- timeline 12-28 -->
 经过几天寻觅以及折腾转发程序之后，在一个Misskey实例上上线了一个新的bot，将Telegram频道转发从之前的bot分离出来（因为tg到mastodon当时没找到什么太好的实现），并转移到这里，原bot暂时闲置，另有安排。
@@ -111,31 +117,32 @@ _(@grassblock@nya.one)_
 {% endtimeline %}
 之后便是日常性使用了，没什么好说的。
 
-不过回想起来，来 Fediverse 除了有点探索的意味，更多的是对自由，不受制于*一些*“大公司”的一种渴求（尤其是看到Musk收购Twitter后所做的一切有关变动之后），同时这也让我有了更多的选择，看到了更大的世界。
+不过回想起来，来 Fediverse 除了有点探索的意味，更多的是对自由，不受制于_一些_“大公司”的一种渴求（尤其是看到Musk收购Twitter后所做的一切有关变动之后），同时这也让我有了更多的选择，看到了更大的世界。
 正如这篇帖子：
 <iframe src="https://rainyme.ca/notes/9aegeottyd" style="width: 100%; border: 0; height: 512px" width="400" allowfullscreen="allowfullscreen"></iframe>
 
-*（感谢 @hao-tian提出）如果您无法正常存取，请点击[这里](https://rainyme.ca/notes/9aegeottyd)跳转到原帖。*
+_（感谢 @hao-tian提出）如果您无法正常存取，请点击[这里](https://rainyme.ca/notes/9aegeottyd)跳转到原帖。_
 
-*对于遵守x-frame/CSP的现代浏览器（如Firefox、edge），如果无法显示，请点击相应的“在新标签页打开”/“在新窗口中打开”，或者跳转到原帖*
+_对于遵守x-frame/CSP的现代浏览器（如Firefox、edge），如果无法显示，请点击相应的“在新标签页打开”/“在新窗口中打开”，或者跳转到原帖_
 
 ## Tech
+
 依旧什么都没认真学（
 
-一直想补完某人说的前端三剑客（也即 HTML、CSS、JS，之前只掌握了一些浅显的知识），但是苦于没有利用好时间一直没能实现，之后的React计划也就随之推迟了。 
+一直想补完某人说的前端三剑客（也即 HTML、CSS、JS，之前只掌握了一些浅显的知识），但是苦于没有利用好时间一直没能实现，之后的React计划也就随之推迟了。
 
 新的一年除了补完这些内容外，还会尝试众多的前端框架（？），最后选项一个趁手的掌握下去，至于时间嘛，像海绵里的水，只要愿挤，总是有的。
 
 \后端一点没动...打算先~~当脚本小子~~学习诸如Python等等脚本语言，然后整点大活，学点C++和Java（不过可能是明年的事情了）
 
 ## Circles
+
 常年混的b站比较能反映我所在的圈子和我看的内容，所以我们先从它的年度总结开始说：
 
 <iframe src="https://social.ongov.ca/@grassblock/109612705316431782/embed" class="mastodon-embed" style="width: 100%; border: 0; height: 512px" width="400" allowfullscreen="allowfullscreen"></iframe>
 ~~确实看得有点多了~~
 
 像游戏、科技什么的都不意外，偶尔看点有意思的鬼畜（但是这并不包括某些极其阴间的鬼畜），可我想了半天也想不通，为什么我吃饭的时候看的下饭视频被归入了生活区...
-
 
 但是这些由大数据生成的东西也不完全准确。
 
@@ -155,6 +162,7 @@ _~~顺便眼熟的人可以找咱要内群链接~~_
 DP7经过n次周目后逐渐稳定下来，但是谁又说不准什么时候又会跑路（
 
 不过这几次改换对我的启示还蛮大的，或许以后经营社区会用得上：
+
 - 成员活跃性和质量对于社群来说是极其重要的，因为人是主要核心
 - 内部管理制度完善，但不至于让成员产生束缚
 - ...
@@ -164,14 +172,14 @@ DP7经过n次周目后逐渐稳定下来，但是谁又说不准什么时候又�
 先看看年度报告吧：
 <iframe src="https://nya.one/notes/99ceeyci4w" style="width: 100%; border: 0; height: 512px" width="400" allowfullscreen="allowfullscreen"></iframe>
 
-*如果无法正常显示上面的内容请尝试更换网络环境，或者访问[原帖](https://nya.one/notes/99ceeyci4w)。（感谢 @hao_tian指出）*
+_如果无法正常显示上面的内容请尝试更换网络环境，或者访问[原帖](https://nya.one/notes/99ceeyci4w)。（感谢 @hao_tian指出）_
 
-*对于遵守x-frame/CSP的现代浏览器（如Firefox、Edge），如果无法显示，请点击相应的“在新标签页打开”/“在新窗口中打开”，或者访问原帖。*
+_对于遵守x-frame/CSP的现代浏览器（如Firefox、Edge），如果无法显示，请点击相应的“在新标签页打开”/“在新窗口中打开”，或者访问原帖。_
 
 恕我直言，现在科技区，尤其是操作系统区（包括但不限于Windows各个版本、Linux发行版），现在追求就是快，看谁能首发一个操作系统的评测，以及出相关的教程（虽然细分来看这是软件区的范畴），但是由于咱极其喜欢当鸽子咕咕咕，于是首发什么的便不可能，现在就处于一种有稿不敢发怕撞车的一种情况导致废稿众多，等我有时间看看能不能改出两个（
 
-
 ## 结语
+
 时光流逝，转眼又是新的开始。
 
 旧的一年，有苦，有乐，有酸，有甜，但它已成过去。
@@ -183,6 +191,7 @@ _~~没活了，写点套话，因为也没几个人看，这都快开工/开学�
 ---
 
 一年一度的 Special thx（无恰饭）：
+
 - Obisidian ：以markdown为基底的知识库管理，具有丰富的功能和强大的可扩展性
 - M$ 365 套件 设计器：为本文的封面提供设计灵感
 - 缓更时前来交流的群友们
@@ -199,6 +208,5 @@ _~~没活了，写点套话，因为也没几个人看，这都快开工/开学�
 [2022 年的总结，但是没想好标题，还加更了内容（ · 湛蓝的调色板](https://nekoq.eu.org/blog/2022)
 
 ...
-
 
 <script src="https://social.ongov.ca/embed.js" async="async"></script>

@@ -1,14 +1,16 @@
 ---
+
 date: 2023-11-05 17:45:54
 title: 【全网首吐？】您摇了我吧，hackergame！—— 比赛过程踩的大坑以及吐槽
 tags: ['hackergame']
 catgories: ['tech']
 description: "【本文章使用Notion导出】参黑客原神，品折腾人生（？）"
 slug: hackergame-2023-hole
-top_img: https://www.notion.so/images/page-cover/nasa_robert_stewart_spacewalk_2.jpg
+top_img: <https://www.notion.so/images/page-cover/nasa_robert_stewart_spacewalk_2.jpg>
 ---
+
 {{< alert icon="bell" cardColor="#9db4c0" iconColor="#303852" textColor="#324054" >}}
-本文章随附纯 HTML 版本（但是效果比较差）：[传送门](/archived/hg-2023-wp/hole.html) 
+本文章随附纯 HTML 版本（但是效果比较差）：[传送门](/archived/hg-2023-wp/hole.html)
 {{< /alert >}}
 激动人心的~~大佬竞赛~~——hackergame 2023已然落下帷幕。我相信大家已经看过亿些题解、writeup 这一类的东西了。但是作为一个可以算是不会任何ctf知识、第一次参加这类比赛的我来说，我还是有些该说的和可能不该说的想说的话想要写出来告诉大家。
 
@@ -29,16 +31,15 @@ hackergame 结束过后，于我而言，先来的不是官方的题解，而是
 之前说要写一篇题解，但是发现自己面对题目往往是百思不得其解，遂放弃了这个想法。当初写了这么一段文字：
 
 > 最终还是决定不来做比赛解题了，等我至少比较精通信息查找、web开发和Python再说吧...客观来讲，现在的情况是：
-> 
+>
 > 搜索：只会问什么上面的去什么上面找，图片只会EXIF和搜图，剩下的扔给AI听天由命
 > web：只会写纯静态，但是HTML连个head都写不全，CSS只会结合英文释义自动补全，JavaScript只学到函数，复杂一点直接看不懂（今天早上只看了一点异步，然后没看明白）
 > Python：只会基本算术、定义变量、input、print...这还是高中信息课上教的一切...
 > 以上几乎与我一年前的水平持平。
-> 
+>
 > 最近学的C，只会print、获取用户输入、定义变量、编译。
 > 新兴的AIGC，也不是完全会用，施法无从下手...
 > 更何况我连趁手的工具都找不到...就好像比试光剑技术，但是我连光剑都没带...
- 
 
 ![Screenshot 2023-11-04 at 14-36-29 Hackergame 2023.png](/img/hackergame-2023/Screenshot_2023-11-04_at_14-36-29_Hackergame_2023.png)
 
@@ -48,16 +49,13 @@ hackergame 结束过后，于我而言，先来的不是官方的题解，而是
 
 下面是跟一个朋友复盘题的解法时，发现自己做题时踩的坑：
 
-
 {{< alert icon="circle-info" cardColor="#303952" iconColor="#fafafa" textColor="#f1faee" >}}
 🙇‍♂️ 特别感谢：wuhang2003 于比赛结束后和我~~交流病情~~讨论题目，以及他的writeup：[Hackergame 2023 启动日志 - 捞人的小站](https://zwh.moe/posts/ctf/hackergame-2023)，欢迎去支持一下（
-
 
 💡 若无特殊说明，以下的“友”均指 wuhang2003。
 {{< /alert >}}
 
-
-### **猫咪小测 - 搜索的艺术**
+### 猫咪小测 - 搜索的艺术
 
 ![Untitled](/img/hackergame-2023/Untitled.png)
 
@@ -81,7 +79,7 @@ To be honest，在做这道题之前，我已经为了寻找上一道题的结�
 
 该死的searxng…
 
-### **奶奶的睡前flag故事 - 截个图都能有漏洞？**
+### 奶奶的睡前flag故事 - 截个图都能有漏洞？
 
 我看着加粗的谷歌亲儿子、系统没更新和1080p的截图摇了摇头，我又不是那个孙子，我怎么知道flag（
 
@@ -99,13 +97,13 @@ To be honest，在做这道题之前，我已经为了寻找上一道题的结�
 追记：在写这篇文章的时候截图给这位朋友看的时候，他帮我找到了视频…
 
 > 【【差评】微软和谷歌搞了个影响17亿台设备的漏洞，天天截图水群的我现在很慌。。。-哔哩哔哩】 [https://www.bilibili.com/video/BV1nm4y187cY](https://www.bilibili.com/video/BV1nm4y187cY)
-> 
+>
 
 ![https://images.unsplash.com/photo-1619148189616-013b06952c04?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb](https://images.unsplash.com/photo-1619148189616-013b06952c04?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb)
 
 因为我也不知道要放点什么，放个睡前故事中出现的狐狐吧
 
-### **Git？Git！ - 你们这个IDEA怎么回事啊，连个撤回的commit都看不了.wav**
+### Git？Git！ - 你们这个IDEA怎么回事啊，连个撤回的commit都看不了.wav
 
 拿到题目，我熟练地打开了IDEA（什么肌肉记忆），然后被每一个内容没有出现红色的commit吓晕：
 
@@ -166,6 +164,7 @@ To be honest，在做这道题之前，我已经为了寻找上一道题的结�
 当初看它比较的原理居然是比较base64，但是不知道怎么比的，有意思（
 
 ### 旅行照片3.0 - 你最好是东京大学的学长
+
 ![2023-11-04 17-54-06屏幕截图.png](/img/hackergame-2023/2023-11-04_17-54-06%25E5%25B1%258F%25E5%25B9%2595%25E6%2588%25AA%25E5%259B%25BE.png)
 
 做“旅行照片3.0”时历史记录（一部分
@@ -188,7 +187,7 @@ To be honest，在做这道题之前，我已经为了寻找上一道题的结�
 
 还有更离谱的：博物馆门票的价格居然是0元，零元购（？
 
-### 赛博井字棋 - 别走！待我与你大战300回合！
+### 赛博井字棋 - 别走！待我与你大战300回合
 
 好，我承认这是最折磨我的题之一，我甚至为此去看了JavaScript的异步是怎么写的，甚至都了解了它把既当前端又当api，把下的位置发送给了自己，模式是固定的，甚至到了修改了发送body，但是没看到页面发生变化就放弃了…
 
@@ -217,16 +216,16 @@ src: [*Minecraft - Disc 11 and 13 - Spectrogram*](https://www.youtube.com/watch?
 **我：** 哇，这运气不错啊!
 
 > *慢扫描电视（英语：Slow-scan television），简称SSTV，是业余无线电爱好者的一种主要图片传输方法，慢扫描电视通过无线电传输和接收单色或彩色静态图片。*
-> 
+>
 
-然后找个能从音频识别的工具就完成了（比如 https://github.com/colaclanth/sstv ）。
+然后找个能从音频识别的工具就完成了（比如 <https://github.com/colaclanth/sstv> ）。
 
 ~~果然看着答案说什么都轻松~~
 
 今天复盘的时候发现题目介绍的那句名言：
 
 > *生而为人，应该能够换尿布、策划入侵、杀猪、开船、造房子、写十四行诗、算账、建墙、正骨、抚慰临终之人、接受命令、下达命令、合作、独行、解决方程式、分析新问题、清理马粪、编程、烹饪美食、高效战斗、英勇牺牲。专业分工是给昆虫准备的。*—罗伯特·海莱恩（Robert Heinlein）
-> 
+>
 
 仔细一想，确实是这么回事——现在强调专业性，但是其实更应该成为一个能力丰富的人。
 

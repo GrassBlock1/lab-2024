@@ -3,6 +3,7 @@ title: 拿到一个轮子传教用的U盘
 date: 2022-02-25 15:27:37
 updated: 2022-02-27 21:15:00
 tags:
+
 - xx功
 - Daily
 keywords:
@@ -10,10 +11,11 @@ keywords:
 - 日常
 - 邪教
 - Udisk
-top_img: "https://unsplash.com/photos/7AcMUSYRZpU/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8MXx8d2F0ZXIlMjBsaWx5fGVufDB8fHx8MTY0NTc5MTEwOQ&force=true&w=1920"
+top_img: "<https://unsplash.com/photos/7AcMUSYRZpU/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8MXx8d2F0ZXIlMjBsaWx5fGVufDB8fHx8MTY0NTc5MTEwOQ&force=true&w=1920>"
 categories: Daily
 description: 捡漏了属于是（
 slug: a-udisk-from-xxx
+
 ---
 
 {{< alert >}}
