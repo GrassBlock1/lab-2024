@@ -1,6 +1,6 @@
 const { matterMarkdownAdapter } = require('@elog/cli')
 const path = require("node:path");
-const {rename} = require("node:fs");
+const {rename, unlink} = require("node:fs");
 
 
 /**
@@ -25,13 +25,15 @@ const format = async (doc, imageClient) => {
         })
     }
     doc.body = matterMarkdownAdapter(doc);
-    return doc;
+
     const oldname = process.cwd() + "/content/posts/" + doc.properties.slug + "/" + doc.properties.title + ".md"
     const newname = process.cwd() + "/content/posts/" + doc.properties.slug + "/index.md"
     rename(oldname,newname,function (err) {
         if (err) throw err
         console.log('尝试替换文章名称以正常显示封面...成功')
     })
+
+    return doc;
 };
 
 module.exports = {

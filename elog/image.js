@@ -9,7 +9,7 @@ const path = require("path");
 const getImagePath = (doc, outputDir) => {
     // 当前文档的存在路径，例如：docs/yuque
     const docPath = doc.docPath
-    // 当前文档标题
+    // 当前文档永久链接
     const slug = doc.properties.slug
     // 当前文档其他属性
     // 具体可查看elog.cache.json文件docs中的结构
