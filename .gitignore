@@ -9,7 +9,8 @@
 
 # Elog
 .elog.env
-elog.cache.json
+#elog.cache.json
+#elog使用增量更新，也可使用 --disable-cache 忽略缓存更新，使用缓存更新可以加快速度
 
 # OS generated files
 .DS_Store

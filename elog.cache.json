@@ -1,0 +1,84 @@
+{
+  "docs": [
+    {
+      "id": "616c6d9e-15fe-4359-921f-fe3514d3ad38",
+      "doc_id": "616c6d9e-15fe-4359-921f-fe3514d3ad38",
+      "updated": 1717779060000,
+      "properties": {
+        "categories": "tech",
+        "tags": [
+          "垃圾技术",
+          "blog",
+          "今天开服务不用钱"
+        ],
+        "summary": "托管个人空间的新选择。如果你已经有在使用 zeabur 并跑了一些服务在上面，无需另外购买，这种办法可能会更为超值。",
+        "description": "喜大普奔，现在终于能在 Zeabur 上运行 Mix Space 了，无服务器选择喜+1。",
+        "slug": "mxspace-on-zeabur",
+        "title": "使用 Mix Space × Zeabur 搭建自己的个人空间（博客）",
+        "cover": "https://www.notion.so/images/page-cover/nasa_buzz_aldrin_on_the_moon.jpg",
+        "date": "2024-05-15 22:45:00",
+        "updated": "2024-06-08 00:51:00"
+      },
+      "catalog": [
+        {
+          "title": "mxspace-on-zeabur",
+          "doc_id": "616c6d9e-15fe-4359-921f-fe3514d3ad38"
+        }
+      ],
+      "realName": "使用 Mix Space × Zeabur 搭建自己的个人空间（博客）",
+      "relativePath": "mxspace-on-zeabur/使用 Mix Space × Zeabur 搭建自己的个人空间（博客）.md",
+      "docPath": "content/posts/mxspace-on-zeabur"
+    }
+  ],
+  "catalog": [
+    {
+      "object": "page",
+      "id": "616c6d9e-15fe-4359-921f-fe3514d3ad38",
+      "created_time": "2024-05-15T14:45:00.000Z",
+      "last_edited_time": "2024-06-07T16:51:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "d9622249-ee94-4bbd-ad75-f3633e15a77a"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "d9622249-ee94-4bbd-ad75-f3633e15a77a"
+      },
+      "cover": {
+        "type": "external",
+        "external": {
+          "url": "https://www.notion.so/images/page-cover/nasa_buzz_aldrin_on_the_moon.jpg"
+        }
+      },
+      "icon": {
+        "type": "external",
+        "external": {
+          "url": "https://mx-space.js.org/logo.png"
+        }
+      },
+      "parent": {
+        "type": "database_id",
+        "database_id": "c577ebd8-c44a-44cb-917d-4acb88b92f67"
+      },
+      "archived": false,
+      "in_trash": false,
+      "properties": {
+        "categories": "tech",
+        "tags": [
+          "垃圾技术",
+          "blog",
+          "今天开服务不用钱"
+        ],
+        "summary": "托管个人空间的新选择。如果你已经有在使用 zeabur 并跑了一些服务在上面，无需另外购买，这种办法可能会更为超值。",
+        "description": "喜大普奔，现在终于能在 Zeabur 上运行 Mix Space 了，无服务器选择喜+1。",
+        "slug": "mxspace-on-zeabur",
+        "title": "使用 Mix Space × Zeabur 搭建自己的个人空间（博客）",
+        "cover": "https://www.notion.so/images/page-cover/nasa_buzz_aldrin_on_the_moon.jpg",
+        "date": "2024-05-15 22:45:00",
+        "updated": "2024-06-08 00:51:00"
+      },
+      "url": "https://www.notion.so/Mix-Space-Zeabur-616c6d9e15fe4359921ffe3514d3ad38",
+      "public_url": "https://wsblockg.notion.site/Mix-Space-Zeabur-616c6d9e15fe4359921ffe3514d3ad38"
+    }
+  ]
+}
