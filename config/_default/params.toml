@@ -34,7 +34,7 @@ smartTOCHideUnfocusedChildren = true
   showThemeAttribution = true
   showAppearanceSwitcher = true
   showScrollToTop = true
-  customFooter = "给岁月以文明，给时光以生命。 <br> <a href=\"https://icp.gov.moe/?keyword=20220007\" target=\"_blank\">萌ICP备20220007号</a>"
+  customFooter = "给岁月以文明，给时光以生命。 <br> <a class=\"hover:underline hover:decoration-primary-400 hover:text-primary-500\" href=\"https://icp.gov.moe/?keyword=20220007\" target=\"_blank\">萌ICP备20220007号</a>"
 
 [homepage]
   layout = "background" # valid options: page, profile, hero, card, background, custom

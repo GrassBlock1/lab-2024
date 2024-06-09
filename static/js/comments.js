@@ -207,13 +207,13 @@ function loadComments() {
               </p>
               <p>或是复制帖文的地址并通过自己网站的搜索框抓取这篇帖子进行互动：</p>
               <p class="input-row">
-                  <input type="text" readonly id="copyInput" value="${url}">
-                  <button class="button" id="copy">复制</button>
+                  <input type="text" readonly id="copymInput" value="${url}">
+                  <button class="button" id="copym">复制</button>
               </p>
               <p>账号所在的实例使用 Misskey、Pleroma 等平台的用户，上面的方式可能不工作，请手动复制下面的链接到站点搜索框手动抓取进行互动：</p>
               <p class="input-row">
-                  <input type="text" readonly id="copyInput" value="${host}/posts/${url}">
-                  <button class="button" id="copy">复制</button>
+                  <input type="text" readonly id="copygInput" value="${host}/posts/${url}">
+                  <button class="button" id="copyg">复制</button>
               </p>
                 </dialog>`
                 const dialog = document.getElementById('comment-dialog');
@@ -255,15 +255,28 @@ function loadComments() {
                 });
 
                 // copy tye post's url when pressing copy
-                document.getElementById('copy').addEventListener('click', () => {
+                document.getElementById('copym').addEventListener('click', () => {
                     // select the input field, both for visual feedback, and so that the user can use CTRL/CMD+C for manual copying, if they don't trust you
-                    document.getElementById('copyInput').select();
+                    document.getElementById('copymInput').select();
                     navigator.clipboard.writeText(url);
                     // Confirm this by changing the button text
-                    document.getElementById('copy').innerHTML = '已复制！';
+                    document.getElementById('copym').innerHTML = '已复制！';
                     // restore button text after a second.
                     window.setTimeout(() => {
-                        document.getElementById('copy').innerHTML = '复制';
+                        document.getElementById('copym').innerHTML = '复制';
+                    }, 1000);
+                });
+
+                // copy tye post's url when pressing copy
+                document.getElementById('copyg').addEventListener('click', () => {
+                    // select the input field, both for visual feedback, and so that the user can use CTRL/CMD+C for manual copying, if they don't trust you
+                    document.getElementById('copygInput').select();
+                    navigator.clipboard.writeText(url);
+                    // Confirm this by changing the button text
+                    document.getElementById('copyg').innerHTML = '已复制！';
+                    // restore button text after a second.
+                    window.setTimeout(() => {
+                        document.getElementById('copyg').innerHTML = '复制';
                     }, 1000);
                 });
 
