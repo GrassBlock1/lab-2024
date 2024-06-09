@@ -16,6 +16,8 @@ for SUBDIR in "$TARGET_DIR"/*; do
                 NEWFILE="$SUBDIR/index.md"
                 echo "Renaming $FILE to $NEWFILE"
                 mv "$FILE" "$NEWFILE"
+            else
+                echo "Nothing to do with $SUBDIR/$FILENAME ...Moving on to next."
             fi
         done
     fi

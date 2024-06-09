@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 检查分支
+      - name: 拉取仓库
         uses: actions/checkout@master
         with:
           token: ${{ secrets.ELOG_GITHUB_TOKEN }}
@@ -29,15 +29,15 @@ jobs:
       - name: 安装node环境
         uses: actions/setup-node@master
         with:
-          node-version: "16.x"
+          node-version: "21.x"
 
       - name: 安装pnpm
         uses: pnpm/action-setup@v3
         with:
-          version: 8
+          version: 9
           run_install: |
             - recursive: false
-              args: [--no-frozen-lockfile, --strict-peer-dependencies, --prod]
+              args: [--frozen-lockfile, --strict-peer-dependencies, --prod]
 
       - name: 设置时区
         run: |
@@ -52,7 +52,7 @@ jobs:
           # 对应package.json中的script.sync
           pnpm run sync
 
-      - name: 清理重复文章
+      - name: 修复文章封面
         run: bash cleanup.sh
 
       - name: 推送到仓库
@@ -61,6 +61,6 @@ jobs:
           cwd: .
           default_author: github_actions
           add: .
-          message: 'chore: sync Notion posts (pushed by GitHub Actions)'
+          message: '[skip ci] chore: sync Notion posts (pushed by GitHub Actions)'
           fetch: true
           push: true
