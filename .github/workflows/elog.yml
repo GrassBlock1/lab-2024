@@ -37,7 +37,7 @@ jobs:
           version: 8
           run_install: |
             - recursive: false
-              args: [--frozen-lockfile, --strict-peer-dependencies, --prod]
+              args: [--no-frozen-lockfile, --strict-peer-dependencies, --prod]
 
       - name: 设置时区
         run: |
