@@ -6,8 +6,8 @@ tags:
 - 'GNOME'
 - 'Dark Mode'
 categories: 'tech'
-cover: <https://obj.imgb.space/api/raw/?path=/img/2023/07/autodarrrk/cover.webp>
-top_img: <https://obj.imgb.space/api/raw/?path=/img/2023/07/autodarrrk/cover.webp>
+cover: </img/2023/07/autodarrrk/cover.webp>
+top_img: </img/2023/07/autodarrrk/cover.webp>
 description: '经过几天的摸索，我最终找到了让 GNOME 桌面环境下随时间自动切换全局可自定义的深色模式的方法，同时也让一部分应用服从系统设定。'
 slug: auto-darkmode-on-gnome
 
@@ -100,7 +100,7 @@ Qt 则更不必想，由于主题系统独立于GTK，所以自定义主题，�
 一般来说，这个扩展在默认安装时就已经被启用，但是我们还是需要对其进行一些配置。
 
 打开扩展的设置，你会看到这样的界面：
-![扩展界面](https://obj.imgb.space/api/raw/?path=/img/2023/07/autodarrrk/2023-07-29-14-32-46.webp)
+![扩展界面](/img/2023/07/autodarrrk/2023-07-29-14-32-46.webp)
 
 在默认打开的 `安排` 一栏，可以自由调整切换发生的时间，或者是关闭手动安排，使其随日出日落自动切换。
 
@@ -285,7 +285,7 @@ Adwaita 作为默认主题，毫无疑问的是它的兼容性是最好的，它
 
 OBS 默认使用的 Yami 主题在自定义Qt主题下的显示效果并不好，甚至在浅色主题下会出现一些设置项看不清的情况，但可以通过更改为系统主题来解决，这样同时也会解决跟随系统主题的问题。
 
-![谢谢，已经瞎了](https://obj.imgb.space/api/raw/?path=/img/2023/07/autodarrrk/2023-07-29-14-36-45.webp)
+![谢谢，已经瞎了](/img/2023/07/autodarrrk/2023-07-29-14-36-45.webp)
 
 点击菜单栏上的`文件`，打开 `设置`，在 `通用` 一栏中，将 `主题` 的选项改为 `System` 即可。
 

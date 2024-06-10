@@ -7,7 +7,7 @@ tags:
 - 'uptime-kuma'
 - '今天开服务不用钱'
 categories: ['tech']
-cover: <https://obj.imgb.space/api/raw/?path=/img/2023/08/uptime-kuma-cover.webp>
+cover: </img/2023/08/uptime-kuma-cover.webp>
 slug: uptime-kuma
 
 ---
@@ -35,10 +35,10 @@ slug: uptime-kuma
 [![Deploy on Zeabur](https://zeabur.com/button.svg)](https://zeabur.com/templates/ZD3VHB?referralCode=GrassBlock1)
 
 还可以手动创建项目，在新建服务时选择 `Marketplace` 并找到 `Uptime Kuma`，直接部署。
-![选择uptime kuma](https://obj.imgb.space/api/raw/?path=/img/2023/07/uptime-kuma/2023-07-22-17-25-51_Zeabur.webp)
+![选择uptime kuma](/img/2023/07/uptime-kuma/2023-07-22-17-25-51_Zeabur.webp)
 
 部署完成后，点击 `域名` 来绑定一个域名，你可以使用 `生成域名` 来将 `*.zeabur.app` 作为二级域名，也可以使用自己的域名
-![域名](https://obj.imgb.space/api/raw/?path=/img/2023/07/uptime-kuma/2023-07-22-17-29-58_Zeabur.webp)
+![域名](/img/2023/07/uptime-kuma/2023-07-22-17-29-58_Zeabur.webp)
 
 如果要使用自己的域名，需要在你的域名解析商那里添加一条 `CNAME` 记录，将你要使用的域名指向 `zeabur.app`，然后在 Zeabur 中添加域名，等待几分钟即可。
 
@@ -48,19 +48,19 @@ slug: uptime-kuma
 
 部署成功后，打开你所绑定的域名，注册管理员账户并按需求创建监控项即可，支持 HTTP、TCP、DNS、Ping、证书 等等。
 
-![添加监控](https://obj.imgb.space/api/raw/?path=/img/2023/07/uptime-kuma/2023-07-22-17-39-44_Uptime_Kuma.webp "添加监控项")
+![添加监控](/img/2023/07/uptime-kuma/2023-07-22-17-39-44_Uptime_Kuma.webp "添加监控项")
 
 ## 添加状态页面
 
 和 UptimeRobot 一样，uptime kuma 也可以创建一个**可自定义**的状态页面，用于展示你的服务的状态。
 
 如果你想要将状态页面设置为访问域名时的默认页面，可以在 `设置` > `入口页面` 中选择你刚刚创建的状态页，最后点击’保存‘即可，这样访客访问你设置的域名时就会直接看到你的状态页了。
-![设定](https://obj.imgb.space/api/raw/?path=/img/2023/07/uptime-kuma/2023-07-22-17-52-19_Uptime_Kuma.webp)
+![设定](/img/2023/07/uptime-kuma/2023-07-22-17-52-19_Uptime_Kuma.webp)
 
 ## 设置通知
 
 转到设置，然后点击 `通知`，随后点击 `设置通知`，你可以在这里设置通知的方式，包括邮件、Telegram、Ntfy、Server酱、Matrix等50多种方式，你可以根据自己的喜好来选择配置。
-![设置通知](https://obj.imgb.space/api/raw/?path=/img/2023/07/uptime-kuma/2023-07-22-17-52-33_Uptime_Kuma.webp)
+![设置通知](/img/2023/07/uptime-kuma/2023-07-22-17-52-33_Uptime_Kuma.webp)
 设置好之后，记得在已有的监控项中设置通知方式，否则你将无法收到通知。（或者直接在添加通知方式时直接选择 `默认开启` 并 `应用到所有监控项`，省事）
 
 # 备份

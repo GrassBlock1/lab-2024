@@ -7,8 +7,8 @@ tags:
 - 合订本
 - Minecraft
 categories: ['collection']
-cover: <https://obj.imgb.space/api/raw/?path=/prjs/mc_daily/cover.webp>
-top_img: <https://obj.imgb.space/api/raw/?path=/prjs/mc_daily/cover.webp>
+cover: </mc_daily/cover.webp>
+top_img: </mc_daily/cover.webp>
 description: '#草方块的MC日常 合订本来咯！'
 slug: mc-daily-01
 
@@ -34,7 +34,7 @@ slug: mc-daily-01
 
 [原消息](https://t.me/realGrassblock/311)
 
-<video controls src='https://obj.imgb.space/api/raw/?path=/prjs/mc_daily/vid/video_2023-07-14_20-41-53.mp4' crossorigin="anonymous" autoplay="false" height="480px" width="100%" ></video>
+<video controls src='/mc_daily/vid/video_2023-07-14_20-41-53.mp4' crossorigin="anonymous" autoplay="false" height="480px" width="100%" ></video>
 
 我火星了？1.16正式版自带音乐包的吗？
 
@@ -46,8 +46,8 @@ slug: mc-daily-01
 
 [原链接](https://t.me/realGrassblock/611)
 
-![创建新元素！](https://obj.imgb.space/api/raw/?path=/prjs/mc_daily/img/photo_2023-07-19_13-52-42.webp)
-![化合物创建器](https://obj.imgb.space/api/raw/?path=/prjs/mc_daily/img/photo_2023-07-15_10-34-30.webp)
+![创建新元素！](/mc_daily/img/photo_2023-07-19_13-52-42.webp)
+![化合物创建器](/mc_daily/img/photo_2023-07-15_10-34-30.webp)
 我在 Minecraft 学化学，但是怎么创建化合物啊？
 
 （补记：左翻有找看到了启用教育版特性的选项，于是玩了一把）
@@ -56,7 +56,7 @@ slug: mc-daily-01
 
 [原链接](https://t.me/realGrassblock/659)
 
-![游戏暂停界面](https://obj.imgb.space/api/raw/?path=/prjs/mc_daily/img/photo_2023-07-15_10-34-35.webp)
+![游戏暂停界面](/mc_daily/img/photo_2023-07-15_10-34-35.webp)
 成功在白嫖的面板服上玩了一会儿
 
 （补记：当时用的是server.pro，其实说实话免费的很难用，因为要排队而且锁设置，似乎存档也不会留下，但我这点实在记不得了，但是对于当时的我来说仍然是一件很快乐的事（指和朋友一起玩））
@@ -65,7 +65,7 @@ slug: mc-daily-01
 
 [原链接](https://t.me/realGrassblock/731)
 
-![一份文件列表](https://obj.imgb.space/api/raw/?path=/prjs/mc_daily/img/photo_2023-07-15_10-34-40.webp)
+![一份文件列表](/mc_daily/img/photo_2023-07-15_10-34-40.webp)
 突然找到了我的~~Minecarft~~Minecraft有音乐了的原因…（原文打错了）
 
 （补记：当时在车上还听了听这些原声，真的很有氛围！）
@@ -78,7 +78,7 @@ slug: mc-daily-01
 
 [原链接](https://t.me/realGrassblock/949)
 
-![一个抄袭游戏的直播画面](https://obj.imgb.space/api/raw/?path=/prjs/mc_daily/img/photo_2023-07-15_10-34-46.webp)
+![一个抄袭游戏的直播画面](/mc_daily/img/photo_2023-07-15_10-34-46.webp)
 啊这…这是什么玩意儿
 
 （补记：当时就比较喜欢短视频多一些，就没想到刷到了这么个鬼东西）
@@ -87,7 +87,7 @@ slug: mc-daily-01
 
 [原链接](https://t.me/realGrassblock/1094)
 
-![保熟的更新日志](https://obj.imgb.space/api/raw/?path=/prjs/mc_daily/img/photo_2023-07-15_10-34-58.webp)
+![保熟的更新日志](/mc_daily/img/photo_2023-07-15_10-34-58.webp)
 删除了him（盯）
 
 （补记：这首是 布施明 的《君は薔薇より美しい（你比玫瑰更美丽）》，当时翻了翻评论区发现了这条，没绷住。）
@@ -98,7 +98,7 @@ slug: mc-daily-01
 
 [原链接](https://t.me/realGrassblock/2923)
 
-<video controls src='https://obj.imgb.space/api/raw/?path=/prjs/mc_daily/vid/video_2023-07-15_10-17-48.mp4' crossorigin="anonymous" autoplay="false" height="480px" width="100%"></video>
+<video controls src='/mc_daily/vid/video_2023-07-15_10-17-48.mp4' crossorigin="anonymous" autoplay="false" height="480px" width="100%"></video>
 
 不是很理解 ver 1.17.10
 
@@ -108,7 +108,7 @@ slug: mc-daily-01
 
 [原链接](https://t.me/realGrassblock/3227)
 
-![一列咱铺的铁轨](https://obj.imgb.space/api/raw/?path=/prjs/mc_daily/img/photo_2023-07-15_10-35-05.webp)
+![一列咱铺的铁轨](/mc_daily/img/photo_2023-07-15_10-35-05.webp)
 
 只要我们不断铺路 道路就会向前延伸
 
@@ -118,7 +118,7 @@ slug: mc-daily-01
 
 [原链接](https://t.me/realGrassblock/6136) [联邦宇宙](https://o3o.ca/@grassblock/110013695562425447) [镜像](https://social.ongov.ca/@grassblock/110013695562425447)
 
-![出bug了的故地](https://obj.imgb.space/api/raw/?path=/prjs/mc_daily/img/photo_2023-07-15_10-35-11.webp)
+![出bug了的故地](/mc_daily/img/photo_2023-07-15_10-35-11.webp)
 
 今天打开了手机上好久没玩的存档（大概一年多），发现它已经坏得差不多了... 这就是仅能加载出来的地形了...几个区块外有个半空岛也一并加载不了了
 
@@ -130,8 +130,8 @@ slug: mc-daily-01
 
 [原链接](https://t.me/realGrassblock/6303) [联邦宇宙](https://o3o.ca/@grassblock/110291128120037048) [镜像](https://social.ongov.ca/@grassblock/110291128120037048)
 
-![新形象](https://obj.imgb.space/api/raw/?path=/prjs/mc_daily/img/photo_2023-07-15_10-35-22.webp)
-![故地的一部分](https://obj.imgb.space/api/raw/?path=/prjs/mc_daily/img/photo_2023-07-15_10-35-29.webp)
+![新形象](/mc_daily/img/photo_2023-07-15_10-35-22.webp)
+![故地的一部分](/mc_daily/img/photo_2023-07-15_10-35-29.webp)
 
 刚才玩了一圈Minecraft Bedrock，我只能说微软是懂怎么搞坏游戏的🌚
 
@@ -144,7 +144,7 @@ slug: mc-daily-01
 
 [原链接](https://t.me/realGrassblock/6372) [联邦宇宙](https://o3o.ca/@grassblock/110517263092978611) [镜像](https://social.ongov.ca/@grassblock/110517263092978611)
 
-![和某同学一起](https://obj.imgb.space/api/raw/?path=/prjs/mc_daily/img/photo_2023-07-15_10-35-35.webp)
+![和某同学一起](/mc_daily/img/photo_2023-07-15_10-35-35.webp)
 
 拍毕业照拍完和某同学坐在台阶上玩 Minecraft 基岩版 ，还好mojang/ms对局域网联机没作出限制...
 
@@ -158,7 +158,7 @@ slug: mc-daily-01
 
 [原链接](https://t.me/realGrassblock/6496) [联邦宇宙](https://o3o.ca/@grassblock/110552879987489670) [镜像](https://social.ongov.ca/@grassblock/110552879987489670)
 
-![你瞧瞧这现在哪儿有him啊，这都是改出来的](https://obj.imgb.space/api/raw/?path=/prjs/mc_daily/img/photo_2023-07-19_14-03-48.webp)
+![你瞧瞧这现在哪儿有him啊，这都是改出来的](/mc_daily/img/photo_2023-07-19_14-03-48.webp)
 
 上午听说了[看见 Herobrine 的版本(a1.0.16_02)和存档种子](https://www.bilibili.com/video/av613247631)，然后下午就把官端和存档一块下载安装下来之后就在这儿等，结果等了一个游戏日（大概快~~七八分钟~~20多分钟(1)）也没等来，就成功印证了那句 *"Herobrine is frequently referred to by Mojang Studios, however, Herobrine has never appeared in Minecraft himself."* （来自[Minecraft Wiki](https://minecraft.fandom.com/wiki/Herobrine)）
 
@@ -184,7 +184,7 @@ slug: mc-daily-01
 
 [原链接](https://t.me/realGrassblock/6723) [联邦宇宙](https://o3o.ca/@grassblock/110621014550603032) [镜像](https://social.ongov.ca/@grassblock/110621014550603032)
 
-![玩点旧的](https://obj.imgb.space/api/raw/?path=/prjs/mc_daily/img/photo_2023-07-15_10-35-44.webp)
+![玩点旧的](/mc_daily/img/photo_2023-07-15_10-35-44.webp)
 
 玩了一下 b1.7.3 （一个广受喜爱的版本） ，就有一种找回了曾经的感觉，但是当初拉我入坑的已经不玩了，就有一点悲伤。
 
@@ -206,7 +206,7 @@ slug: mc-daily-01
 
 [原链接](https://t.me/realGrassblock/6929) [联邦宇宙](https://o3o.ca/@grassblock/110694999386726853) [镜像](https://o3o.ca/@grassblock/110694999386726853)
 
-![狐狸与狐狸](https://obj.imgb.space/api/raw/?path=/prjs/mc_daily/img/photo_2023-07-15_10-35-57.webp)
+![狐狸与狐狸](/mc_daily/img/photo_2023-07-15_10-35-57.webp)
 
 尝试在Chrome OS上用Linux容器玩了一会儿Minecraft Java 1.18.2，感觉性能损耗不是很明显（？
 
@@ -218,8 +218,8 @@ slug: mc-daily-01
 
 [原链接](https://t.me/realGrassblock/6963) [联邦宇宙](https://o3o.ca/@grassblock/110711640190560050) [镜像](https://social.ongov.ca/@grassblock/110711640190560050)
 
-![活动以及活动](https://obj.imgb.space/api/raw/?path=/prjs/mc_daily/img/photo_2023-07-15_10-36-03.webp)
-![官方玩我（？](https://obj.imgb.space/api/raw/?path=/prjs/mc_daily/img/photo_2023-07-15_10-36-06.webp)
+![活动以及活动](/mc_daily/img/photo_2023-07-15_10-36-03.webp)
+![官方玩我（？](/mc_daily/img/photo_2023-07-15_10-36-06.webp)
 
 刷b站的时候看到 @邹陈云飞 发了新一期的 [MC 周报](https://b23.tv/BV1NW4y1Z7Pi)，看到官方夏日庆典的活动要到期了，咱就光速打开了许久没有打开的基岩版，补领了活动期间的物品。
 
@@ -231,7 +231,7 @@ slug: mc-daily-01
 
 [原链接](https://t.me/realGrassblock/6974) [联邦宇宙](https://o3o.ca/@grassblock/110712740231254975) [镜像](https://social.ongov.ca/@grassblock/110712740231254975)
 
-![一段对话记录](https://obj.imgb.space/api/raw/?path=/prjs/mc_daily/img/photo_2023-07-15_10-36-11.webp)
+![一段对话记录](/mc_daily/img/photo_2023-07-15_10-36-11.webp)
 
 八年老玩家（我）现状：至今连末地传送门都不会找
 
@@ -241,7 +241,7 @@ slug: mc-daily-01
 
 [原链接](https://t.me/realGrassblock/7024) [联邦宇宙](https://o3o.ca/@grassblock/110735026929619781) [镜像](https://social.ongov.ca/@grassblock/110735026929619781)
 
-![我又去养老了](https://obj.imgb.space/api/raw/?path=/prjs/mc_daily/img/photo_2023-07-18_21-38-09.webp)
+![我又去养老了](/mc_daily/img/photo_2023-07-18_21-38-09.webp)
 
 又去群友开的新的原版服务器看了一眼，嫖了许多物资（
 

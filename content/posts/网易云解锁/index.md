@@ -21,7 +21,7 @@ slug: unblock-ncm
 
 ![对比图（左图为未使用，右图为使用后）](https://cdn.jsdelivr.net/gh/Grassblock1/jsdelivr/624282_origin_Collage_20210321_191754.jpg "对比图")
 
-![运行样例](https://obj.imgb.space/api/raw/?path=/img/unblock_ncm/Screenshot_20211112085506.webp)
+![运行样例](/img/unblock_ncm/Screenshot_20211112085506.webp)
 
 可以看到，"VIP"的歌曲变为“免费”了，说明 UnblockNeteaseMusic 已经生效。
 

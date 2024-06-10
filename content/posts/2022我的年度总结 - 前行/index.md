@@ -8,8 +8,8 @@ categories: ['Daily']
 keywords: ['2022','年终总结','年度报告','日常']
 description: “长路浩浩荡荡，万事尽可期待。”
 slug: 2022-move-forward
-top_img: <https://obj.imgb.space/api/raw/?path=/img/2022/conclusion/cover.webp>
-cover: <https://obj.imgb.space/api/raw/?path=/img/2022/conclusion/cover.webp>
+top_img: </img/2022/conclusion/cover.webp>
+cover: </img/2022/conclusion/cover.webp>
 aplayer: true
 ---
 
@@ -39,7 +39,7 @@ aplayer: true
 至于之前那些内容已经交由[Save The Web 项目](https://save-web.org) 存档，我也会择机放出。
 
 新的一年也要有新外观新体验，所以就把实验室在这两天又折腾了一下，比如说换成[Nord](https://nordtheme.com)配色，加一些侧边小部件什么的，可以看下下面的提交记录：
-![实验室提交记录](https://obj.imgb.space/api/raw/?path=/img/2022/conclusion/conclusion-lab-commits.webp)
+![实验室提交记录](/img/2022/conclusion/conclusion-lab-commits.webp)
 _你们这是什么rclone啊传输速度那么慢（？）_
 
 ## Devices

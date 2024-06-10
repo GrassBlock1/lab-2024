@@ -32,15 +32,15 @@ slug: another-widget-v2
 
 当然，你也可以进行一些自定义，比如这样（是不是有Lawnchair Q内味了）：
 
-![还可以这样](https://obj.imgb.space/api/raw/?path=/img/another_w/Screenshot_20211112092633.webp)
+![还可以这样](/img/another_w/Screenshot_20211112092633.webp)
 
 一切也归于它众多的可自定义选项，比如你可以控制哪些来源出现在“速览上：
 
-![“速览”的一些自定义](https://obj.imgb.space/api/raw/?path=/img/another_w/Screenshot_20211112093057.webp)
+![“速览”的一些自定义](/img/another_w/Screenshot_20211112093057.webp)
 
 当然你也可以更改各部分控件的大小，使其更有 Android 12风格：
 
-![？？？](https://obj.imgb.space/api/raw/?path=/img/another_w/Screenshot_20211112093516.webp)
+![？？？](/img/another_w/Screenshot_20211112093516.webp)
 
 同时，这个应用也提供了一些其它易于调整的选项，而且它的设置界面采用类 Material 设计（谷粉震怒），十分美观。
 

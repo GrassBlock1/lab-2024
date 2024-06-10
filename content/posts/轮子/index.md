@@ -30,19 +30,19 @@ warning : 你草并不建议通过此种方式来捡漏，并且，这是邪教�
 
 一边说着，拆开了包装：
 
-![图片](https://obj.imgb.space/api/raw/?path=/img/lunzi_u/IMG_20220227_200846.webp)
-![反面图片](https://obj.imgb.space/api/raw/?path=/img/lunzi_u/IMG_20220227_200857.webp)
+![图片](/img/lunzi_u/IMG_20220227_200846.webp)
+![反面图片](/img/lunzi_u/IMG_20220227_200857.webp)
 
 里面有一份介绍和使用说明，说是“自费制作”，能“看清真相”的“自由门”和一些传教视频，可以说是入门级教程了。
 
 还附赠了一个 type-C OTG转接头，为手机使用。
 
 这便是 U盘 本体了，样式我觉得还可以：
-![本体](https://obj.imgb.space/api/raw/?path=/img/lunzi_u/IMG_20220227_210755.webp)
+![本体](/img/lunzi_u/IMG_20220227_210755.webp)
 
 我对此突然就来了兴趣，并找机会测试了一下，结果...
 
-![图片](https://obj.imgb.space/api/raw/?path=/img/lunzi_u/Screenshot_20220227_201002.webp)
+![图片](/img/lunzi_u/Screenshot_20220227_201002.webp)
 
 不是，你的传教视频呢？你的自由门呢？怎么啥都没有啊（
 
@@ -56,14 +56,14 @@ warning : 你草并不建议通过此种方式来捡漏，并且，这是邪教�
 
 为了验证这段说法的真实性 我特意下载了 CrystalDiskMark 来测：
 
-![测试结果仅供参考](https://obj.imgb.space/api/raw/?path=/img/lunzi_u/Screenshot_20220226_153939.webp)
+![测试结果仅供参考](/img/lunzi_u/Screenshot_20220226_153939.webp)
 
 ~~不得不说就这点是比较准确的，但还不如某人送我的呢~~
 
 不过这个测试跑了2个小时，看来做大型工作是不太可能了。
 
 还发现一个问题：
-![这文件系统](https://obj.imgb.space/api/raw/?path=/img/lunzi_u/Screenshot_20220227_203523.webp)
+![这文件系统](/img/lunzi_u/Screenshot_20220227_203523.webp)
 这文件系统竟是FAT32，我不活了（（（
 
 最后总结一下吧，毕竟是从轮子那里白嫖的，要什么自行车（

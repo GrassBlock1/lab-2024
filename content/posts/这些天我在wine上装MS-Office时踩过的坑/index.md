@@ -9,8 +9,8 @@ tags:
 categories: 'tech'
 description: "（GitHub Copilot我可真谢谢你）最近在wine上尝试折腾M$ Office，把方法和过程都堆这里了，希望再也不要有人跟我一样踩这些坑了"
 slug: ms-office-on-wine
-top_img: <https://obj.imgb.space/api/raw/?path=/img/2023/wine-office-exp.webp>
-cover: <https://obj.imgb.space/api/raw/?path=/img/2023/wine-office-exp.webp>
+top_img: </img/2023/wine-office-exp.webp>
+cover: </img/2023/wine-office-exp.webp>
 
 ---
 {{< alert >}}
