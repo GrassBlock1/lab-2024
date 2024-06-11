@@ -1,16 +1,17 @@
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@waline/client@3.0.0-alpha.11/dist/waline.min.css" />
-  <div id="waline" class="article"></div>
-  <script type="module">
-    import { init } from 'https://cdn.jsdelivr.net/npm/@waline/client@3.0.0-alpha.11/dist/waline.min.js';
+<!-- CSS -->
+<link href="http://gb-comments.zeabur.app/dist/Artalk.css" rel="stylesheet" />
 
-    init({
-      el: '#waline',
-      serverURL: 'https://waline-gb.zeabur.app/',
-    });
-  </script>
-<style>
-#wl-edit {
-  width: -moz-available !important;
-  width: -webkit-fill-available !important;
-}
-</style>
+<!-- JS -->
+<script src="http://gb-comments.zeabur.app/dist/Artalk.js"></script>
+
+<!-- Artalk -->
+<div id="Comments"></div>
+<script>
+  Artalk.init({
+    el:        '#Comments',                // 绑定元素的 Selector
+    pageKey:   '/ask',                  // 固定链接
+    server:    'http://gb-comments.zeabur.app',  // 后端地址
+    site:      'lab',             // 你的站点名
+    darkMode: 'auto'
+  })
+</script>

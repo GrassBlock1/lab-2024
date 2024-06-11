@@ -63,21 +63,26 @@
   weight = 40
 
 [[main]]
+  name = "留言"
+  pageRef = "guestbook"
+  weight = 50
+
+[[main]]
   name = "投食"
   pageRef = "donate"
-  weight = 50
+  weight = 60
 
 [[main]]
   #pre = "rocket"
   name = "开往"
   url = "https://www.travellings.cn/go.html"
-  weight = 60
+  weight = 70
 
 [[main]]
   pre = "rss"
   #name = "RSS"
   url = "./posts/index.xml"
-  weight = 70
+  weight = 80
 
 # -- Footer Menu --
 # The footer menu is displayed at the bottom of the page, just before
