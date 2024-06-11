@@ -1,16 +1,16 @@
 <!-- CSS -->
-<link href="http://gb-comments.zeabur.app/dist/Artalk.css" rel="stylesheet" />
+<link href="https://gb-comments.zeabur.app/dist/Artalk.css" rel="stylesheet" />
 
 <!-- JS -->
-<script src="http://gb-comments.zeabur.app/dist/Artalk.js"></script>
+<script src="https://gb-comments.zeabur.app/dist/Artalk.js"></script>
 
 <!-- Artalk -->
 <div id="Comments"></div>
 <script>
   Artalk.init({
     el:        '#Comments',                // 绑定元素的 Selector
-    pageKey:   '/ask',                  // 固定链接
-    server:    'http://gb-comments.zeabur.app',  // 后端地址
+    pageKey:   '{{ .Page.RelPermalink }}',                  // 固定链接
+    server:    'https://gb-comments.zeabur.app',  // 后端地址
     site:      'lab',             // 你的站点名
     darkMode: 'auto'
   })
