@@ -469,13 +469,6 @@ http {
 >   
 > （其中 [`www.example.com`](http://www.example.com/) 是你在这个步骤中绑定的域名）
 
-	- API 地址为 `https://www.example.com/api/v2`
-	- 前端（Kami/Shiro）地址为 `https://www.example.com`
-	- GateWay 为 `https://www.example.com`
-	- 本地后台为 `https://www.example.com/proxy/qaqdmin`
-
-	（其中 [`www.example.com`](http://www.example.com/) 是你在这个步骤中绑定的域名）
-
 
 按照上述设定配置好前端和后端后，新建一个浏览器标签页，打开 `绑定的域名/qaqdmin` ，不出意外的话，你应该会看到配置引导页面，按照提示设置即可，同时请务必检查默认给出的API等相关地址是否正确，如果不正确请尽快修改。
 
