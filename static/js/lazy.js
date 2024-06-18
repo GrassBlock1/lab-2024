@@ -1,11 +1,6 @@
 // TODO: 'use strict'
 function loadPage(newUrl) {
-    const content = document.getElementById('main-content');
-    content.classList.add('fade-in');
-    content.classList.remove('fade-in');
-    setTimeout(()=> {content.classList.remove('fade-out')}, 200)
-    setTimeout(() => {sendRequest(newUrl)}, 100);
-    setTimeout(() => {content.classList.add('fade-in')}, 200)
+    sendRequest(newUrl)
 }
 
 function sendRequest(newUrl) {
@@ -67,4 +62,7 @@ window.onload = function() {
 
 window.onpopstate = function(event) {
     loadPage(window.location);
+    const content = document.getElementById('main-content');
+    setTimeout(()=> {content.classList.remove('fade-out')}, 250)
+    setTimeout(() => {content.classList.add('fade-in')}, 250)
 }
