@@ -34,7 +34,8 @@ slug: mc-daily-01
 
 [原消息](https://t.me/realGrassblock/311)
 
-<video controls src='/mc_daily/vid/video_2023-07-14_20-41-53.mp4' crossorigin="anonymous" autoplay="false" height="480px" width="100%" ></video>
+{{< video src="mc_daily/vid/video_2023-07-14_20-41-53.mp4" >}}
+
 
 我火星了？1.16正式版自带音乐包的吗？
 
@@ -98,7 +99,7 @@ slug: mc-daily-01
 
 [原链接](https://t.me/realGrassblock/2923)
 
-<video controls src='/mc_daily/vid/video_2023-07-15_10-17-48.mp4' crossorigin="anonymous" autoplay="false" height="480px" width="100%"></video>
+{{< video src="/mc_daily/vid/video_2023-07-15_10-17-48.mp4" >}}
 
 不是很理解 ver 1.17.10
 

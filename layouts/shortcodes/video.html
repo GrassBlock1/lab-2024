@@ -1,0 +1,7 @@
+{{ $video := resources.Get (.Get "src") }}
+{{ with $video }}
+<video width="100%" controls>
+    <source src="{{ .Permalink }}" type="{{ $video.MediaType.Type }}">
+    Your browser does not support video.
+</video>
+{{ end }}
