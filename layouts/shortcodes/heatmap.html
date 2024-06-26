@@ -1,14 +1,16 @@
-<div id="heatmap" style="
-  max-width: 600px;
-  height: 240px;
-  padding: 2px;
-  text-align: center;"
-></div>
+ <div id="heatmap" style="
+    max-width: 100%;
+    height: 512px;
+    padding: 2px;
+    text-align: center;
+    overflow: scroll;"
+    >
+ </div>
 <script src="https://cdn.jsdelivr.net/npm/echarts@5.3.0/dist/echarts.min.js"></script>
 <script type="text/javascript">
     var chartDom = document.getElementById('heatmap');
     var myChart = echarts.init(chartDom);
-    window.onresize = function() {
+    window.onresize = function () {
         myChart.resize();
     };
     var option;
@@ -34,6 +36,7 @@
     }
     {{- end -}}
 
+
     var data = [];
     for (const [key, value] of dataMap.entries()) {
         data.push([key, value.wordCount]);
@@ -48,10 +51,12 @@
     startDate = echarts.format.formatTime('yyyy-MM-dd', startDate);
     endDate = echarts.format.formatTime('yyyy-MM-dd', endDate);
 
-    var style = getComputedStyle(document.body);
-    var bgColor = style.getPropertyValue("--color-neutral-800")
+    var textColor = window.getComputedStyle(document.body).color ;
+    var bgColor = window.getComputedStyle(document.body).backgroundColor;
+
+
     // change date range according to months we want to render
-    function heatmap_width(months){
+    function heatmap_width(months) {
         var startDate = new Date();
         var mill = startDate.setMonth((startDate.getMonth() - months));
         var endDate = +new Date();
@@ -71,20 +76,22 @@
     function getRangeArr() {
         const windowWidth = window.innerWidth;
         if (windowWidth >= 600) {
-            return heatmap_width(12);
+            return heatmap_width(16);
         } else if (windowWidth >= 400) {
-            return heatmap_width(9);
+            return heatmap_width(12);
         } else {
-            return heatmap_width(6);
+            return heatmap_width(8);
         }
     }
-
+    // TODO: add overflow to the chart to make it easier to read.
     option = {
         title: {
             top: 0,
             left: 'center',
             text: '博客废话产量',
-
+            textStyle: {
+                color: textColor
+            }
         },
         tooltip: {
             formatter: function (p) {
@@ -108,19 +115,43 @@
             text: ['千字', ''],
             showLabel: true,
             itemGap: 20,
+            textStyle: {
+                color: textColor
+            }
         },
         calendar: {
             top: 80,
             left: 20,
             right: 4,
-            cellSize: ['auto', 12],
+            //width: 1500,
+            cellSize: 28,
             range: getRangeArr(),
             itemStyle: {
                 color: '#F1F1F1',
-                borderWidth: 2.5,
+                borderWidth: 1,
                 borderColor: '#fff',
             },
-            yearLabel: {show: false},
+            yearLabel: {
+                show: false,
+                textStyle: {
+                    color: textColor
+                }
+            },
+            monthLabel: {
+                nameMap: 'cn',
+                margin: 10,
+                textStyle: {
+                    color: textColor
+                }
+            },
+            dayLabel: {
+                firstDay: 1,
+                nameMap: 'cn',
+                margin: 10,
+                textStyle: {
+                    color: textColor
+                }
+            },
             // the splitline between months. set to transparent for now.
             splitLine: {
                 lineStyle: {
@@ -130,9 +161,12 @@
                     // width: 0.5,
                     // type: 'dashed',
                 }
+            },
+            textStyle: {
+                color: textColor
             }
         },
-        backgroundColor: "#a89984",
+        darkMode: "auto",
         series: {
             type: 'heatmap',
             coordinateSystem: 'calendar',
