@@ -25,7 +25,11 @@ index: false
 以下内容并没有收到任何赞助，~~没人找我~~
 
 [prprCloud - 通过多项多种黑科技，先进可靠的网络设施，优质尖端的资源，快速稳定的全新协议，保证您的体验，体验宛若身在海外的访问速度](https://prpr.96110.cn.com/aff.php?aff=81)
+
 [Facmata - 新兴机场，优质原生ip解锁](https://dash.fmta.boo/#/register?code=vNjq7j0F)
+
+[RioLU.443｜精靈學院 - 安全、快速、高可用的加速服务提供商](https://o.riolu.ooo/register?aff=mXBXaLWa)
+
 
 想添加一些内容？可以通过[Telegram](https://t.me/Grass_block)联系我。
 ## WeChat 赞赏码
