@@ -11,9 +11,16 @@ async function loadPage(newUrl) {
     const text = await response.text();
     const parser = new DOMParser();
     const doc = parser.parseFromString(text, 'text/html');
-    content.innerHTML = doc.querySelector('#main-content').innerHTML;
-    document.title = doc.title;
-    history.pushState(null, doc.title, newUrl); // write browser history
+    if (doc.querySelector('#main-content') === null){
+        let target = "_self";
+        //TODO: check the link clicked and open in new tab if it is external
+        window.open(newUrl, target);
+        content.innerHTML = "Loading...";
+    } else {
+        content.innerHTML = doc.querySelector('#main-content').innerHTML;
+        document.title = doc.title;
+        history.pushState(null, doc.title, newUrl); // write browser history
+    }
 }
 
 // reinit scripts needed with specific element that is newly loaded,like aplayer.
