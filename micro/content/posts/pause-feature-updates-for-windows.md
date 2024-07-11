@@ -4,6 +4,7 @@ date = 2024-06-15T23:54:10+08:00
 draft = false
 tags = ['Windows', '更新', '注册表']
 categories = ['tech']
+slug = 'pause-feature-updates-for-windows'
 description = '暂停 Windows 功能更新的注册表文件，让你的 Windows 更新更加可控。'
 summary = '暂停 Windows 功能更新的注册表文件，让你的 Windows 更新更加可控。'
 +++

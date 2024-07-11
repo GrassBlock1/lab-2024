@@ -10,5 +10,5 @@ draft = false
 
 你可以通过下面的列表来阅读所有的文章，或者在[关于页面](about)来了解更多有关项目和使用的相关信息。
 
-- RSS 订阅：<https://lab.imgb.space/mb/post/index.xml>
+- RSS 订阅：<https://lab.imgb.space/mb/posts/index.xml>
 - 邮箱订阅（WIP）：[填写表单]()，新文章将通过邮件发送给您。
