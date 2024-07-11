@@ -2,6 +2,7 @@
 /public/
 /resources/_gen/
 .hugo_build.lock
+/micro/public
 
 # Dependency directories
 /node_modules/

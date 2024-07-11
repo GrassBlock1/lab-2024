@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="{{- site.Language.Lang -}}">
+
+    <head>
+        {{- partial "head.html" . -}}
+    </head>
+
+    <body>
+        <div class="page">
+
+            <header class="page__header">
+                {{- partial "header.html" . -}}
+            </header>
+
+            <section class="page__body">
+                {{- block "main" . }}{{- end }}
+                <h1>文章列表</h1>
+                {{ range where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+                <article class="post">
+                    <header class="post__header">
+                        <h1><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h1>
+                        <p class="post__meta">
+                            {{ if .Params.author }}
+                            {{ .Params.author }},
+                            {{ else }}
+                            {{ .Site.Params.author.name }},
+                            {{ end }}
+                            <span class="date">{{ .Date.Format "2 January 2006" }}</span>
+                        </p>
+                    </header>
+
+                    <section class="post__summary">
+                        {{ .Summary }}
+                    </section>
+                </article>
+                {{ end }}
+            </section>
+
+            <section class="page__aside">
+                <div class="aside__about">
+                    {{- partial "about.html" . -}}
+                </div>
+                <hr>
+                <div class="aside__content">
+                    {{- block "aside" . }}{{- end }}
+                </div>
+            </section>
+
+            <footer class="page__footer">
+                {{- partial "footer.html" . -}}
+            </footer>
+
+        </div>
+    </body>
+
+</html>
