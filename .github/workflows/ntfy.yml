@@ -1,0 +1,28 @@
+name: Push Notifications
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    steps:
+    - uses: actions/checkout@v2
+    - name: Wait for CF Pages Builds to be done
+      id: cf-pages
+      uses: WalshyDev/cf-pages-await@v1
+      with:
+        apiToken: ${{ secrets.CF_API_TOKEN  }}
+        accountId: '5660a9214c6f279675b84e0825c4183e'
+        project: 'gb-lab-2024'
+    - run: |
+        curl ntfy.envs.net \
+        -d '{
+            "topic": "gb-0173",
+            "message": "为了预览到最新更改，请尝试在 Cloudflare 仪表盘清理站点缓存。",
+            "title": "实验室已在 Cloudflare Pages 成功部署",
+            "tags": ["bell"],
+            "priority": 4,
+            "click": "https://lab.imgb.space",
+            "actions": [{ "action": "view", "label": "查看", "url": "https://lab.imgb.space" }]
+        }'
