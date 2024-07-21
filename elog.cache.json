@@ -6,6 +6,7 @@
       "updated": 1717779060000,
       "properties": {
         "categories": "tech",
+        "is_microblog": "",
         "tags": [
           "垃圾技术",
           "blog",
@@ -64,6 +65,7 @@
       "in_trash": false,
       "properties": {
         "categories": "tech",
+        "is_microblog": "",
         "tags": [
           "垃圾技术",
           "blog",
