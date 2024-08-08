@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-
+# deprecated, will be removed in the future
 # Build the main Hugo project
 hugo
 
