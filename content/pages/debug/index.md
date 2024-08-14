@@ -19,3 +19,9 @@ layout: 'simple'
 </script>
 <script type="module" src="https://esm.sh/@kkna/component-material"></script>
 <kkna-material></kkna-material>
+
+加密测试，密码：`foobar2000`
+
+{{% encrypt foobar2000 %}}
+**Hello World!**
+{{% /encrypt %}}

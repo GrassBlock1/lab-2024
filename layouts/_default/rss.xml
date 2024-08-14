@@ -36,9 +36,13 @@
             <guid>{{ .Permalink }}</guid>
             <description>{{ .Summary | html }}</description>
             <content:encoded>
+                {{ if .HasShortcode "encypt" }}
+                This passage has encypted content and can't be displayed without the correct key, checkout the original site for details.
+                {{ else }}
                 {{ printf "<![CDATA[" | safeHTML }}
                 {{- printf "%s" .Content | emojify | safeHTML }}
                 {{- printf "]]>" | safeHTML }}
+                {{ end }}
             </content:encoded>
             {{ range ( where .Site.RegularPages ".RelPermalink" .RelPermalink | first 1 ) }}
             {{- $images := .Resources.ByType "image" -}}

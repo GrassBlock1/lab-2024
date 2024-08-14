@@ -46,7 +46,9 @@
 "id": {{ .Permalink | jsonify }},
 "url": {{ .Permalink | jsonify }},
 "summary": {{ with .Description }}{{ . | jsonify }}{{ else }}{{ .Summary | jsonify }}{{ end -}},
-"content_html": {{ .Content | jsonify }},
+"content_html": {{ if .HasShortcode "encypt" }}
+"This passage has encypted content and can't be displayed without the correct key, checkout the original site for details."
+{{ else }}{{ .Content | jsonify }}{{ end }},
 {{- $images := .Resources.ByType "image" -}}
 {{- $featured := $images.GetMatch "*feature*" -}}
 {{ $disableImageOptimization := .Page.Site.Params.disableImageOptimization | default false }}

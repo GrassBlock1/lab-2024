@@ -77,6 +77,10 @@ smartTOCHideUnfocusedChildren = true
   showZenMode = true
   showComments = true
 
+[encrypt]
+  password = 'bix!ghuf!rhin6wuwn'
+  storage = 'session'
+
 [list]
   showHero = false
   # heroStyle = "background" # valid options: basic, big, background, thumbAndBackground

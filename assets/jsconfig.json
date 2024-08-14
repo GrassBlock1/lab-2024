@@ -1,0 +1,11 @@
+{
+ "compilerOptions": {
+  "baseUrl": ".",
+  "paths": {
+   "*": [
+    "../../../../.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/encrypt@v0.3.0/assets/*",
+    "../../../../.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/snackbar@v0.1.2/assets/*"
+   ]
+  }
+ }
+}
