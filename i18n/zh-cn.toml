@@ -1,0 +1,12 @@
+# encrypt
+[protectedByPassword]
+other = "此处内容被密码保护"
+
+[enterPassword]
+other = "请输入密码"
+
+[decrypt]
+other = "提交"
+
+[wrongPassword]
+other = "密码错误"

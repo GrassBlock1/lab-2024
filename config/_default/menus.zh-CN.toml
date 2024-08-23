@@ -81,7 +81,7 @@
 [[main]]
   pre = "rss"
   #name = "RSS"
-  url = "./posts/index.xml"
+  url = "/posts/index.xml"
   weight = 80
 
 # -- Footer Menu --

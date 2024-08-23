@@ -22,6 +22,6 @@ layout: 'simple'
 
 加密测试，密码：`foobar2000`
 
-{{% encrypt foobar2000 %}}
+{{% encrypt "foobar2000" %}}
 **Hello World!**
 {{% /encrypt %}}
