@@ -7,6 +7,8 @@ baseURL = "https://lab.imgb.space/"
 defaultContentLanguage = "zh-CN"
 timezone = "Asia/Shanghai"
 
+timeout = "180s" # regress the build failure #1595
+
 pluralizeListTitles = "true" # hugo function useful for non-english languages, find out more in  https://gohugo.io/getting-started/configuration/#pluralizelisttitles
 hasCJKLanguage = true
 
