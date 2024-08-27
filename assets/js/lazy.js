@@ -23,6 +23,25 @@ async function loadPage(newUrl) {
     }
 }
 
+// restore the highlightCurrentMenuArea behaviour
+function activeCurrentMenuItem() {
+    const mainMenu = document.getElementsByClassName('main-menu')[0];
+    const path = window.location.pathname;
+    const links = mainMenu.querySelectorAll('a[href="' + path + '"]');
+    const currentActives = mainMenu.querySelectorAll('p.active');
+    if (currentActives.length > 0) {
+        currentActives.forEach(function (currentActive){
+            currentActive.classList.remove('active')
+        })
+    }
+    links.forEach(function (link) {
+        const currentItem = link.querySelector('p');
+        if (currentItem) {
+            currentItem.classList.add('active');
+        }
+    });
+}
+
 // reinit scripts needed with specific element that is newly loaded,like aplayer.
 function reinitScript() {
     const loadCommentButton = document.getElementById("load-comment");
@@ -69,15 +88,21 @@ window.onload = function() {
             content.classList.add('fade-out');
             await new Promise(resolve => {
                 content.addEventListener('transitionend', resolve, {once: true});
+
+            });
+            // simply scroll to top
+            window.scroll({
+                top: 0,
+                left: 0,
+                behavior: "smooth",
             });
             await loadPage(newUrl);
             content.classList.remove('fade-out');
             content.classList.add('fade-in');
-
             content.addEventListener('transitionend', function() {
                 content.classList.remove('fade-in');
             }, {once: true});
-
+            activeCurrentMenuItem();
             reinitScript();
         }
     });
