@@ -2,6 +2,7 @@
 // this loads page main element with a url and try to browse like a normal page
 async function loadPage(newUrl) {
     const content = document.getElementById('main-content');
+    const mainMenu = document.getElementsByClassName('main-menu')[0];
     const response = await fetch(newUrl, {
         method: 'GET',
         headers: {
@@ -18,6 +19,9 @@ async function loadPage(newUrl) {
         content.innerHTML = "Loading...";
     } else {
         content.innerHTML = doc.querySelector('#main-content').innerHTML;
+        // refresh the main menu (search and appearance not work currently)
+        // TODO: make these work
+        mainMenu.outerHTML = doc.querySelector('div.main-menu').outerHTML;
         document.title = doc.title;
         history.pushState(null, doc.title, newUrl); // write browser history
     }
@@ -42,6 +46,8 @@ function activeCurrentMenuItem() {
     });
 }
 
+
+
 // reinit scripts needed with specific element that is newly loaded,like aplayer.
 function reinitScript() {
     const loadCommentButton = document.getElementById("load-comment");
@@ -54,10 +60,8 @@ function reinitScript() {
 
     const guestbookElement = document.getElementById("Comments")
     if (guestbookElement) {
-        const script = document.createElement("script");  // create a script DOM node
-        script.src = "https://gb-comments.zeabur.app/dist/Artalk.js";  // set its src to the provided URL
-        const comment = document.getElementsByTagName("section")[1]
-        comment.appendChild(script);  // add it to the end of the head section of the page (could change 'head' to 'body' to add it to the end of the body section instead)
+        // reload artalk
+        artalk.reload();
     }
 }
 

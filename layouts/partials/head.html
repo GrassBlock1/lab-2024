@@ -74,7 +74,8 @@
     }}"></script>
   {{ end }}
   {{ if not .Site.Params.disableImageZoom | default true }}
-  <script src="{{ "js/zoom.min.js" | relURL }}"></script>
+  {{ $zoomJS := resources.Get "lib/zoom/zoom.min.js" | resources.Fingerprint "sha512" }}
+  <script src="{{ $zoomJS.RelPermalink }}" integrity="{{ $zoomJS.Data.Integrity }}"></script>
   {{ end }}
   {{/* Icons */}}
   {{ if templates.Exists "partials/favicons.html" }}
@@ -100,6 +101,18 @@
   {{ end }}
   {{/* Social */}}
   {{ template "_internal/opengraph.html" . }}
+  {{ if and .IsHome .Site.Params.siteCoverImage }}
+  {{- with .Site.Params.siteCoverImage -}}
+  {{ $coverImage := "" }}
+  {{ if or (strings.HasPrefix . "http:") (strings.HasPrefix . "https:") }}
+  {{ $coverImage = resources.GetRemote . }}
+  {{ else }}
+  {{ $coverImage = resources.Get . }}
+  {{ end }}
+  {{ $coverImage = $coverImage.Resize "x512" }}
+  <meta property="og:image" content="{{ $coverImage.Permalink }}" />
+  {{- end -}}
+  {{ end }}
   {{ template "_internal/twitter_cards.html" . }}
   {{/* Schema */}}
   {{ partial "schema.html" . }}

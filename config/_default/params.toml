@@ -20,6 +20,7 @@ disableTextInHeader = false
 
 defaultBackgroundImage = "./img/background.jpg" # used as default for background images
 # defaultFeaturedImage = "IMAGE.jpg" # used as default for featured images in all articles
+siteCoverImage = "./img/blog-cover.png" # used in og:image and twitter:image meta tags when shared as homepage
 
 highlightCurrentMenuArea = true
 smartTOC = true
