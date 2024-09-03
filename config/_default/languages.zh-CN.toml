@@ -12,7 +12,7 @@ title = "/var/log/gblab"
   logo = "img/logo@small.png"
   # secondaryLogo = "img/logo.png"
   # description = "某不知名奇点观察员的观察日志"
-  description = "此处会不定时产生大量废话的日志"
+  description = "此处会不定时产生包含大量废话的日志文件"
   copyright = "© 2024 by 草方块, Under CC-BY-NC-SA 4.0"
 
  [author]
