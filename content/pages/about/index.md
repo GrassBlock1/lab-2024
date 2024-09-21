@@ -79,7 +79,6 @@ GrassBlog 建立！作为一个测试性分部而存在，使用 Hexo 驱动
 {{< timelineItem icon="heart" header="2024" subheader="09-02" >}}
 网站更换了新的名字，灵感来源于 Linux 的文件系统，更加具有指向性。
 {{< /timelineItem >}}
-{{< /timelineItem >}}
 {{< timelineItem icon="heart" header="2024" subheader="09-20" >}}
 网站域名迁移到 lab.gb0.dev，又是一个新的开始，这次它将成为真正的实验室...
 {{< /timelineItem >}}
