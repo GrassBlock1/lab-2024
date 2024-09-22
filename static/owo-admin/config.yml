@@ -1,0 +1,75 @@
+backend:
+  name: github
+  repo: GrassBlock1/lab-2024
+  commit_messages:
+    create: "feat: [CMS] Create {{collection}} “{{slug}}”"
+    update: "feat: [CMS] Update {{collection}} “{{slug}}”"
+    delete: "feat: [CMS] Delete {{collection}} “{{slug}}”"
+    uploadMedia: "feat: [CMS] Upload “{{path}}”"
+    deleteMedia: "feat: [CMS] Delete “{{path}}”"
+    openAuthoring: '{{message}}'
+
+publish_mode: editorial_workflow
+
+media_folder: "assets/img/uploads"
+
+public_folder: "/img/uploads"
+
+site_url: https://lab.gb0.dev
+
+logo_url: /img/logo.png
+
+locale: 'zh_Hans'
+
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "_"
+
+collections:
+  - name: posts
+    label: "文章"
+    identifier_field: name
+    folder: "content/posts"
+    path: '{{slug}}/index'
+    fields:
+      - label: "标题"
+        name: "title"
+        widget: "string"
+      - label: "发布时间"
+        name: "date"
+        widget: "datetime"
+      - {label: "这是一个草稿", name: "draft", widget: "boolean", default: true}
+      - label: '封面图'
+        name: 'featured'
+        widget: 'image'
+      - label: "标签"
+        name: "tags"
+        widget: "list"
+        fields:
+          - { label: 标签, name: tag, widget: string }
+      - label: "分类"
+        name: "categories"
+        widget: "list"
+        fields:
+          - { label: 分类, name: tag, widget: string }
+      - label: "简介"
+        name: "description"
+        widget: "string"
+      - label: "永久链接"
+        name: "slug"
+        widget: "string"
+        required: true
+      - label: "文章内容"
+        name: "body"
+        widget: "markdown"
+  - name: pages
+    label: "页面"
+    identifier_field: name
+    folder: "content/pages"
+    path: '{{slug}}/index'
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "thumbnail", widget: "featuredImage" }
+      - { label: "Body", name: "body", widget: "markdown" }
