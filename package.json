@@ -7,7 +7,7 @@
 		"clean": "elog clean"
 	},
 	"dependencies": {
-		"@elog/cli": "^0.13.2",
+		"@elog/cli": "^0.13.5",
 		"tinacms": "^2.2.4"
 	},
 	"devDependencies": {
