@@ -1,6 +1,7 @@
 backend:
   name: github
   repo: GrassBlock1/lab-2024
+  use_graphql: true
   commit_messages:
     create: "feat: [CMS] Create {{collection}} “{{slug}}”"
     update: "feat: [CMS] Update {{collection}} “{{slug}}”"
@@ -17,7 +18,7 @@ public_folder: "/img/uploads"
 
 site_url: https://lab.gb0.dev
 
-logo_url: /img/logo.png
+logo_url: /img/logo@small.png
 
 locale: 'zh_Hans'
 

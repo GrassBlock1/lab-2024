@@ -7,9 +7,12 @@
 		"clean": "elog clean"
 	},
 	"dependencies": {
-		"@elog/cli": "^0.13.2"
+		"@elog/cli": "^0.13.2",
+		"tinacms": "^2.2.4"
 	},
 	"devDependencies": {
+		"@tinacms/cli": "^1.6.4",
+		"@types/node": "^22.5.5",
 		"markdownlint": "^0.34.0",
 		"markdownlint-cli2": "^0.13.0"
 	}
