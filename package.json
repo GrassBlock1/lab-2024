@@ -4,14 +4,15 @@
 		"elog:init": "elog init",
 		"sync:local": "elog sync -e .elog.env",
 		"sync": "elog sync",
-		"clean": "elog clean"
+		"clean": "elog clean",
+		"tinacms": "tinacms"
 	},
 	"dependencies": {
 		"@elog/cli": "^0.13.5",
-		"tinacms": "^2.2.4"
+		"tinacms": "^2.2.4",
+		"@tinacms/cli": "^1.6.4"
 	},
 	"devDependencies": {
-		"@tinacms/cli": "^1.6.4",
 		"@types/node": "^22.5.5",
 		"markdownlint": "^0.34.0",
 		"markdownlint-cli2": "^0.13.0"
