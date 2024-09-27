@@ -15,7 +15,7 @@ title = "/var/log/gblab"
   description = "此处会不定时产生包含大量废话的日志文件"
   copyright = "© 2024 by 草方块, Under CC-BY-NC-SA 4.0"
 
- [author]
+ [params.author]
    name = "草方块"
    image = "img/avatar.png"
    headline = "还没取正经名字的折腾怪物"
