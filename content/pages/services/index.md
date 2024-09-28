@@ -8,11 +8,11 @@ index: false
 ---
 
 ## 这是什么？
-这些是我利用开源软件部署的一些服务，它们有些可以公开使用，有些则是私人使用。
+这些是我利用开源软件部署的一些服务，它们大多是一些闭源服务的替代品，也有一些是我自己的需求。
 
 ## 了解背后的服务商
 - 这些服务大部分部署在 [netcup](https://www.netcup.com/?ref=246155) 的服务器上，使用的是 [VPS 1000 ARM G11](https://www.netcup.com/en/server/arm-server/vps-1000-arm-g11-iv-mnz/?ref=246155)，提供 6c8g 的配置。
-- 当然有一小部分服务出于一些考虑部署在了 [Zeabur]() 上，支持 docker 镜像。
+- 当然有一小部分服务出于一些考虑部署在了 [Zeabur](https://zeabur.com?referralCode=GrassBlock1) 上，支持 docker 镜像。
 - 当然总的来说它们都在使用 [Cloudflare](https://www.cloudflare.com/) 的免费服务，包括 CDN、DNS、WAF 等。
 
 ## 支持
@@ -21,3 +21,7 @@ index: false
 如果你想让服务持续运行下去，可以考虑通过 [捐赠](/donate) 来支持我。
 
 ## 服务列表
+
+[服务状态](https://status.imgb.space) | [申请使用私有服务（免费！）](https://forms.gle/SVgjJwWzn4aF4Bpp9)
+
+{{< services >}}

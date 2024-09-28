@@ -1,0 +1,15 @@
+public:
+  - name: none
+    link: https://example.com
+    logo: https://hellop.png # 準備建新站
+    descr: "Nothing here"
+
+private:
+  - name: Vaultwarden
+    link: https://vault.grassblock.eu.org
+    logo: https://github.com/dani-garcia/vaultwarden/raw/refs/heads/main/resources/vaultwarden-icon.svg # 準備建新站
+    descr: "Unofficial Bitwarden compatible server written in Rust"
+  - name: Webmail
+    link: https://mail.gb0.dev
+    logo: https://roundcube.net/images/roundcube_logo_icon.svg
+    descr: "Webmail client based on Roundcube"
