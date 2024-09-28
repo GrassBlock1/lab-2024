@@ -14,7 +14,7 @@ index: false
 
 目前博客的开销：
 - 域名：`$12.18/年` (~¥85/年，Cloudflare)
-- 服务器：`€5.26/月`（~¥500/年，netcup [VPS 1000 ARM G11,6c8g](https://www.netcup.com/en/server/arm-server/vps-1000-arm-g11-iv-mnz/?ref=246155)，用于站点统计及[其他服务](/service)）
+- 服务器：`€5.26/月`（~¥500/年，netcup [VPS 1000 ARM G11,6c8g](https://www.netcup.com/en/server/arm-server/vps-1000-arm-g11-iv-mnz/?ref=246155)，用于站点统计及[其他服务](/services)）
 - 站点托管：`¥0/年`（Cloudflare）
 
 # 捐赠方式
