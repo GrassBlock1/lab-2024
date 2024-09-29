@@ -1,8 +1,8 @@
 public:
-  - name: none
-    link: https://example.com
-    logo: https://hellop.png # 準備建新站
-    descr: "Nothing here"
+  - name: ntfy
+    link: https://ntfy.gb0.dev
+    logo: https://raw.githubusercontent.com/binwiederhier/ntfy/refs/heads/main/web/public/static/images/ntfy.png
+    descr: "[WIP] Send push notifications to your phone or desktop using PUT/POST requests"
 
 private:
   - name: Vaultwarden
@@ -12,4 +12,4 @@ private:
   - name: Webmail
     link: https://mail.gb0.dev
     logo: https://roundcube.net/images/roundcube_logo_icon.svg
-    descr: "Webmail client based on Roundcube"
+    descr: "Webmail client based on Roundcube, backend provided by [docker-mailserver]"

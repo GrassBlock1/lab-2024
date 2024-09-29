@@ -4,7 +4,7 @@
     <a href="{{ .link }}" target="_blank" rel="external" class="min-w-full">
         <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative flex justify-center">
             <img src="{{ .logo }}" class="ml-2 w-24 h-24 nozoom rounded-full" alt="logo" />
-            <div class="px-6 pt-4 pb-2">
+            <div class="px-6 pt-4 pb-2 flex flex-col">
                 <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral">
                     {{ .name | emojify }}
                     <span class="text-xs align-top cursor-default text-neutral-400 dark:text-neutral-500">
@@ -26,7 +26,7 @@
      <a href="{{ .link }}" target="_blank" rel="external" class="min-w-full">
          <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative flex justify-center">
              <img src="{{ .logo }}" class="ml-2 w-24 h-24 nozoom rounded-full" alt="logo" />
-             <div class="px-6 pt-4 pb-2">
+             <div class="px-6 pt-4 pb-2 flex flex-col">
                  <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral">
                      {{ .name | emojify }}
                      <span class="text-xs align-top cursor-default text-neutral-400 dark:text-neutral-500">
@@ -35,7 +35,7 @@
             </span>
                  </div>
                  <div class="py-1 prose dark:prose-invert">
-                     {{ .descr | markdownify | emojify }}
+                     {{ .descr | emojify }}
                  </div>
              </div>
          </div>
