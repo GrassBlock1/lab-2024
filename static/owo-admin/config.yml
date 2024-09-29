@@ -1,6 +1,7 @@
 backend:
   name: github
   repo: GrassBlock1/lab-2024
+  base_url: https://gb-ghoauth.vercel.app
   use_graphql: true
   commit_messages:
     create: "feat: [CMS] Create {{collection}} “{{slug}}”"
