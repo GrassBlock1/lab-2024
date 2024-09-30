@@ -45,6 +45,7 @@ collections:
       - label: '封面图'
         name: 'featured'
         widget: 'image'
+        required: false
       - label: "标签"
         name: "tags"
         widget: "list"
