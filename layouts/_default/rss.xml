@@ -12,11 +12,6 @@
         {{- end -}}
         {{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-    <!--follow challenge-->
-    <follow_challenge>
-        <feedId>63597138149986304</feedId>
-        <userId>63596104668505088</userId>
-    </follow_challenge>
     <channel>
         <title>{{ if eq  .Title  .Site.Title }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{.}} on {{ end }}{{ .Site.Title }}{{ end }}</title>
         <link>{{ .Permalink }}</link>
@@ -33,6 +28,11 @@
         {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
         {{- end -}}d
         {{ range $pages }}
+        <!--follow challenge-->
+        <follow_challenge>
+            <feedId>63597138149986304</feedId>
+            <userId>63596104668505088</userId>
+        </follow_challenge>
         <item>
             <title>{{ .Title }}</title>
             <link>{{ .Permalink }}</link>
