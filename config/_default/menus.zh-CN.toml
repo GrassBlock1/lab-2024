@@ -58,6 +58,11 @@
   weight = 40
 
 [[main]]
+  name = "近况"
+  pageRef = "now"
+  weight = 40
+
+[[main]]
   name = "关于"
   pageRef = "about"
   weight = 40
