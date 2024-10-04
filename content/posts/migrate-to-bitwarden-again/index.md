@@ -8,9 +8,9 @@ summary: 转回 Bitwarden，并试图通过折腾还原此前使用 1password �
 description: 出于对开源的喜爱与偏好，我把密码管理器换回了自建的 Bitwarden，再次折腾了一番。
 slug: migrate-to-bitwarden-again
 title: 再次迁移到 Bitwarden
-cover: 'https://prod-files-secure.s3.us-west-2.amazonaws.com/154c8cde-d9ed-4739-b2db-0407122f1c06/a03502fb-1ca5-4161-9be6-01d13cba435a/migrate-to-bitwarden-cover.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20241004%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20241004T092943Z&X-Amz-Expires=3600&X-Amz-Signature=d8e19976a27d2e5a6279cbedb60156773748cd50c88f6cc58c10d8d53fcabcc0&X-Amz-SignedHeaders=host&x-id=GetObject'
+cover: 'https://prod-files-secure.s3.us-west-2.amazonaws.com/154c8cde-d9ed-4739-b2db-0407122f1c06/a03502fb-1ca5-4161-9be6-01d13cba435a/migrate-to-bitwarden-cover.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20241004%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20241004T100546Z&X-Amz-Expires=3600&X-Amz-Signature=6bfd8bd39fa189a983fcd6926378e90e1f9f40362b0fb1a03b2cfdd13556f87c&X-Amz-SignedHeaders=host&x-id=GetObject'
 date: '2024-09-30 21:59:00'
-updated: '2024-10-04 17:27:00'
+updated: '2024-10-04 18:04:00'
 ---
 
 将近一年前，我听取了一位朋友的建议，把密码管理器换成了 1Password，并且使用了相当长一段时间，大多数时候它都很好用，只是偶尔经历网络抖动的时候，在手机上的自动填充要很久才能完成，不过还算可接受的范围内。
@@ -265,15 +265,12 @@ KDE Plasma：
 ![image.png](/img/migrate-to-bitwarden-again/9419f1f4c6e564cadfc206f59cbce104.png)
 
 
-> 💡 其它桌面环境/窗管的实现方式可能不太一样，比如在 Hyprland：  
-> ```shell  
-> bind = CTRL + SHIFT, SPACE, exec, rofi-rbw  
-> ```
+其它桌面环境/窗管的实现方式可能不太一样，比如在 Hyprland：
 
 
-	```shell
-	bind = CTRL + SHIFT, SPACE, exec, rofi-rbw
-	```
+```shell
+bind = CTRL + SHIFT, SPACE, exec, rofi-rbw
+```
 
 
 ### SSH Agent
@@ -310,11 +307,10 @@ export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
 然后在密码库中新建一个名为 `ssh` 的文件夹（右上角新建>文件夹），再在其中建立一个名为密钥名字（比如`id_ed25519`）的项目，如果新建项目类型是“安全笔记”，那么在“备注”中填写这串密钥的 passphrase；如果是“登录信息”，那么在“密码”中填写这串密钥的 passphrase。
 
 
-> 💡 推荐在创建时，勾选“主密码重新提示”，这样在每次打开时，都会要求输入主密码，最大程度保证安全。  
-> ![image.png](/img/migrate-to-bitwarden-again/f7721d95ba057c52fcd73e25231d12e7.png)
+> 💡 推荐在创建时，勾选“主密码重新提示”，这样在每次打开时，都会要求输入主密码，最大程度保证安全。（如下图所示）
 
 
-	![image.png](/img/migrate-to-bitwarden-again/f7721d95ba057c52fcd73e25231d12e7.png)
+![image.png](/img/migrate-to-bitwarden-again/f7721d95ba057c52fcd73e25231d12e7.png)
 
 
  然后在 shell 配置中配置好环境变量：
@@ -393,7 +389,7 @@ set -gx SSH_ASKPASS "/path/to/bw-askpass"
 写文章的时候脑子比较糊，要是真出现了什么知识性错误请务必告诉咱。
 
 
-最近拿到了一个 Follow 邀请码，放在这里：`2)I-I1H.6H1h&7$2DmC(2E<QN` ，以及一段对话：
+最近拿到了一个 Follow 邀请码，放在这里：`39325c2c563a476246343834484e5a3162715b28` ，以及一段对话：
 
 
 > 我：你说咱们这样真的能拿到流量嘛？  
@@ -401,7 +397,7 @@ set -gx SSH_ASKPASS "/path/to/bw-askpass"
 > 我：那你把这串东西给我然后我放在这儿别人也不能用啊。  
 > ：这不是不让你这刚认证你这网站送的机会白白溜走嘛  
 > 我：那给我个面子，你把这东西变成这样的的办法告诉我。  
-> ：不能明说，只能告诉你这个东西是先经过将每个字符表示为某种两个字节的形式，再经过和你们常见的 base64 名字上几乎相类似的方法编码得到的  
+> ：不能明说，只能告诉你这个东西是先用你们常见的 base64 名字上几乎相类似的两种方法编码两次，再将每个字符表示为某种两个字节的形式得到的  
 > 我：听起来好乱，我脑子更晕了。  
 > ：没事，以目前人类代码的水平，已经有足够多的工具能解出这段东西了  
 > 我：好吧，我是实在解不出来，我不知道有没有人和我一样。  
