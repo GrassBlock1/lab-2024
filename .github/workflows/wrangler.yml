@@ -1,0 +1,63 @@
+name: My Hexo Blog # 名字随意
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version:
+          - 21.x
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          # 令 GitHub 在 git clone 和 git checkout 后「忘记」使用的 credentials。
+          # 如果之后需要以另外的身份（如你的 GitHub Bot）执行 git push 操作时（如部署到 GitHub Pages），必须设置为 false。
+          persist-credentials: false
+          submodules: true
+          fetch-depth: 0
+      - name: Install Node.js
+        uses: actions/setup-node@master
+        with:
+          node-version: "21.x"
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 9
+          run_install: |
+            - recursive: false
+              args: [--frozen-lockfile, --strict-peer-dependencies, --prod]
+      - name: Set Timezone
+        run: |
+          export TZ='Asia/Shanghai'
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.135.0'
+          extended: true
+      - name: Build Hugo
+        run: |
+          ./scripts/build.sh -e wrangler
+      - name: Deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CF_WORKERS_TOKEN }}
+          WRANGLER_SEND_METRICS: false
+        run: |
+          pnpm wrangler deploy
+      - name: Notify
+        run: |
+          curl https://ntfy.gb0.dev \
+          -H "Authorization: Bearer ${{ secrets.NTFY_TOKEN }}"
+          -d '{
+              "topic": "me",
+              "message": "为了预览到最新更改，请尝试在 Cloudflare 仪表盘清理站点缓存。",
+              "title": "实验室已在 Cloudflare Workers 边缘节点成功部署",
+              "tags": ["bell"],
+              "priority": 4,
+              "click": "https://gblab.grassblock.workers.dev",
+              "actions": [{ "action": "view", "label": "查看", "url": "https://gblab.grassblock.workers.dev" }]
+          }'
+            

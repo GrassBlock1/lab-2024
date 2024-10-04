@@ -35,5 +35,8 @@ Thumbs.db
 *.so
 *.dylib
 
+# Wrangler directory
+.wrangler/
+
 node_modules
 .env

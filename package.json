@@ -9,12 +9,13 @@
 	},
 	"dependencies": {
 		"@elog/cli": "^0.13.5",
-		"tinacms": "^2.2.4",
-		"@tinacms/cli": "^1.6.4"
+		"@tinacms/cli": "^1.6.4",
+		"tinacms": "^2.2.4"
 	},
 	"devDependencies": {
 		"@types/node": "^22.5.5",
 		"markdownlint": "^0.34.0",
-		"markdownlint-cli2": "^0.13.0"
+		"markdownlint-cli2": "^0.13.0",
+		"wrangler": "^3.79.0"
 	}
 }

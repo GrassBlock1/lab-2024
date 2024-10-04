@@ -1,0 +1,8 @@
+# Top-level configuration
+name = "gblab"
+#main = "src/index.js"
+compatibility_date = "2024-10-04"
+assets = { directory = "./public" }
+
+workers_dev = true
+#route = { pattern = "test.gb0.dev/*", zone_name = "gb0.dev" }
