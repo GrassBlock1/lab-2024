@@ -1,4 +1,4 @@
-name: My Hexo Blog # 名字随意
+name: Deploy to Workers # 名字随意
 on:
   push:
     branches:
@@ -23,13 +23,22 @@ jobs:
         uses: actions/setup-node@master
         with:
           node-version: "21.x"
+      # 缓存 node_modules，缓存机制参见 GitHub 文档：https://help.github.com/en/actions/configuring-and-managing-workflows/caching-dependencies-to-speed-up-workflows
+      - name: Cache node_modules
+        uses: actions/cache@v4 # 使用 GitHub 官方的缓存 Action。
+        env:
+          cache-name: hugo-node-modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('package.json') }}
+          # 使用 package-lock.json 的 Hash 作为缓存的 key。也可以使用 package.json 代替
       - name: Install pnpm
         uses: pnpm/action-setup@v3
         with:
           version: 9
           run_install: |
             - recursive: false
-              args: [--frozen-lockfile, --strict-peer-dependencies, --prod]
+              args: [--frozen-lockfile, --strict-peer-dependencies]
       - name: Set Timezone
         run: |
           export TZ='Asia/Shanghai'
@@ -53,7 +62,7 @@ jobs:
           -H "Authorization: Bearer ${{ secrets.NTFY_TOKEN }}"
           -d '{
               "topic": "me",
-              "message": "为了预览到最新更改，请尝试在 Cloudflare 仪表盘清理站点缓存。",
+              "message": "快来查看吧",
               "title": "实验室已在 Cloudflare Workers 边缘节点成功部署",
               "tags": ["bell"],
               "priority": 4,
