@@ -1,14 +1,22 @@
-<link href="/css/mastodon-comments.css" rel="stylesheet" />
 <section id="comments" class="container">
     <b>评论区</b>
     <br>
-    <p>评论由 <a href="https://hatsu.cli.rs">Hatsu</a> 驱动，可通过一个联邦宇宙帐号回复这个博文对应的帖子进行评论。</p>
-    <p>你可以在 <a class="hover:underline hover:decoration-primary-400 text-primary-400 hover:text-primary-500" href="https://carlschwan.eu/2020/12/29/adding-comments-to-your-static-blog-with-mastodon/" target="_blank" >此处</a> 以及 <a class="hover:underline hover:decoration-primary-400 text-primary-400 hover:text-primary-500" href="https://blog.southfox.me/2023/06/使用 Mastodon 作为博客的评论系统/" target="_blank">此处</a> 查看功能实现</p>
-    <p id="mastodon-comments-list"><button id="load-comment" class="!rounded-md bg-primary-600 px-4 py-2 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700">展开评论区</button></p>
-    <div id="comments-wrapper" class="mastodon-comment">
-        <noscript><p>需要JavaScript才能加载和查看评论。尝试取消禁用JavaScript并重载，或者直接在Mastodon搜索框中输入本文章的链接。</p></noscript>
-    </div>
+    <p>换域名了，Hatsu 还在联系迁移，于是建了个 Artalk 拿来用。欢迎评论！</p>
+    <p><button id="load-comment" onclick="initArtalk()" class="!rounded-md bg-primary-600 px-4 py-2 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700">展开评论区</button></p>
+    <div id="Artalk" class="py-2"></div>
 
-    <script src="/js/purify.min.js"></script>
-    <script src="/js/comments.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/artalk/2.9.0/Artalk.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/artalk/2.9.0/Artalk.js"></script>
+    <script>
+        function initArtalk() {
+            Artalk.init({
+                el: '#Artalk',
+                pageKey: '{{ .Permalink }}',
+                pageTitle: '{{ .Title }}',
+                server: 'https://artalk.gb0.dev',
+                site: 'lab@GB',
+                darkMode: 'auto'
+            })
+        }
+    </script>
 </section>
