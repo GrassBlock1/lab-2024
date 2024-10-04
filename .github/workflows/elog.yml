@@ -70,6 +70,6 @@ jobs:
           cwd: .
           default_author: github_actions
           add: .
-          message: '[skip ci] chore: sync Notion posts (pushed by GitHub Actions)'
+          message: 'chore: sync Notion posts (pushed by GitHub Actions)'
           fetch: true
           push: true
