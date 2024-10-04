@@ -1,6 +1,6 @@
 const { matterMarkdownAdapter } = require('@elog/cli')
 const path = require("node:path");
-const {rename, unlink} = require("node:fs");
+const {rename} = require("node:fs");
 
 
 /**
@@ -12,16 +12,18 @@ const {rename, unlink} = require("node:fs");
 const format = async (doc, imageClient) => {
     const cover = doc.properties.cover
     // 将 cover 字段中的 notion 图片下载到本地
+    console.log('开始下载封面')
     if (imageClient)  {
         // 只有启用图床平台image.enable=true时或image.enablForExt=true，imageClient才能用，否则请自行实现图片上传
         const url = await imageClient.uploadImageFromUrl(cover, doc)
+        console.log('封面下载成功')
         // cover 移动到对应文件夹中的 featured.jpg
         const oldFile = process.cwd() + "/assets" + url
         const format = url.split('.')[1]
         const newFile = process.cwd() + "/content/posts/" + doc.properties.slug + "/featured." + format
         rename(oldFile,newFile,function (err) {
             if (err) throw err
-            console.log('成功替换封面')
+            console.log('成功替换封面到正确的位置')
         })
     }
     doc.body = matterMarkdownAdapter(doc);

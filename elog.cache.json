@@ -1,12 +1,40 @@
 {
   "docs": [
     {
+      "id": "1118f53e-27ec-8095-bbda-e57bdb809c5f",
+      "doc_id": "1118f53e-27ec-8095-bbda-e57bdb809c5f",
+      "updated": 1728030840000,
+      "properties": {
+        "categories": "tech",
+        "tags": [
+          "今天开服务不用钱",
+          "Bitwarden",
+          "垃圾技术"
+        ],
+        "summary": "转回 Bitwarden，并试图通过折腾还原此前使用 1password 的部分体验",
+        "description": "出于对开源的喜爱与偏好，我把密码管理器换回了自建的 Bitwarden，再次折腾了一番。",
+        "slug": "migrate-to-bitwarden-again",
+        "title": "再次迁移到 Bitwarden",
+        "cover": "https://prod-files-secure.s3.us-west-2.amazonaws.com/154c8cde-d9ed-4739-b2db-0407122f1c06/a03502fb-1ca5-4161-9be6-01d13cba435a/migrate-to-bitwarden-cover.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20241004%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20241004T085927Z&X-Amz-Expires=3600&X-Amz-Signature=f4be2da1499f745b00f7eef3e971ec85173f3f2d261cd11eea33eead033f4d8b&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "date": "2024-09-30 21:59:00",
+        "updated": "2024-10-04 16:34:00"
+      },
+      "catalog": [
+        {
+          "title": "migrate-to-bitwarden-again",
+          "doc_id": "1118f53e-27ec-8095-bbda-e57bdb809c5f"
+        }
+      ],
+      "realName": "再次迁移到 Bitwarden",
+      "relativePath": "migrate-to-bitwarden-again/再次迁移到 Bitwarden.md",
+      "docPath": "content/posts/migrate-to-bitwarden-again"
+    },
+    {
       "id": "616c6d9e-15fe-4359-921f-fe3514d3ad38",
       "doc_id": "616c6d9e-15fe-4359-921f-fe3514d3ad38",
       "updated": 1717779060000,
       "properties": {
         "categories": "tech",
-        "is_microblog": "",
         "tags": [
           "垃圾技术",
           "blog",
@@ -32,6 +60,54 @@
     }
   ],
   "catalog": [
+    {
+      "object": "page",
+      "id": "1118f53e-27ec-8095-bbda-e57bdb809c5f",
+      "created_time": "2024-09-30T13:59:00.000Z",
+      "last_edited_time": "2024-10-04T08:34:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "d9622249-ee94-4bbd-ad75-f3633e15a77a"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "d9622249-ee94-4bbd-ad75-f3633e15a77a"
+      },
+      "cover": {
+        "type": "file",
+        "file": {
+          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/154c8cde-d9ed-4739-b2db-0407122f1c06/a03502fb-1ca5-4161-9be6-01d13cba435a/migrate-to-bitwarden-cover.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20241004%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20241004T085927Z&X-Amz-Expires=3600&X-Amz-Signature=f4be2da1499f745b00f7eef3e971ec85173f3f2d261cd11eea33eead033f4d8b&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2024-10-04T09:59:26.968Z"
+        }
+      },
+      "icon": {
+        "type": "emoji",
+        "emoji": "🔒"
+      },
+      "parent": {
+        "type": "database_id",
+        "database_id": "c577ebd8-c44a-44cb-917d-4acb88b92f67"
+      },
+      "archived": false,
+      "in_trash": false,
+      "properties": {
+        "categories": "tech",
+        "tags": [
+          "今天开服务不用钱",
+          "Bitwarden",
+          "垃圾技术"
+        ],
+        "summary": "转回 Bitwarden，并试图通过折腾还原此前使用 1password 的部分体验",
+        "description": "出于对开源的喜爱与偏好，我把密码管理器换回了自建的 Bitwarden，再次折腾了一番。",
+        "slug": "migrate-to-bitwarden-again",
+        "title": "再次迁移到 Bitwarden",
+        "cover": "https://prod-files-secure.s3.us-west-2.amazonaws.com/154c8cde-d9ed-4739-b2db-0407122f1c06/a03502fb-1ca5-4161-9be6-01d13cba435a/migrate-to-bitwarden-cover.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20241004%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20241004T085927Z&X-Amz-Expires=3600&X-Amz-Signature=f4be2da1499f745b00f7eef3e971ec85173f3f2d261cd11eea33eead033f4d8b&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "date": "2024-09-30 21:59:00",
+        "updated": "2024-10-04 16:34:00"
+      },
+      "url": "https://www.notion.so/Bitwarden-1118f53e27ec8095bbdae57bdb809c5f",
+      "public_url": null
+    },
     {
       "object": "page",
       "id": "616c6d9e-15fe-4359-921f-fe3514d3ad38",
@@ -65,7 +141,6 @@
       "in_trash": false,
       "properties": {
         "categories": "tech",
-        "is_microblog": "",
         "tags": [
           "垃圾技术",
           "blog",
