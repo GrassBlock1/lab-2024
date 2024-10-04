@@ -16,10 +16,10 @@ find "$TARGET_DIR" -type f -name "*.md" | while read -r FILE; do
     #fi
     TARGET_SUBDIR=$(dirname "$FILE")
     NEW_FILE="$TARGET_SUBDIR/index.md"
-    INDEX_FILE="$TARGET_SUBDIR/_index.md"
-    INDEX_EN_FILE="$TARGET_SUBDIR/_index.md"
-    if [[ -f "$NEW_FILE" || -f "$INDEX_FILE" || -f "$INDEX_EN_FILE" ]]; then
-        echo "File $NEW_FILE already moved correctly. Skipping."
+    #INDEX_FILE="$TARGET_SUBDIR/_index.md"
+    #INDEX_EN_FILE="$TARGET_SUBDIR/_index.en.md"
+    if ! grep -m 1 -q index "$FILE" ; then
+        echo "$FILE already moved correctly. Skipping."
         continue
     else
         echo "Renaming $FILE to $NEW_FILE"
