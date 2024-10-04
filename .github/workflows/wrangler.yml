@@ -60,7 +60,7 @@ jobs:
       - name: Notify
         run: |
           curl https://ntfy.gb0.dev \
-          -H "Authorization: Bearer ${{ secrets.NTFY_TOKEN }}"
+          -H "Authorization: Bearer ${{ secrets.NTFY_TOKEN }}" \
           -d '{
               "topic": "me",
               "message": "快来查看吧",
