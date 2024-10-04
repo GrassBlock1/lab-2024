@@ -8,9 +8,9 @@ summary: 转回 Bitwarden，并试图通过折腾还原此前使用 1password �
 description: 出于对开源的喜爱与偏好，我把密码管理器换回了自建的 Bitwarden，再次折腾了一番。
 slug: migrate-to-bitwarden-again
 title: 再次迁移到 Bitwarden
-cover: 'https://prod-files-secure.s3.us-west-2.amazonaws.com/154c8cde-d9ed-4739-b2db-0407122f1c06/a03502fb-1ca5-4161-9be6-01d13cba435a/migrate-to-bitwarden-cover.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20241004%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20241004T085927Z&X-Amz-Expires=3600&X-Amz-Signature=f4be2da1499f745b00f7eef3e971ec85173f3f2d261cd11eea33eead033f4d8b&X-Amz-SignedHeaders=host&x-id=GetObject'
+cover: 'https://prod-files-secure.s3.us-west-2.amazonaws.com/154c8cde-d9ed-4739-b2db-0407122f1c06/a03502fb-1ca5-4161-9be6-01d13cba435a/migrate-to-bitwarden-cover.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20241004%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20241004T092943Z&X-Amz-Expires=3600&X-Amz-Signature=d8e19976a27d2e5a6279cbedb60156773748cd50c88f6cc58c10d8d53fcabcc0&X-Amz-SignedHeaders=host&x-id=GetObject'
 date: '2024-09-30 21:59:00'
-updated: '2024-10-04 16:34:00'
+updated: '2024-10-04 17:27:00'
 ---
 
 将近一年前，我听取了一位朋友的建议，把密码管理器换成了 1Password，并且使用了相当长一段时间，大多数时候它都很好用，只是偶尔经历网络抖动的时候，在手机上的自动填充要很久才能完成，不过还算可接受的范围内。
@@ -365,29 +365,20 @@ set -gx SSH_ASKPASS "/path/to/bw-askpass"
 如果你在 1Password 和 Bitwarden 之间徘徊，我根据我的使用体验做了下面的一张表，你可以参考：
 
 
-|                           | Bitwarden                                                                           | 1Password                                                                         |
-| ------------------------- | ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| 价格
-（以官网标注的价格为准，低价区可能会更便宜） | 免费版：无附件、2FA、安全警报等
-Premium：10$/年
-家庭版：40$/年，最多6人（~6.67$/人/年）                          | 没有免费版
-个人版：2.99$/月（~36$/年）
-家庭版：4.99$/月（~60$/年），最多6人（~10$/人/年）
-                     |
-| 源码开放                      | ✅ 服务端和客户端完全开源，社区也有许多第三方实现
-（也就是说你可以完全自建）                                             | ❌ 不开源，有一部分组件和库开源
-（而且需要付费）                                                         |
-| 原生 ssh agent              | ❌ 可以使用一些脚本+Bitwarden 的 cli 实现（见上文）                                                  | ✅ 在桌面端 App 设置中开启并做好配置即可                                                           |
-| 分享密码                      | ⭕ 勉强支持，可以通过 Bitwarden send/把朋友拉到组织里实现                                               | ✅ 支持生成某个条目的分享链接，设置有效期和范围                                                          |
-| 生成器                       | 用户名、密码、邮箱、基于 Mozilla Relay 等临时邮箱服务的邮箱                                               | 只有密码                                                                              |
-| 生成较为复杂的英文单词组成的易记密码        | ❌ 目前还不行，只能生成随机字符组成的密码                                                               | ✅ 可以生成类似于 `outburst+bucket5?over` 的形式                                             |
-| Steam 令牌                  | ✅ [已经支持](https://community.bitwarden.com/t/question-about-steam-totp-codes/3513/14) | ❌ 还没有，似乎[明确不会做](https://1password.community/discussion/97919/steam-guard-support) |
-| 浏览器插件                     | ————                                                                                | 默认会关闭浏览器附带的自动保存密码功能                                                               |
-| 登录项目自定义字段                 | 支持文本、密码和布尔值                                                                         | 除文本、密码以外，支持安全问题、日期、电话、分组                                                          |
-| 附件                        | 创建项目/已有项目旁的“附件”选项                                                                   | 在添加项目时可以直接上传                                                                      |
-| 命令行                       | Node.js 编写的 `bw` cli
-也有基于 Rust 的第三方实现 [rbw](https://github.com/doy/rbw) 等等          | 使用 Go 编写，未能获取到更多信息                                                                |
-| 其它                        | - 有 Bitwarden Send，支持文本和文件，可以部分代替 PrivateBin 的机能                                    | - 界面似乎更为美观一些，当然个人意见仅供参考                                                           |
+|                          | Bitwarden                                                                           | 1Password                                                                         |
+| ------------------------ | ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| 价格（以官网标注的价格为准，低价区可能会更便宜） | 免费版：无附件、2FA、安全警报等 // Premium：10$/年 // 家庭版：40$/年，最多6人（~6.67$/人/年）                    | 没有免费版 // 个人版：2.99$/月（~36$/年）// 家庭版：4.99$/月（~60$/年），最多6人（~10$/人/年）                 |
+| 源码开放                     | ✅ 服务端和客户端完全开源，社区也有许多第三方实现（也就是说你可以完全自建）                                              | ❌ 不开源，有一部分组件和库开源（而且需要付费）                                                          |
+| 原生 ssh agent             | ❌ 可以使用一些脚本+Bitwarden 的 cli 实现（见上文）                                                  | ✅ 在桌面端 App 设置中开启并做好配置即可                                                           |
+| 分享密码                     | ⭕ 勉强支持，可以通过 Bitwarden send/把朋友拉到组织里实现                                               | ✅ 支持生成某个条目的分享链接，设置有效期和范围                                                          |
+| 生成器                      | 用户名、密码、邮箱、基于 Mozilla Relay 等临时邮箱服务的邮箱                                               | 只有密码                                                                              |
+| 生成较为复杂的英文单词组成的易记密码       | ❌ 目前还不行，只能生成随机字符组成的密码                                                               | ✅ 可以生成类似于 `outburst+bucket5?over` 的形式                                             |
+| Steam 令牌                 | ✅ [已经支持](https://community.bitwarden.com/t/question-about-steam-totp-codes/3513/14) | ❌ 还没有，似乎[明确不会做](https://1password.community/discussion/97919/steam-guard-support) |
+| 浏览器插件                    | ————                                                                                | 默认会关闭浏览器附带的自动保存密码功能                                                               |
+| 登录项目自定义字段                | 支持文本、密码和布尔值                                                                         | 除文本、密码以外，支持安全问题、日期、电话、分组                                                          |
+| 附件                       | 创建项目/已有项目旁的“附件”选项                                                                   | 在添加项目时可以直接上传                                                                      |
+| 命令行                      | Node.js 编写的 `bw` cli，也有基于 Rust 的第三方实现 [rbw](https://github.com/doy/rbw) 等等          | 使用 Go 编写，未能获取到更多信息                                                                |
+| 其它                       | - 有 Bitwarden Send，支持文本和文件，可以部分代替 PrivateBin 的机能                                    | - 界面似乎更为美观一些，当然个人意见仅供参考                                                           |
 
 
 # 总结
