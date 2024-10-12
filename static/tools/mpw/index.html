@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" class="mdui-theme-auto">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="https://unpkg.com/mdui@2/mdui.css">
+    <script src="https://unpkg.com/mdui@2/mdui.global.js"></script>
+    <title>易记密码生成器</title>
+    <!-- Two Tone -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<mdui-card class="main">
+    <h1 class="mdui-text-center">Memorable Password Generator</h1>
+    <form class="password-form">
+        <div class="word-count">
+            <div class="wdc-label">
+                <span id="word-count">3</span><span>个词</span>
+            </div>
+            <mdui-slider id="wdc-slider" min="3" max="15" tickmarks step="1"></mdui-slider>
+        </div>
+        <div class="uppercase">
+            <span>首个词语字母大写</span>
+            <mdui-switch id="upcs-switch">
+                <mdui-icon slot="checked-icon" name=""></mdui-icon>
+            </mdui-switch>
+        </div>
+        <div class="divider">
+            <mdui-select id="divider-options" label="分隔符" value="numbers-and-symbols">
+                <mdui-menu-item value="hyphens">连字符</mdui-menu-item>
+                <mdui-menu-item value="spaces">空格</mdui-menu-item>
+                <mdui-menu-item value="numbers">随机数字</mdui-menu-item>
+                <mdui-menu-item value="numbers-and-symbols">随机数字和符号</mdui-menu-item>
+            </mdui-select>
+        </div>
+        <div class="gen-passwd">
+            <mdui-button full-width onclick="generatePassword()">生成密码！</mdui-button>
+        </div>
+    </form>
+    <div id="result-part" class="mdui-textfield">
+        <mdui-text-field id="result" counter readonly>
+            <mdui-button-icon id="copy" slot="end-icon" onclick="navigator.clipboard.writeText(document.getElementById('result').value);" icon="content_copy--rounded"></mdui-button-icon>
+        </mdui-text-field>
+        <mdui-snackbar closeable auto-close-delay="2000" id="copied-message">已复制到剪贴板</mdui-snackbar>
+    </div>
+    <div id="more-info" class="mdui-prose">
+        <a href="javascript:" id="help-button">帮助</a>
+        <a href="https://gist.github.com/GrassBlock1/d17cc08ce208efb86ce6bd1cab3c1bb1">源码</a>
+
+        <mdui-dialog close-on-overlay-click close-on-esc id="help-dialog">
+            <span slot="headline">帮助</span>
+            <span slot="description">一些你可能遇到的常见问题</span>
+            <b>Q: 这个生成器的原理？</b>
+            <p>A: 从 <a href="https://www.eff.org/files/2016/07/18/eff_large_wordlist.txt">EFF's Long Wordlist</a> 中随机抽选你需要数量的单词，然后在间隔中随机插入字符/插入指定字符。</p>
+            <b>Q: 隐私问题？</b>
+            <p>A: 随机过程完全在浏览器中进行，不会被上传以及保存。页面使用原生的 Javascript 来实现这一过程，不经过任何框架。</p>
+            <b>Q: 我想直接把它保存到密码管理器，有更简易懒人的方法吗？</b>
+            <p>A：暂时没有，我正在想办法。</p>
+            <mdui-button class="close-dialog">关闭</mdui-button>
+        </mdui-dialog>
+
+    </div>
+</mdui-card>
+<script>
+    mdui.setColorScheme('#5e81ac'); // define theme from palette
+    const wordCountElem = document.getElementById('word-count');
+    const wordCountSliderElem = document.getElementById('wdc-slider');
+    wordCountSliderElem.addEventListener("input", () => {
+        wordCountElem.innerHTML = document.getElementById('wdc-slider').value;
+    }); // dynamically update word count
+
+    const snackbar = document.getElementById("copied-message");
+    const copyButton = document.getElementById("copy")
+    copyButton.addEventListener("click", () => snackbar.open = true);
+    // snackbar
+
+    const helpButton = document.getElementById("help-button")
+    const helpDialog = document.getElementById("help-dialog")
+    const clsDialogBtn = document.querySelector(".close-dialog")
+    helpButton.addEventListener("click", () => helpDialog.open = true);
+    clsDialogBtn.addEventListener("click", () => helpDialog.open = false);
+</script>
+<script src="passwd-gen.js"></script>
+</body>
+</html>

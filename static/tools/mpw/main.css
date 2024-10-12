@@ -1,0 +1,26 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+form {
+    width: 60%;
+}
+#result-part {
+    width: 50%;
+}
+.wdc-label {
+    font-size: 1rem;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+.uppercase, .word-count, .divider, .gen-passwd {
+    margin: 1rem;
+}
+.uppercase, .word-count {
+    display: flex;
+    justify-content: space-between;
+}
