@@ -1,6 +1,6 @@
 const { matterMarkdownAdapter } = require('@elog/cli')
 const path = require("node:path");
-const {rename} = require("node:fs");
+const {rename, mkdir} = require("node:fs");
 
 
 /**
@@ -18,13 +18,23 @@ const format = async (doc, imageClient) => {
         const url = await imageClient.uploadImageFromUrl(cover, doc)
         console.log('封面下载成功')
         // cover 移动到对应文件夹中的 featured.jpg
-        const oldFile = process.cwd() + "/assets" + url
+        const oldFile = path.join(process.cwd(), "assets" , url)
         const format = url.split('.')[1]
-        const newFile = process.cwd() + "/content/posts/" + doc.properties.slug + "/featured." + format
-        rename(oldFile,newFile,function (err) {
-            if (err) throw err
-            console.log('成功替换封面到正确的位置')
-        })
+        const newDir = path.join(process.cwd() , "content" , "posts", "doc.properties.slug")
+        const newFile = path.join(newDir,`/featured.${format}`)
+        if (newDir) { mkdir(newDir, { recursive: true }, (err) => {
+            if (err) throw err;
+            console.log('似乎还没有文章文件夹...正在创建文件夹');
+            rename(oldFile, newFile, function (err) {
+                if (err) throw err;
+                console.log('成功替换封面到正确的位置');
+            });
+        }); } else {
+            rename(oldFile, newFile, function (err) {
+                if (err) throw err;
+                console.log('成功替换封面到正确的位置');
+            });
+        }
     }
     doc.body = matterMarkdownAdapter(doc);
     return doc;

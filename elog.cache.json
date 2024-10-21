@@ -1,6 +1,33 @@
 {
   "docs": [
     {
+      "id": "11e8f53e-27ec-8014-a027-f4877e4a5f26",
+      "doc_id": "11e8f53e-27ec-8014-a027-f4877e4a5f26",
+      "updated": 1729520340000,
+      "properties": {
+        "categories": "thinking",
+        "tags": [
+          "Blogging"
+        ],
+        "summary": "不定时更新的快问快答环节（1/n），今天是独立博客自省问卷15题。",
+        "description": "尝试回答了独立博客自省问卷15题（https://yayu.net/4626.html）。",
+        "slug": "15-answers-to-blogging",
+        "title": "答独立博客自省问卷15题",
+        "cover": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb",
+        "date": "2024-10-13 23:28:00",
+        "updated": "2024-10-21 22:19:00"
+      },
+      "catalog": [
+        {
+          "title": "15-answers-to-blogging",
+          "doc_id": "11e8f53e-27ec-8014-a027-f4877e4a5f26"
+        }
+      ],
+      "realName": "答独立博客自省问卷15题",
+      "relativePath": "15-answers-to-blogging/答独立博客自省问卷15题.md",
+      "docPath": "content/posts/15-answers-to-blogging"
+    },
+    {
       "id": "1118f53e-27ec-8095-bbda-e57bdb809c5f",
       "doc_id": "1118f53e-27ec-8095-bbda-e57bdb809c5f",
       "updated": 1728036240000,
@@ -15,7 +42,7 @@
         "description": "出于对开源的喜爱与偏好，我把密码管理器换回了自建的 Bitwarden，再次折腾了一番。",
         "slug": "migrate-to-bitwarden-again",
         "title": "再次迁移到 Bitwarden",
-        "cover": "https://prod-files-secure.s3.us-west-2.amazonaws.com/154c8cde-d9ed-4739-b2db-0407122f1c06/a03502fb-1ca5-4161-9be6-01d13cba435a/migrate-to-bitwarden-cover.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20241004%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20241004T100546Z&X-Amz-Expires=3600&X-Amz-Signature=6bfd8bd39fa189a983fcd6926378e90e1f9f40362b0fb1a03b2cfdd13556f87c&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "cover": "https://prod-files-secure.s3.us-west-2.amazonaws.com/154c8cde-d9ed-4739-b2db-0407122f1c06/a03502fb-1ca5-4161-9be6-01d13cba435a/migrate-to-bitwarden-cover.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20241021%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20241021T143229Z&X-Amz-Expires=3600&X-Amz-Signature=e12efbe815355e0e47b8fc25249bf4d7312eade16a4e259243692753e6c45b09&X-Amz-SignedHeaders=host&x-id=GetObject",
         "date": "2024-09-30 21:59:00",
         "updated": "2024-10-04 18:04:00"
       },
@@ -37,7 +64,6 @@
         "categories": "tech",
         "tags": [
           "垃圾技术",
-          "blog",
           "今天开服务不用钱"
         ],
         "summary": "托管个人空间的新选择。如果你已经有在使用 zeabur 并跑了一些服务在上面，无需另外购买，这种办法可能会更为超值。",
@@ -62,6 +88,51 @@
   "catalog": [
     {
       "object": "page",
+      "id": "11e8f53e-27ec-8014-a027-f4877e4a5f26",
+      "created_time": "2024-10-13T15:28:00.000Z",
+      "last_edited_time": "2024-10-21T14:19:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "d9622249-ee94-4bbd-ad75-f3633e15a77a"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "d9622249-ee94-4bbd-ad75-f3633e15a77a"
+      },
+      "cover": {
+        "type": "external",
+        "external": {
+          "url": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb"
+        }
+      },
+      "icon": {
+        "type": "emoji",
+        "emoji": "📝"
+      },
+      "parent": {
+        "type": "database_id",
+        "database_id": "c577ebd8-c44a-44cb-917d-4acb88b92f67"
+      },
+      "archived": false,
+      "in_trash": false,
+      "properties": {
+        "categories": "thinking",
+        "tags": [
+          "Blogging"
+        ],
+        "summary": "不定时更新的快问快答环节（1/n），今天是独立博客自省问卷15题。",
+        "description": "尝试回答了独立博客自省问卷15题（https://yayu.net/4626.html）。",
+        "slug": "15-answers-to-blogging",
+        "title": "答独立博客自省问卷15题",
+        "cover": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb",
+        "date": "2024-10-13 23:28:00",
+        "updated": "2024-10-21 22:19:00"
+      },
+      "url": "https://www.notion.so/15-11e8f53e27ec8014a027f4877e4a5f26",
+      "public_url": null
+    },
+    {
+      "object": "page",
       "id": "1118f53e-27ec-8095-bbda-e57bdb809c5f",
       "created_time": "2024-09-30T13:59:00.000Z",
       "last_edited_time": "2024-10-04T10:04:00.000Z",
@@ -76,8 +147,8 @@
       "cover": {
         "type": "file",
         "file": {
-          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/154c8cde-d9ed-4739-b2db-0407122f1c06/a03502fb-1ca5-4161-9be6-01d13cba435a/migrate-to-bitwarden-cover.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20241004%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20241004T100546Z&X-Amz-Expires=3600&X-Amz-Signature=6bfd8bd39fa189a983fcd6926378e90e1f9f40362b0fb1a03b2cfdd13556f87c&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2024-10-04T11:05:46.302Z"
+          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/154c8cde-d9ed-4739-b2db-0407122f1c06/a03502fb-1ca5-4161-9be6-01d13cba435a/migrate-to-bitwarden-cover.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20241021%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20241021T143229Z&X-Amz-Expires=3600&X-Amz-Signature=e12efbe815355e0e47b8fc25249bf4d7312eade16a4e259243692753e6c45b09&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2024-10-21T15:32:29.181Z"
         }
       },
       "icon": {
@@ -101,7 +172,7 @@
         "description": "出于对开源的喜爱与偏好，我把密码管理器换回了自建的 Bitwarden，再次折腾了一番。",
         "slug": "migrate-to-bitwarden-again",
         "title": "再次迁移到 Bitwarden",
-        "cover": "https://prod-files-secure.s3.us-west-2.amazonaws.com/154c8cde-d9ed-4739-b2db-0407122f1c06/a03502fb-1ca5-4161-9be6-01d13cba435a/migrate-to-bitwarden-cover.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20241004%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20241004T100546Z&X-Amz-Expires=3600&X-Amz-Signature=6bfd8bd39fa189a983fcd6926378e90e1f9f40362b0fb1a03b2cfdd13556f87c&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "cover": "https://prod-files-secure.s3.us-west-2.amazonaws.com/154c8cde-d9ed-4739-b2db-0407122f1c06/a03502fb-1ca5-4161-9be6-01d13cba435a/migrate-to-bitwarden-cover.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20241021%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20241021T143229Z&X-Amz-Expires=3600&X-Amz-Signature=e12efbe815355e0e47b8fc25249bf4d7312eade16a4e259243692753e6c45b09&X-Amz-SignedHeaders=host&x-id=GetObject",
         "date": "2024-09-30 21:59:00",
         "updated": "2024-10-04 18:04:00"
       },
@@ -143,16 +214,13 @@
         "categories": "tech",
         "tags": [
           "垃圾技术",
-          "blog",
           "今天开服务不用钱"
         ],
-        "status": "已发布",
         "summary": "托管个人空间的新选择。如果你已经有在使用 zeabur 并跑了一些服务在上面，无需另外购买，这种办法可能会更为超值。",
         "description": "喜大普奔，现在终于能在 Zeabur 上运行 Mix Space 了，无服务器选择喜+1。",
         "slug": "mxspace-on-zeabur",
         "title": "使用 Mix Space × Zeabur 搭建自己的个人空间（博客）",
         "cover": "https://www.notion.so/images/page-cover/nasa_buzz_aldrin_on_the_moon.jpg",
-        "urlname": "616c6d9e-15fe-4359-921f-fe3514d3ad38",
         "date": "2024-05-15 22:45:00",
         "updated": "2024-06-08 00:51:00"
       },
