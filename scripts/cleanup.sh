@@ -18,7 +18,7 @@ find "$TARGET_DIR" -type f -name "*.md" | while read -r FILE; do
     NEW_FILE="$TARGET_SUBDIR/index.md"
     #INDEX_FILE="$TARGET_SUBDIR/_index.md"
     #INDEX_EN_FILE="$TARGET_SUBDIR/_index.en.md"
-    if ! grep -m 1 -q index "$FILE" ; then
+    if [[ "$FILE" == *"index"* ]] ; then
         echo "$FILE already moved correctly. Skipping."
         continue
     else
