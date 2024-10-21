@@ -20,7 +20,7 @@ const format = async (doc, imageClient) => {
         // cover 移动到对应文件夹中的 featured.jpg
         const oldFile = path.join(process.cwd(), "assets" , url)
         const format = url.split('.')[1]
-        const newDir = path.join(process.cwd() , "content" , "posts", "doc.properties.slug")
+        const newDir = path.join(process.cwd() , "content" , "posts", doc.properties.slug)
         const newFile = path.join(newDir,`/featured.${format}`)
         if (newDir) { mkdir(newDir, { recursive: true }, (err) => {
             if (err) throw err;
