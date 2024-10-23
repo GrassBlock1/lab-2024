@@ -3,6 +3,18 @@ public:
     link: https://ntfy.gb0.dev
     logo: https://raw.githubusercontent.com/binwiederhier/ntfy/refs/heads/main/web/public/static/images/ntfy.png
     descr: "[WIP] Send push notifications to your phone or desktop using PUT/POST requests"
+  - name: "Akkoma"
+    link: https://portal.gb0.dev
+    logo: https://docs.akkoma.dev/stable/images/logo.png
+    descr: "Be very cool on the internet, driven by awesome Fediverse."
+  - name: "Artalk"
+    link: https://artalk.gb0.dev
+    logo: https://artalk.js.org/favicon.png
+    descr: "A simple, lightweight, and privacy-focused comment system"
+  - name: "microbin"
+    link: https://bin.gb0.dev
+    logo: https://raw.githubusercontent.com/szabodanika/microbin/refs/heads/master/templates/assets/logo-square.png
+    descr: "A secure, configurable file-sharing and URL shortening web app written in Rust."
 
 private:
   - name: Vaultwarden
@@ -13,3 +25,11 @@ private:
     link: https://mail.gb0.dev
     logo: https://roundcube.net/images/roundcube_logo_icon.svg
     descr: "Webmail client based on Roundcube, backend provided by [docker-mailserver]"
+  - name: "Umami"
+    link: https://umami.grassblock.eu.org
+    logo: https://avatars.githubusercontent.com/u/105618662?s=200&v=4
+    descr: " Umami is a simple, fast, privacy-focused alternative to Google Analytics."
+  - name: "Wakapi"
+    link: https://waka.grassblock.eu.org
+    logo: https://raw.githubusercontent.com/muety/wakapi/refs/heads/master/static/assets/images/android-chrome-512x512.png
+    descr: "Wakapi is an open-source tool that helps you keep track of the time you have spent."
