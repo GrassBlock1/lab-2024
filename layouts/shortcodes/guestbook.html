@@ -9,9 +9,9 @@
 <script>
   const artalk = Artalk.init({
     el:        '#Comments',                // 绑定元素的 Selector
-    pageKey:   '{{ .Page.RelPermalink | safeHTML }}index.html',                  // 固定链接
-    server:    'https://gb-comments.zeabur.app',  // 后端地址
-    site:      'Mare_Infinitus',             // 你的站点名
+    pageKey:   '{{ .Permalink }}',                  // 固定链接
+    server:    '{{ $.Site.Params.artalk.server }}',  // 后端地址
+    site:      '{{ $.Site.Params.artalk.site }}',             // 你的站点名
     darkMode: 'auto'
   })
 </script>

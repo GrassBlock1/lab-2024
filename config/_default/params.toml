@@ -122,6 +122,13 @@ smartTOCHideUnfocusedChildren = true
   cardView = false
   cardViewScreenWidth = false
 
+[artalk]
+server = 'https://artalk.gb0.dev'
+site = 'lab@GB'
+
+[hatsu]
+server = "https://hatsu-nightly-debug.hyp3r.link"
+
 [firebase]
   # apiKey = "XXXXXX"
   # authDomain = "XXXXXX"

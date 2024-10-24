@@ -13,8 +13,8 @@
                 el: '#Artalk',
                 pageKey: '{{ .Permalink }}',
                 pageTitle: '{{ .Title }}',
-                server: 'https://artalk.gb0.dev',
-                site: 'lab@GB',
+                server: '{{ $.Site.Params.artalk.server }}',
+                site: '{{ $.Site.Params.artalk.site }}',
                 darkMode: 'auto'
             })
         }
