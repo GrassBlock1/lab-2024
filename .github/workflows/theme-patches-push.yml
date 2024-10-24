@@ -1,0 +1,46 @@
+name: Sync Theme tweaks to Remote Repo
+
+on:
+  push:
+    paths:
+      - 'i18n/**'
+      - 'layouts/**'
+      - 'static/css/**'
+      - 'static/js/**'
+  workflow_dispatch:
+
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout current repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Git
+        run: |
+          git config --global user.name 'grassblock'
+          git config --global user.email 'i@gb0.dev'
+      - name: Clone remote repo
+        run: |
+          git clone https://grassblock:${{ secrets.REMOTE_REPO_TOKEN }}@gitlab.com/grassblock/pufferfish remote_repo
+      - name: Sync files
+        run: |
+            rsync -av --progress i18n/ remote_repo/i18n/
+            rsync -av --progress layouts/ remote_repo/layouts/
+            mkdir -p remote_repo/static/
+            rsync -av --progress static/css/ remote_repo/static/css/
+            rsync -av --progress static/js/ remote_repo/static/js/
+        shell: bash
+
+      - name: Commit and push changes to remote repo
+        run: |
+          cd remote_repo
+          git add .
+          git commit -m "sync: ${{ github.event.head_commit.message }}"
+          git push origin main
+        env:
+          GITHUB_TOKEN: ${{ secrets.REMOTE_REPO_TOKEN }}
