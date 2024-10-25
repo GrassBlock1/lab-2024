@@ -1,15 +1,14 @@
 <!-- CSS -->
-<link href="https://gb-comments.zeabur.app/dist/Artalk.css" rel="stylesheet" />
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/artalk/2.9.0/Artalk.css">
 <!-- JS -->
-<script src="https://gb-comments.zeabur.app/dist/Artalk.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/artalk/2.9.0/Artalk.js"></script>
 
 <!-- Artalk -->
 <div id="Comments"></div>
 <script>
   const artalk = Artalk.init({
     el:        '#Comments',                // 绑定元素的 Selector
-    pageKey:   '{{ .Permalink }}',                  // 固定链接
+    pageKey:   '{{ .Page.Permalink | safeHTML }}',                  // 固定链接
     server:    '{{ $.Site.Params.artalk.server }}',  // 后端地址
     site:      '{{ $.Site.Params.artalk.site }}',             // 你的站点名
     darkMode: 'auto'
