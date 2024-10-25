@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>随机数生成器</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #number {
+            font-size: 45vw;
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        #controls {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input[type="number"] {
+            width: 60px;
+            margin: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        label {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="number">1</div>
+
+    <div id="controls">
+        <label>
+            最小值： <input type="number" id="min" value="1">
+        </label>
+        <label>
+            最大值： <input type="number" id="max" value="100">
+        </label>
+        <label>
+            真随机数（使用 <a href="https://www.random.org">random.org</a> 的 API） <input type="checkbox" id="trueRandom">
+        </label>
+        <noscript>本工具虽然尽可能保证了兼容性，但还是需要依赖 JavaScript 来生成随机数。如果随机数无法生成，请启用 JavaScript 后重试。</noscript>
+        <button onclick="generateNumber()">生成！</button>
+    </div>
+
+    <script>
+        async function generateNumber() {
+            const min = parseInt(document.getElementById('min').value);
+            const max = parseInt(document.getElementById('max').value);
+            const useTrueRandom = document.getElementById('trueRandom').checked;
+
+            if (isNaN(min) || isNaN(max) || min >= max) {
+                alert("请输入正确的范围");
+                return;
+            }
+
+            let randomNumber;
+
+            if (useTrueRandom) {
+                try {
+                    const response = await fetch(`https://www.random.org/integers/?num=1&min=${min}&max=${max}&col=1&base=10&format=plain&rnd=new`, {
+                        method: 'GET'
+                    });
+                    if (response.ok) {
+                        randomNumber = await response.text();
+                        randomNumber = parseInt(randomNumber.trim());
+                    } else {
+                        alert("Error fetching true random number. Falling back to pseudo-random.");
+                        randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+                    }
+                } catch (error) {
+                    console.error(error);
+                    alert("与 random.org 通信失败，将使用伪随机数。");
+                    randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+                }
+            } else {
+                randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+            }
+
+            document.getElementById('number').textContent = randomNumber;
+        }
+    </script>
+
+</body>
+</html>
