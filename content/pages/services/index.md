@@ -22,6 +22,6 @@ index: false
 
 ## 服务列表
 
-[服务状态](https://status.imgb.space) | [申请使用私有服务（免费！）](https://forms.gle/SVgjJwWzn4aF4Bpp9)
+[服务状态](https://status.imgb.space) | [申请使用服务（免费！）](https://wsblockg.notion.site/12e8f53e27ec81828d48c2068f18122c?pvs=105)
 
 {{< services >}}
