@@ -16,13 +16,14 @@ jobs:
         accountId: '5660a9214c6f279675b84e0825c4183e'
         project: 'gb-lab-2024'
     - run: |
-        curl ntfy.envs.net \
+        curl ntfy.gb0.dev \
+        -H "Authorization: Bearer ${{ secrets.NTFY_TOKEN }}" \
         -d '{
-            "topic": "gb-0173",
+            "topic": "me",
             "message": "为了预览到最新更改，请尝试在 Cloudflare 仪表盘清理站点缓存。",
             "title": "实验室已在 Cloudflare Pages 成功部署",
             "tags": ["bell"],
             "priority": 4,
-            "click": "https://lab.imgb.space",
+            "click": "https://lab.gb0.dev",
             "actions": [{ "action": "view", "label": "查看", "url": "https://lab.imgb.space" }]
         }'
