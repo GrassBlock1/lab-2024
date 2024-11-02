@@ -4,10 +4,9 @@
   tag=i
   lifeLike=true
 >}}
-Per aspera ad astra.
+其实分别也没有这么可怕。65万个小时后，当我们氧化成风，就能变成同一杯啤酒上两朵相邻的泡沫，就能变成同一盏路灯下两粒依偎的尘埃。宇宙中的原子并不会湮灭，而我们，也终究会在一起。
 {{< /typeit >}}
 
-<!--全新微博客上线~ 欢迎访问 <a href="/mb" data-umami-event="Go into microblog">[m1cr0b10g]</a>！-->
 更换了新的域名！现在你可以通过 lab.gb0.dev 访问本站。
 
 更多情报将在稍后放出。
