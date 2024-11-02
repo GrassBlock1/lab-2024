@@ -10,3 +10,6 @@ other = "提交"
 
 [wrongPassword]
 other = "密码错误"
+
+[footer]
+powered_by = '由 {{ .Hugo }} &amp; <a href="https://gitlab.com/grassblock/pufferfish" target="_blank" >Pufferfish</a> (修改自 {{ .Theme }}) 强力驱动'
