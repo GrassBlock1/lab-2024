@@ -3,8 +3,6 @@ title: "调试页面"
 layout: 'simple'
 ---
 
-{{< heatmap >}}
-
 <script type="module">
     import { hatsu } from 'https://esm.sh/@kkna/preset-hatsu'
     import { openheart } from 'https://esm.sh/@kkna/preset-openheart'
@@ -21,6 +19,8 @@ layout: 'simple'
 <kkna-material></kkna-material>
 
 加密测试，密码：`foobar2000`
+
+![logo](/img/logo@square.png)
 
 {{% encrypt "foobar2000" %}}
 **Hello World!**
