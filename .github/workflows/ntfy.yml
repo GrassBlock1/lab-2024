@@ -25,5 +25,5 @@ jobs:
             "tags": ["bell"],
             "priority": 4,
             "click": "https://lab.gb0.dev",
-            "actions": [{ "action": "view", "label": "查看", "url": "https://lab.imgb.space" }]
+            "actions": [{ "action": "view", "label": "查看", "url": "https://lab.gb0.dev" }]
         }'
