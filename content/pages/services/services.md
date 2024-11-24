@@ -4,7 +4,7 @@ date: 2024-07-27 22:00:34
 comments: false
 description: 为了满足自己使用上的一些需求开设的服务
 layout: simple
-index: false
+slug: services
 ---
 
 ## 这是什么？
