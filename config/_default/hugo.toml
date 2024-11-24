@@ -27,7 +27,7 @@ enableEmoji = true
 [permalinks]
   [permalinks.page]
     posts = '/post/:slug/'
-    pages = '/:filename/'
+    pages = ':slugorfilename/'
 
   [permalinks.section]
     posts = '/posts/'
