@@ -3,7 +3,7 @@ title: 'Aperture'
 layout: simple
 description: '一个 Matrix 服务器'
 date: 2024-11-24 14:45:51
-url: "/services/matrix/"
+slug: "/services/matrix/"
 ---
 ![Featured Image](featured.jpg)
 *Image Source: [Portal 2 Soundtrack on Steam](https://store.steampowered.com/app/323180/Portal_2_Soundtrack/)*
