@@ -25,3 +25,7 @@ layout: 'simple'
 {{% encrypt "foobar2000" %}}
 **Hello World!**
 {{% /encrypt %}}
+
+{{% encrypt %}}
+**Hello World!**
+{{% /encrypt %}}

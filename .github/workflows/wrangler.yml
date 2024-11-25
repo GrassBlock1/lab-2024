@@ -48,6 +48,8 @@ jobs:
           hugo-version: '0.135.0'
           extended: true
       - name: Build Hugo
+        env:
+          HUGO_PARAMS_ENCRYPT_PASSWORD: ${{ secrets.HUGO_ENCRYPT_PASSWORD }}
         run: |
           ./scripts/build.sh -e wrangler
       - name: Deploy

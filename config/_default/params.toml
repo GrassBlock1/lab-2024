@@ -79,7 +79,7 @@ smartTOCHideUnfocusedChildren = true
   showComments = true
 
 [encrypt]
-  password = 'bix!ghuf!rhin6wuwn'
+  #password = 'hidden'
   storage = 'session'
 
 [list]

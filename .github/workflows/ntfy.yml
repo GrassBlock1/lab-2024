@@ -13,10 +13,10 @@ jobs:
       uses: WalshyDev/cf-pages-await@v1
       with:
         apiToken: ${{ secrets.CF_API_TOKEN  }}
-        accountId: '5660a9214c6f279675b84e0825c4183e'
+        accountId: ${{ secrets.CF_ACCOUNT_ID }}
         project: 'gb-lab-2024'
     - run: |
-        curl ntfy.gb0.dev \
+        curl -L ntfy.gb0.dev \
         -H "Authorization: Bearer ${{ secrets.NTFY_TOKEN }}" \
         -d '{
             "topic": "me",
