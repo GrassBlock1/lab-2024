@@ -16,7 +16,7 @@ jobs:
         accountId: ${{ secrets.CF_ACCOUNT_ID }}
         project: 'gb-lab-2024'
     - run: |
-        curl -L ntfy.gb0.dev \
+        curl https://ntfy.gb0.dev \
         -H "Authorization: Bearer ${{ secrets.NTFY_TOKEN }}" \
         -d '{
             "topic": "me",
