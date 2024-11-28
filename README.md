@@ -32,4 +32,4 @@ Live Website: https://lab.gb0.dev
 # License
 无特殊说明，站点的所有代码部分均采用 [Mozilla Public License 2.0](https://www.mozilla.org/en-US/MPL/2.0/) 授权，见 [LICENSE](./LICENSE) 文件。
 
-文章、图片等其它资源，除非特别声明，均采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en) 授权，见 [LICENSE.res](./LICENSE.res) 文件。
+文章、图片等其它资源，除非特别声明，均采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en) 授权，见 [LICENSE-RES](./LICENSE-RES) 文件。
