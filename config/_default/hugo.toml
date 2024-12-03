@@ -47,16 +47,22 @@ enableEmoji = true
   priority = 0.5
 
 [outputs]
-  home = ["HTML", "RSS", "JSON","jsonfeed"]
+  home = ["HTML", "RSS", "JSON","jsonfeed","twtxt"]
 
 [mediaTypes."application/feed+json"]
     suffixes = [ "json" ]
 
-[outputFormats.jsonfeed]
-    mediaType = "application/feed+json"
-    baseName = "feed"
-    rel = "alternate"
-    isPlainText = true
+[outputFormats]
+    [outputFormats.jsonfeed]
+        mediaType = "application/feed+json"
+        baseName = "feed"
+        rel = "alternate"
+        isPlainText = true
+
+[outputFormats.twtxt]
+    name = "twtxt"
+    mediaType = "text/plain"
+    baseName = "twtxt"
 
 
 [related]

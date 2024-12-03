@@ -1,0 +1,10 @@
+{{- /* Hugo twtxt 模板 */ -}}
+{{- $baseURL := .Site.BaseURL -}}
+{{- range .Site.RegularPages.ByDate.Reverse -}}
+{{- if eq .Section "posts" -}}
+{{- $date := .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML -}}
+{{- $title := .Title | plainify | htmlUnescape -}}
+{{- $link := printf "%s" .Permalink -}}
+{{$date}}{{ printf "%s" "\t" }}{{$title}} {{$link}} {{ printf "%s" "\n" }}
+{{- end -}}
+{{- end -}}
