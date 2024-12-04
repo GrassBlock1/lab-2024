@@ -21,13 +21,12 @@ title = "/var/log/gblab"
    headline = "还没取正经名字的折腾怪物"
    bio = "不知名CV工程师，卑微奇点观察员，人类资格证绝赞重考中"
    links = [
-     { email = "mailto:hi@imgb.space" },
-     { link = "https://imgb.space/" },
+     { email = "mailto:i@gb0.dev" },
+     { link = "https://gb0.dev/" },
      { github = "https://github.com/GrassBlock1" },
-     { mastodon = "https://o3o.ca/@grassblock" },
-     { steam = "https://steamcommunity.com/profiles/76561199422870469" },
+     { activitypub = "https://portal.gb0.dev/users/me"},
+     { steam = "https://steamcommunity.com/id/GB-427/" },
      { telegram = "https://t.me/Grass_block" },
      { x-twitter = "https://twitter.com/Grass_block_cn" },
-     { pgpkey = "/gpg-key" },
      { rocket = "https://www.travellings.cn/go.html"}
    ]
