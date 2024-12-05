@@ -22,7 +22,7 @@
         {{ if not .Date.IsZero }}<lastBuildDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>{{ end }}
         {{- with .OutputFormats.Get "RSS" -}}
         {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
-        {{- end -}}d
+        {{- end -}}
         {{- range $index, $element := where .Site.RegularPages "Type" "in"
         .Site.Params.mainSections }}
         {{- with $element }}
@@ -39,7 +39,7 @@
             {{ $newContent := replaceRE $pattern $replacement $content }}
             <content:encoded>
                 {{ printf "<![CDATA[" | safeHTML }}
-                {{- printf "%s" .Content | emojify | safeHTML }}
+                {{- printf "%s" .Content | emojify }}
                 {{- printf "]]>" | safeHTML }}
             </content:encoded>
             {{ range ( where .Site.RegularPages ".RelPermalink" .RelPermalink | first 1 ) }}
