@@ -47,7 +47,7 @@ enableEmoji = true
   priority = 0.5
 
 [outputs]
-  home = ["HTML", "RSS", "JSON","jsonfeed","twtxt"]
+  home = ["HTML", "RSS", "JSON","jsonfeed","twtxt","fed"]
 
 [mediaTypes."application/feed+json"]
     suffixes = [ "json" ]
@@ -59,10 +59,16 @@ enableEmoji = true
         rel = "alternate"
         isPlainText = true
 
-[outputFormats.twtxt]
-    name = "twtxt"
-    mediaType = "text/plain"
-    baseName = "twtxt"
+    [outputFormats.twtxt]
+        name = "twtxt"
+        mediaType = "text/plain"
+        baseName = "twtxt"
+
+    # fed.brid.gy only recognize rss.xml/atom.xml so make a rss file w/ posts only for it
+    [outputFormats.fed]
+        name = "fed"
+        mediaType = "application/rss+xml"
+        baseName = "rss"
 
 
 [related]
