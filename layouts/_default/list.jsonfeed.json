@@ -29,10 +29,9 @@
 {{- if (or .Site.Params.author .Site.Params.author_url) }}
 "authors": [{
 {{- if .Site.Params.author }}
-"name": {{ .Site.Params.author | jsonify }},
-{{- end }}
-{{- if .Site.Params.author_url }}
-"url": {{ .Site.Params.author_url | jsonify }}
+"name": {{ .Site.Params.author.name | jsonify }},
+"url": {{ .Site.Params.author.url | jsonify }},
+"avatar": {{ with resources.Get .Site.Params.author.image }}{{ .Permalink | jsonify }}{{ end }}
 {{- end }}
 }],
 {{- end }}

@@ -17,6 +17,7 @@ title = "/var/log/gblab"
 
  [params.author]
    name = "草方块"
+   url = "https://gb0.dev/"
    image = "img/avatar.png"
    headline = "还没取正经名字的折腾怪物"
    bio = "不知名CV工程师，卑微奇点观察员，人类资格证绝赞重考中"
