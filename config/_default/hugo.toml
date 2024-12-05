@@ -47,7 +47,7 @@ enableEmoji = true
   priority = 0.5
 
 [outputs]
-  home = ["HTML", "JSON","jsonfeed","twtxt","fed"]
+  home = ["HTML", "RSS", "JSON","jsonfeed","twtxt","fed"]
 
 [mediaTypes."application/feed+json"]
     suffixes = [ "json" ]
