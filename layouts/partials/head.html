@@ -133,8 +133,8 @@
   {{ if templates.Exists "partials/extend-head.html" }}
   {{ partialCached "extend-head.html" .Site }}
   {{ end }}
-  {{ if templates.Exists "partials/activitypub.html" }}
-  {{ partial "activitypub.html" . }}
+  {{ if templates.Exists "partials/indieweb.html" }}
+  {{ partial "indieweb.html" . }}
   {{ end }}
   <meta name="theme-color"/>
   {{/* Firebase */}}
