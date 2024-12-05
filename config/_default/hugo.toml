@@ -52,6 +52,9 @@ enableEmoji = true
 [mediaTypes."application/feed+json"]
     suffixes = [ "json" ]
 
+[mediaTypes."application/rss+xml"]
+    suffixes = [ "rss", "xml" ]
+
 [outputFormats]
     [outputFormats.jsonfeed]
         mediaType = "application/feed+json"
@@ -64,11 +67,13 @@ enableEmoji = true
         mediaType = "text/plain"
         baseName = "twtxt"
 
-    # fed.brid.gy only recognize rss.xml/atom.xml so make a rss file w/ posts only for it
+    # fed.brid.gy only recognize .rss/.atom so make a rss file w/ posts only for it
     [outputFormats.fed]
         name = "fed"
         mediaType = "application/rss+xml"
-        baseName = "rss"
+        baseName = "feed"
+        rel = "alternate"
+        isPlainText = true
 
 
 [related]
