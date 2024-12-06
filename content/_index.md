@@ -15,7 +15,7 @@
 <span class="h-card" style="display: none;">
   A h-card not visible to the user.
   <a class="u-url" rel="me" href="/">/var/log/gblab</a>
-  <img class="u-photo" src="/img/logo@square.png" />
-  <img class="u-featured" src="/img/blog-cover.png" />
+  <img class="u-photo" alt="avatar of gblab acct" src="/img/logo@square.png" />
+  <img class="u-featured" alt="banner of gblab acct" src="/img/blog-cover.png" />
   <a class="u-url" href="acct:gb@lab.gb0.dev"></a>
 </span>
