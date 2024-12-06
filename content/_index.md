@@ -23,4 +23,5 @@
   <a class="u-url" href="acct:gb@lab.gb0.dev">fedi</a>
   <a rel="me" href="https://web.brid.gy/r/https://lab.gb0.dev/"></a>
 </span>
+#nobridge
 </details>
