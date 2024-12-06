@@ -10,3 +10,12 @@
 更换了新的域名！现在你可以通过 lab.gb0.dev 访问本站。
 
 更多情报将在稍后放出。
+
+<!--hcard related-->
+<span class="h-card" style="display: none;">
+  A h-card not visible to the user.
+  <a class="u-url" rel="me" href="/">/var/log/gblab</a>
+  <img class="u-photo" src="/img/logo@square.png" />
+  <img class="u-featured" src="/img/blog-cover.png" />
+  <a class="u-url" href="acct:gb@lab.gb0.dev"></a>
+</span>
