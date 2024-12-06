@@ -11,11 +11,13 @@
 
 更多情报将在稍后放出。
 
-<!--hcard related-->
-<span class="h-card" style="display: none;">
-  A h-card not visible to the user.
+<!--h-card related-->
+<span class="h-card" hidden="from-humans">
+  I'm 
   <a class="u-url" rel="me" href="/">/var/log/gblab</a>
-  <img class="u-photo" alt="avatar of gblab acct" src="/img/logo@square.png" />
-  <img class="u-featured" alt="banner of gblab acct" src="/img/blog-cover.png" />
-  <a class="u-url" href="acct:gb@lab.gb0.dev"></a>
+  <img class="u-photo" alt="avatar of gblab acct" src="/img/logo@square.png" width="25%" height="25%"/>
+  banner:
+  <img class="u-featured" alt="banner of gblab acct" src="/img/blog-cover.png" width="25%" height="25%" />
+  <a class="u-url" href="acct:gb@lab.gb0.dev">fedi</a>
+  <a rel="me" href="https://web.brid.gy/r/https://lab.gb0.dev/"></a>
 </span>
