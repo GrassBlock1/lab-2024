@@ -1,0 +1,8 @@
+{{ if $.Page.Scratch.Get "spoilerCss" }}
+{{ else }}
+{{- $spoilerCss := $.Page.Scratch.Set "spoilerCss" 1 -}}
+<link rel="stylesheet" href="/css/spoiler.css" />
+{{ end }}
+<div class="spoiler">
+  {{ .Inner }}
+</div>
