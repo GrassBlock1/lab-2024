@@ -18,14 +18,22 @@ layout: 'simple'
 <script type="module" src="https://esm.sh/@kkna/component-material"></script>
 <kkna-material></kkna-material>
 
-加密测试，密码：`foobar2000`
+{{% spoiler %}}
+哇，你居然在看这行字欸，那我祝你每天开心~
+{{% /spoiler %}}
 
-![logo](/img/logo@square.png)
+{{% spoiler %}}
+_我恭喜你发财，我恭喜你精彩_
+{{% /spoiler %}}
+
+{{% spoiler %}} 
+> 希望这有用吧
+{{% /spoiler %}}
+
+加密测试，密码：`foobar2000`
 
 {{% encrypt "foobar2000" %}}
 **Hello World!**
 {{% /encrypt %}}
 
-{{% encrypt %}}
-**Hello World!**
-{{% /encrypt %}}
+![logo](/img/logo@square.png)
