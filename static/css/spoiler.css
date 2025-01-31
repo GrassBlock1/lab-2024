@@ -9,7 +9,7 @@
     color: #ffffff;
 }
 
-/* fix blockquotes & code  */
+/* fix blockquotes */
 .spoiler blockquote {
     color: #252525;
     transition: color 0.5s;
@@ -18,12 +18,22 @@
 .spoiler blockquote:hover {
     color: #ffffff;
 }
-
+/* fix code */
 .spoiler code pre {
     color: #252525;
     transition: color 0.5s;
 }
 
 .spoiler code pre:hover {
+    color: #ffffff;
+}
+
+/* fix list bullet*/
+.spoiler li::marker {
+    color: #252525;
+    transition: color 0.5s;
+}
+
+.spoiler:hover li::marker {
     color: #ffffff;
 }
