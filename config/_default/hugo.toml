@@ -13,7 +13,7 @@ pluralizeListTitles = "true" # hugo function useful for non-english languages, f
 hasCJKLanguage = true
 
 enableRobotsTXT = true
-paginate = 10
+#paginate = 10
 summaryLength = 0
 
 buildDrafts = false
@@ -27,7 +27,7 @@ enableEmoji = true
 [permalinks]
   [permalinks.page]
     posts = '/post/:slug/'
-    pages = ':slugorfilename/'
+    pages = ':slugorcontentbasename/'
 
   [permalinks.section]
     posts = '/posts/'
