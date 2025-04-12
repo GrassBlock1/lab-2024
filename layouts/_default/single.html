@@ -90,7 +90,11 @@
         {{ if .Site.Params.aiSummary }}
         <button id="summarize-button" class="!rounded-md bg-primary-600 px-2 py-1 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700">总结文章</button>
         <div id="summary-output" class="border-2 border-solid rounded-md dark:border-primary-300" style="display: none;"></div>
-        <script src="/js/summarizer-client.js"></script>
+        {{ with resources.Get "js/summarizer-client.js" }}
+          {{ with . | minify | js.Build | fingerprint }}
+            <script src="{{ .RelPermalink }}" integrity="{{- .Data.Integrity }}" crossorigin="anonymous"></script>
+          {{ end }}
+        {{ end }}
         {{ end }}
         <div class="article-content max-w-prose mb-20">
           {{ .Content }}
