@@ -124,7 +124,7 @@ smartTOCHideUnfocusedChildren = true
 
 [artalk]
 server = 'https://artalk.gb0.dev'
-site = 'lab@GB'
+site = 'archived-2025-lab@GB'
 
 [hatsu]
 server = "https://hatsu-nightly-debug.hyp3r.link"
@@ -142,9 +142,9 @@ server = "https://hatsu-nightly-debug.hyp3r.link"
   # site = "ABC12345"
   # domain = "llama.yoursite.com"
 
-[umamiAnalytics]
-   websiteid = "cd3f2502-70ea-411a-9e87-c96f0d46a788"
-   domain = "umami.grassblock.eu.org"
+#[umamiAnalytics]
+#   websiteid = "cd3f2502-70ea-411a-9e87-c96f0d46a788"
+#   domain = "umami.grassblock.eu.org"
 
 [buymeacoffee]
   # identifier = ""

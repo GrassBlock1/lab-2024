@@ -1,6 +1,9 @@
 # /var/log/gblab
 
-Live Website: https://lab.gb0.dev
+Live Website: https://archive-2025.lab.gb0.dev
+
+> [!WARNING]
+> 目前新的实验室 (https://lab.gb0.dev) 已转向由 Astro 驱动，源代码可在 [BlockG-ws/gb-lab](https://github.com/BlockG-ws/gb-lab) （或者实验室页脚对应的链接），此处代码仅作存档以及参考用意。
 
 天地人间完全开源，后面忘了。
 

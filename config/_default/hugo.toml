@@ -3,7 +3,7 @@
 # https://blowfish.page/docs/getting-started/
 
 theme = "blowfish"
-baseURL = "https://lab.gb0.dev/"
+baseURL = "https://archive-2025.lab.gb0.dev"
 defaultContentLanguage = "zh-CN"
 timezone = "Asia/Shanghai"
 
